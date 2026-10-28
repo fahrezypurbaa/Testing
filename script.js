@@ -154,83 +154,65 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
   const rundown = [
     {
-      time: "15.00",
-      range: "15.00 – 16.30",
-      duration: "90 menit",
-      title: "Rehearsal & Gladi Bersih"
-    },
-    {
-      time: "16.30",
-      range: "16.30 – 17.00",
-      duration: "30 menit",
-      title: "Rehat & Persiapan Akhir"
-    },
-    {
       time: "17.00",
-      range: "17.00 – 18.00",
+      range: "17.00 – 18.00 WIB",
       duration: "60 menit",
-      title: "Open Gate & Registrasi"
+      title: "Open Gate & Registrasi",
     },
     {
       time: "18.45",
-      range: "18.45 – 19.00",
+      range: "18.45 – 19.00 WIB",
       duration: "15 menit",
-      title: "Sosialisasi K3 oleh PLN"
+      title: "Sosialisasi K3 oleh PLN",
     },
     {
       time: "19.00",
-      range: "19.00 – 19.10",
+      range: "19.00 – 19.10 WIB",
       duration: "10 menit",
-      title: "Pembukaan oleh MC & Doa"
+      title: "Pembukaan oleh MC & Doa",
     },
     {
       time: "19.10",
-      range: "19.10 – 19.20",
+      range: "19.10 – 19.20 WIB",
       duration: "10 menit",
-      title: "Pemutaran Film Andi Arief"
+      title: "Pemutaran Film Andi Arief",
     },
     {
       time: "19.20",
-      range: "19.20 – 19.35",
+      range: "19.20 – 19.35 WIB",
       duration: "15 menit",
-      title: "Dramatic Reading: Pelajaran Cinta"
+      title: "Dramatic Reading: Pelajaran Cinta",
     },
     {
       time: "19.35",
-      range: "19.35 – 19.50",
+      range: "19.35 – 19.50 WIB",
       duration: "15 menit",
-      title: "Monolog Penulis Buku & Tokoh"
+      title: "Monolog Penulis Buku & Tokoh",
     },
     {
       time: "19.50",
-      range: "19.50 – 20.00",
+      range: "19.50 – 20.00 WIB",
       duration: "10 menit",
-      title: "Sambutan Tuan Rumah"
+      title: "Sambutan Tuan Rumah",
     },
     {
       time: "20.00",
-      range: "20.00 – 20.15",
+      range: "20.00 – 20.15 WIB",
       duration: "15 menit",
-      title: "Sambutan SBY"
+      title: "Sambutan SBY",
     },
     {
       time: "20.15",
-      range: "20.15 – 20.30",
+      range: "20.15 – 20.30 WIB",
       duration: "15 menit",
-      title: "Penyerahan Buku Simbolik"
+      title: "Penyerahan Buku Simbolik",
     },
     {
-      time: "—22.00",
-      range: "Berakhir pukul 22.00",
+      time: "20.30",
+      range: "Setelah penyerahan buku – 22.00 WIB",
       duration: "60–90 menit",
-      title: "Konser KLa Project"
+      title: "Penampilan Konser KLa Project",
     },
-    {
-      time: "SELESAI",
-      range: "Setelah konser",
-      duration: "Belum ditentukan",
-      title: "Penutup & Photo Session"
-    }
   ];
 
   const counter = document.getElementById("eventCounter");
@@ -241,21 +223,27 @@ document.getElementById("year").textContent = new Date().getFullYear();
   const prevButton = document.getElementById("eventPrev");
   const nextButton = document.getElementById("eventNext");
 
-  let currentIndex = 2;
-  let openIndex = 2;
+  let currentIndex = 0;
+  let openIndex = 0;
 
   function escapeHTML(value) {
-    return String(value).replace(/[&<>"']/g, char => ({
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;"
-    }[char]));
+    return String(value).replace(
+      /[&<>"']/g,
+      (char) =>
+        ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#39;",
+        })[char],
+    );
   }
 
   // GENERATE TIMELINE
-  agendaList.innerHTML = rundown.map((item, index) => `
+  agendaList.innerHTML = rundown
+    .map(
+      (item, index) => `
     <div class="agenda-item" data-index="${index}">
 
       <button
@@ -317,19 +305,18 @@ document.getElementById("year").textContent = new Date().getFullYear();
       </div>
 
     </div>
-  `).join("");
+  `,
+    )
+    .join("");
 
-  const rows = [
-    ...agendaList.querySelectorAll(".agenda-item")
-  ];
+  const rows = [...agendaList.querySelectorAll(".agenda-item")];
 
   // UPDATE TAMPILAN
   function updateDisplay(scroll = false) {
     const item = rundown[currentIndex];
 
     // KARTU BIRU KIRI
-    counter.textContent =
-      `SESI ${String(currentIndex + 1).padStart(2, "0")} / ${String(rundown.length).padStart(2, "0")}`;
+    counter.textContent = `SESI ${String(currentIndex + 1).padStart(2, "0")} / ${String(rundown.length).padStart(2, "0")}`;
 
     activeTime.textContent = item.time;
     activeTitle.textContent = item.title;
@@ -345,31 +332,24 @@ document.getElementById("year").textContent = new Date().getFullYear();
       const trigger = row.querySelector(".agenda-trigger");
       const detail = row.querySelector(".agenda-expand");
 
-      trigger.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
+      trigger.setAttribute("aria-expanded", String(isOpen));
 
-      detail.setAttribute(
-        "aria-hidden",
-        String(!isOpen)
-      );
+      detail.setAttribute("aria-hidden", String(!isOpen));
     });
 
     // NAVIGASI
     prevButton.disabled = currentIndex === 0;
-    nextButton.disabled =
-      currentIndex === rundown.length - 1;
+    nextButton.disabled = currentIndex === rundown.length - 1;
 
     // SCROLL HALUS
     if (scroll && openIndex !== null) {
       const reduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
+        "(prefers-reduced-motion: reduce)",
       ).matches;
 
       rows[currentIndex].scrollIntoView({
         behavior: reduceMotion ? "instant" : "smooth",
-        block: "nearest"
+        block: "nearest",
       });
     }
   }
@@ -413,9 +393,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
   // TAMPILAN AWAL
   updateDisplay();
-
 })();
-
 
 /* Rotatable 3D book: pointer drag, keyboard arrows and buttons. */
 (() => {

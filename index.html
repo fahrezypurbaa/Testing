@@ -61,39 +61,65 @@
         </div>
 
         <p class="undangan-subtitle">
-          MENGUNDANG BAPAK/IBU UNTUK MENGHADIRI ACARA:
+          MENGUNDANG BAPAK/IBU UNTUK MENGHADIRI ACARA
         </p>
+
+        <!-- KUTIPAN BERUPA GAMBAR PNG -->
+        <div class="undangan-quote-image">
+          <img
+            src="assets/kutipan-hero.png"
+            alt="Ada cinta yang tidak pernah diucapkan. Ia diberikan sepotong demi sepotong, sampai seseorang bisa hidup sekali lagi."
+          />
+        </div>
       </section>
 
       <!-- HERO NOVEL -->
       <section class="hero container hero-refined" aria-labelledby="heroTitle">
+        <!-- <div class="hero-topline">
+          “Ada cinta yang tidak pernah diucapkan. Ia diberikan sepotong demi
+          sepotong,<br />
+          sampai seseorang bisa hidup sekali lagi.”
+        </div> -->
         <div class="hero-left">
           <!-- TRUE STORY + NAMA PNG -->
+
+          <!-- TRUE STORY + PNG ANDI ARIEF -->
           <div class="hero-author">
-            <span>TRUE STORY ANDI ARIEF</span>
+            <span>TRUE STORY</span>
+
+            <img
+              src="assets/andi-arif.png"
+              alt="Andi Arief"
+              class="hero-andi-logo"
+            />
           </div>
 
-          <!-- JUDUL NOVEL -->
-
-          <h1 id="heroTitle">
-            <span>BAB</span>
-            <span>TERAKHIR</span>
-            <span>PELAJARAN</span>
-            <span class="hero-title-final">
+          <!-- JUDUL 4 BARIS -->
+          <h1 id="heroTitle" class="hero-title-four-lines">
+            <span class="hero-title-row">BAB</span>
+            <span class="hero-title-row">TERAKHIR</span>
+            <span class="hero-title-row">PELAJARAN</span>
+            <span class="hero-title-row hero-title-last">
               CINTA
               <small class="hero-title-label">SEBUAH NOVEL</small>
             </span>
           </h1>
-
-          <p class="hero-lead">
-            SEBUAH KISAH TENTANG KEHILANGAN, KESEMPATAN KEDUA, DAN HAL-HAL YANG
-            TAK PERNAH BENAR-BENAR PERGI.
-          </p>
-
           <div class="hero-meta">
-            <span>Novel<br /><strong>Kontemporer</strong></span>
+            <!-- <span>Novel<br /><strong>Kontemporer</strong></span> -->
             <span>Rilis<br /><strong>2026</strong></span>
-            <span>Karya<br /><strong>Andi Arief</strong></span>
+            <span
+              >Penulis<br /><strong
+                >FX Rudy Gunawan & Hasya Nindita</strong
+              ></span
+            >
+            <span class="hero-publisher">
+              Penerbit
+              <img
+                src="assets/publisher-logo.png"
+                alt="Logo Penerbit"
+                class="publisher-logo"
+              />
+            </span>
           </div>
 
           <div class="hero-actions">
@@ -109,10 +135,6 @@
 
         <!-- GAMBAR BUKU -->
         <div class="hero-right">
-          <div class="hero-topline">
-            BUKU YANG BERBICARA TENTANG HATI DAN INGATAN.
-          </div>
-
           <div class="hero-art hero-art-3d">
             <!-- Buku 3D memakai sampul depan, punggung, dan belakang dari COVER revisi.pdf -->
             <div class="book-stage">
@@ -162,26 +184,24 @@
               <p class="book-help">GESER BUKU UNTUK MEMUTAR 360&deg;</p>
             </div>
 
-            <img
-              class="hero-author-portrait"
-              src="assets/author.png"
-              alt="Ilustrasi Andi Arief"
-              draggable="false"
-            />
-          </div>
+            <div class="publisher publisher-kla">
+              <div class="kla-image-frame">
+                <img
+                  src="assets/kla-project.png"
+                  alt="KLa Project"
+                  class="kla-logo"
+                />
+              </div>
 
-          <div class="publisher publisher-kla">
-            <img
-              src="assets/kla-project.png"
-              alt="KLa Project"
-              class="kla-logo"
-            />
-
-            <div class="kla-info">
-              <span>MENAMPILKAN</span>
-              <strong>KLA PROJECT</strong>
+              <div class="kla-info">
+                <strong>KLA PROJECT</strong>
+              </div>
             </div>
           </div>
+          <p class="hero-right-description">
+            SEBUAH KISAH TENTANG KEHILANGAN, KESEMPATAN KEDUA, DAN HAL-HAL YANG
+            TAK PERNAH BENAR-BENAR PERGI.
+          </p>
         </div>
       </section>
 
@@ -203,15 +223,16 @@
             </div>
           </div>
           <p class="countdown-footer">
-            SABTU · 19.00 WIB · AUDITORIUM PLN PUSAT
+            JUMAT · 19.00 WIB · AUDITORIUM PLN PUSAT
           </p>
         </div>
       </section>
+      <div class="kla-mobile-slot"></div>
       <section class="story-section container" id="tentang">
         <div class="section-heading"><span>SINOPSIS</span><i></i></div>
         <div class="story-photo">
           <img
-            src="assets/story-collage.png"
+            src="assets/TRANSPLANTASI.png"
             alt="Kolase visual karakter dan cerita Hidup Kedua"
           />
         </div>
@@ -221,13 +242,35 @@
           Ada cinta yang tidak pernah dituntaskan, ada diberikan sepanjang<br />
           demi seseorang, sampai seseorang bisa hidup sekali lagi.
         </blockquote>
-        <p class="quote-credit">— HIDUP KEDUA, ANDI ARIEF —</p>
+        <p class="quote-credit">— Bab Terakhir Pelajaran Cinta —</p>
+
+        <!-- VIDEO NOVEL -->
+
+        <!-- VIDEO AUTOPLAY TANPA KONTROL -->
+        <div class="story-video">
+          <video
+            class="novel-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            disablepictureinpicture
+            disableremoteplayback
+          >
+            <source src="assets/video-novel.mp4" type="video/mp4" />
+          </video>
+        </div>
 
         <!-- SINOPSIS DAN BAB UTAMA -->
         <div class="story-columns story-columns-updated">
           <!-- BAGIAN KIRI -->
           <div class="story-copy">
-            <h2>Tentang hati yang diganti, dan cinta yang diberikan.</h2>
+            <p>Sekelumit Cerita</p>
+            <h2>
+              Tentang hati yang diganti, <br />
+              dan cinta yang diberikan.
+            </h2>
 
             <p>
               <em>Bab Terakhir Pelajaran Cinta</em> adalah novel yang berangkat
@@ -242,6 +285,30 @@
               apa artinya diberi kesempatan hidup untuk kedua kalinya, dan apa
               yang harus dipelajari ulang sesudahnya.
             </p>
+            <p>
+              Ketika sang anak bersedia mendonorkan sebagian hatinya, hubungan
+              mereka memasuki babak yang tak pernah dibayangkan sebelumnya.
+              Keputusan itu membawa ketakutan, pertimbangan, dan risiko yang
+              harus dihadapi bersama. Bagi seorang ayah, menerima pertolongan
+              sebesar itu dari anaknya sendiri menghadirkan rasa syukur
+              sekaligus pergulatan batin yang dalam. Bagi sang anak, keputusan
+              tersebut tumbuh dari keinginan sederhana sekaligus mendesak: agar
+              ayahnya tetap hidup dan mereka masih memiliki waktu bersama.
+              Melalui pengalaman keduanya, cinta memperoleh bentuk yang nyata
+              dalam kesediaan untuk merawat, menunggu, dan menjalani proses
+              pemulihan.
+            </p>
+            <p>
+              Dengan mempertemukan ingatan tentang perjuangan politik dan
+              pengalaman intim sebuah keluarga, Bab Terakhir Pelajaran Cinta
+              menelusuri arti kesempatan hidup yang kedua. Setelah operasi,
+              kehidupan berlanjut bersama tanggung jawab untuk menjaga tubuh,
+              merawat hubungan, dan memaknai waktu yang telah diberikan. Novel
+              ini mengajak pembaca mendekati pertanyaan yang mungkin pernah
+              tertunda dalam kehidupan mereka sendiri: kepada siapa kita ingin
+              memberikan waktu, apa yang masih perlu kita sampaikan, dan
+              bagaimana kita ingin hadir bagi orang-orang yang kita cintai.
+            </p>
 
             <!-- LABEL BAWAH -->
             <div class="topic-tags">
@@ -253,7 +320,7 @@
 
           <!-- BAGIAN KANAN -->
           <div class="chapter-panel">
-            <p class="panel-kicker">BAB-BAB UTAMA</p>
+            <p class="panel-kicker">BAB-BAB</p>
 
             <div class="chapter-two-columns">
               <!-- KOLOM KIRI -->
@@ -312,85 +379,198 @@
       </section>
       <section class="speakers-section">
         <div class="container">
-          <div class="section-heading"><span>SUARA PEMBACA</span><i></i></div>
-          <div class="testimonials">
-            <article class="testimonial">
-              <div class="testimonial-heading">
+          <!-- PROFIL PENULIS -->
+          <div class="section-heading">
+            <span>PROFIL PENULIS</span>
+            <i></i>
+          </div>
+
+          <div class="writer-profile-grid">
+            <!-- FX RUDY GUNAWAN -->
+            <article class="writer-profile-card">
+              <div class="writer-profile-photo">
                 <img
                   src="assets/fx-rudy-gunawan.png"
-                  alt="Foto FX Rudy Gunawan"
-                  class="testimonial-photo"
+                  alt="FX Rudy Gunawan"
+                  loading="lazy"
                 />
-                <div>
-                  <h3>FX Rudy Gunawan</h3>
-                  <p>PEMBACA & SAHABAT</p>
-                </div>
               </div>
-              <p>
-                “Sebuah perjalanan yang menyentuh, tentang hidup, pilihan, dan
-                keberanian untuk memulai kembali. Kisah yang terasa dekat dengan
-                kehidupan kita.”
-              </p>
-              <div class="testimonial-sign">
-                KESAN PEMBACA <span>✦ ✦ ✦ ✦ ✦</span>
+
+              <div class="writer-profile-content">
+                <span class="writer-profile-label">PENULIS</span>
+                <h3>FX Rudy Gunawan</h3>
+
+                <p class="writer-profile-bio">
+                  FX Rudy Gunawan adalah penulis, jurnalis, pekerja budaya,
+                  serta pendiri majalah khusus disabilitas Diffa. Ia menulis
+                  novel, cerpen, esai, dan puisi sejak 1990-an. Pernah bekerja
+                  di Kantor Staf Presiden (2015–2019), kemudian mengikuti
+                  residensi penulis Komite Buku Nasional di New York (2019),
+                  program beasiswa non-degree LPDP di Chile (2022), serta
+                  residensi di Kazakhstan pada 2024.
+                </p>
+
+                <div class="writer-profile-works">
+                  <h4>KARYA TERPILIH</h4>
+
+                  <div class="writer-work">
+                    <em>Kamu Cacat Maka Aku Ada</em>
+                    <span>2025</span>
+                  </div>
+
+                  <div class="writer-work">
+                    <em>Para La Vida</em>
+                    <span>2024</span>
+                  </div>
+                </div>
               </div>
             </article>
-            <article class="testimonial">
-              <div class="testimonial-heading">
+
+            <!-- HASYA NINDITA -->
+            <article class="writer-profile-card">
+              <div class="writer-profile-photo">
                 <img
                   src="assets/hasya-nindita.png"
-                  alt="Foto Hasya Nindita"
-                  class="testimonial-photo"
+                  alt="Hasya Nindita"
+                  loading="lazy"
                 />
-                <div>
-                  <h3>Rasya Hindita</h3>
-                  <p>PEMBACA & SAHABAT</p>
-                </div>
               </div>
-              <p>
-                “Novel ini mengingatkan kita bahwa di balik setiap kehilangan
-                selalu ada kesempatan untuk memahami hidup dengan cara yang
-                berbeda.”
-              </p>
-              <div class="testimonial-sign">
-                KESAN PEMBACA <span>✦ ✦ ✦ ✦ ✦</span>
+
+              <div class="writer-profile-content">
+                <span class="writer-profile-label">PENULIS</span>
+                <h3>Hasya Nindita</h3>
+
+                <p class="writer-profile-bio">
+                  Hasya Nindita adalah penulis dan pewarta yang aktif melakukan
+                  peliputan untuk media internasional. Karya jurnalistiknya
+                  terbit di The New York Times, The Gecko Project, Global
+                  Voices, dan berbagai media lainnya. Ia menerima penghargaan
+                  SOPA Awards (2026) untuk salah satu liputan lingkungan. Semasa
+                  remaja, ia menerbitkan novel anak Tersesat, A Misplaced
+                  Journey (2015). Ia juga gemar berdengung dan bergumam.
+                  Instagram: @hasyanindita.
+                </p>
+
+                <div class="writer-profile-works">
+                  <h4>KARYA TERPILIH</h4>
+
+                  <div class="writer-work">
+                    <em>Tersesat, A Misplaced Journey</em>
+                    <span>2015</span>
+                  </div>
+
+                  <div class="writer-work">
+                    <em>Penghargaan SOPA Awards</em>
+                    <span>2026</span>
+                  </div>
+                </div>
               </div>
             </article>
           </div>
 
           <!-- BIOGRAFI ANDI ARIEF -->
           <div class="author-block" id="penulis">
-            <!-- FOTO ANDI ARIEF -->
-            <img
-              src="assets/author.png"
-              alt="Ilustrasi Andi Arief dengan payung"
-              class="author-photo"
-            />
+            <!-- KIRI: ILUSTRASI + KOLASE SEJARAH -->
+            <div class="bio-visual">
+              <img
+                src="assets/biografi-andi-panel.png"
+                alt="Ilustrasi Andi Arief dan kolase sejarah"
+                class="bio-collage-image"
+                loading="lazy"
+              />
+            </div>
 
-            <!-- BIOGRAFI -->
+            <!-- KANAN: BIOGRAFI -->
             <div class="author-bio">
-              <p class="panel-kicker">BIOGRAFI ANDI ARIEF</p>
-
-              <p class="author-script">
-                Dari perjalanan seorang aktivis, pengabdian dalam kehidupan
-                publik, hingga kisah tentang keluarga, kehilangan, dan
-                kesempatan kedua.
-              </p>
+              <div class="author-bio-heading">
+                <h2>Tentang</h2>
+                <img
+                  src="assets/andi-arif.png"
+                  alt="Andi Arief"
+                  class="author-name-img"
+                />
+              </div>
 
               <div class="author-description">
                 <p>
-                  Andi Arief lahir di Lampung pada 20 November 1970. Ia dikenal
-                  sebagai aktivis Reformasi 1998 yang kemudian berkiprah di
-                  dunia politik melalui Partai Demokrat. Ia pernah menjabat
-                  sebagai Staf Khusus Presiden Susilo Bambang Yudhoyono dan
-                  Komisaris Independen PT PLN (Persero).
+                  Andi Arief lahir di Bandar Lampung pada 20 November 1970. Ia
+                  dikenal sebagai aktivis prodemokrasi dan politikus yang
+                  perjalanan hidupnya bersinggungan dengan perubahan politik
+                  Indonesia sejak penghujung Orde Baru. Pada 1989, ia
+                  melanjutkan pendidikan di Jurusan Ilmu Pemerintahan, Fakultas
+                  Ilmu Sosial dan Ilmu Politik, Universitas Gadjah Mada,
+                  Yogyakarta. Kampus menjadi tempatnya mengembangkan pemikiran
+                  sekaligus terlibat dalam gerakan mahasiswa.
                 </p>
 
                 <p>
-                  Melalui novel <em>Bab Terakhir Pelajaran Cinta</em>,
-                  perjalanan hidupnya diangkat menjadi kisah tentang keluarga,
-                  perjuangan, cinta, dan makna kesempatan kedua.
+                  Semasa kuliah, Andi aktif dalam kelompok studi, pers
+                  mahasiswa, dan organisasi kemahasiswaan. Ia menjabat sebagai
+                  Ketua Senat Mahasiswa Fisipol UGM periode 1993–1994 serta
+                  Pemimpin Umum Majalah Mahasiswa Fisipol periode 1994–1995.
+                  Keterlibatannya dalam Solidaritas Mahasiswa Indonesia untuk
+                  Demokrasi (SMID) memperluas kiprahnya dalam perjuangan
+                  menuntut kebebasan politik dan demokratisasi. Pada 1998, ia
+                  menjadi salah satu korban penculikan aktivis yang kemudian
+                  kembali. Pengalaman tersebut menjadi bagian penting dalam
+                  riwayat hidupnya.
                 </p>
+
+                <p>
+                  Setelah Reformasi, Andi memasuki dunia politik dan
+                  pemerintahan. Ia pernah menjadi Komisaris PT Pos Indonesia
+                  serta Staf Khusus Presiden Susilo Bambang Yudhoyono Bidang
+                  Bantuan Sosial dan Bencana. Di Partai Demokrat, ia mengemban
+                  sejumlah tanggung jawab, termasuk sebagai Wakil Sekretaris
+                  Jenderal dan Ketua Badan Pemenangan Pemilu. Pada Juli 2024, ia
+                  diangkat menjadi komisaris PT PLN (Persero), dan tercatat
+                  dalam jajaran perusahaan sebagai Komisaris Independen.
+                </p>
+
+                <p>
+                  Di luar perjalanan politiknya, Andi menghadapi ujian besar
+                  ketika harus menjalani transplantasi hati. Pada Oktober 2024,
+                  ia menjalani operasi di India dengan donor dari putra
+                  sulungnya, Fazle Merah Maula. Peristiwa ini memperlihatkan
+                  sisi pribadi kehidupannya sebagai seorang ayah yang menerima
+                  pertolongan besar dari anaknya sendiri. Dalam perjalanan hidup
+                  yang selama bertahun-tahun diisi aktivitas publik, pengalaman
+                  tersebut menjadi bab penting tentang keluarga, pengorbanan,
+                  dan kesempatan untuk melanjutkan kehidupan.
+                </p>
+              </div>
+
+              <!-- KOMENTAR PENGUNJUNG -->
+              <div class="andi-comment">
+                <div class="andi-comment-heading">
+                  <span>KOMENTAR</span>
+                  <h3>Andi Arief yang Anda Kenal</h3>
+                </div>
+
+                <form
+                  id="andiCommentForm"
+                  action="URL_GOOGLE_APPS_SCRIPT"
+                  method="POST"
+                  target="_blank"
+                >
+                  <input
+                    type="text"
+                    name="nama"
+                    placeholder="Nama Anda"
+                    maxlength="100"
+                    required
+                  />
+
+                  <textarea
+                    name="komentar"
+                    placeholder="Ceritakan sosok Bang Andi Arief yang Anda kenal..."
+                    rows="3"
+                    maxlength="2000"
+                    required
+                  ></textarea>
+
+                  <button type="submit">KIRIM KOMENTAR ↗</button>
+                </form>
               </div>
             </div>
           </div>
@@ -407,7 +587,7 @@
         <div class="event-grid event-interactive">
           <!-- PANEL KIRI -->
           <div class="event-intro">
-            <h2>Satu malam,<br />perjalanan cerita.</h2>
+            <h2>Dua Ratus Empat Puluh Menit Bersama Kawan.</h2>
 
             <p class="event-instruction">
               Pilih setiap sesi untuk melihat detail acara. Seluruh waktu dalam
@@ -472,7 +652,7 @@
             <div class="contact-rsvp">
               <span class="contact-label">NARAHUBUNG</span>
 
-              <h3>BAPAK FUAD</h3>
+              <h3>Mohamad Fuad Burhan</h3>
 
               <a
                 href="https://wa.me/6281227466296"
@@ -529,23 +709,10 @@
                 class="choice"
                 data-attendance="Tidak hadir"
               >
-                Tidak Hadir</button
-              ><button
-                type="button"
-                class="choice"
-                data-attendance="Belum pasti"
-              >
-                Belum Pasti
+                Tidak Hadir
               </button>
             </div>
-            <input type="hidden" name="attendance" value="Hadir" /><label
-              >Jumlah tamu</label
-            >
-            <div class="choice-row" id="guestChoice">
-              <button type="button" class="choice active" data-guests="1">
-                1 Orang
-              </button>
-            </div>
+            <div class="choice-row" id="guestChoice"></div>
             <input type="hidden" name="guests" value="1" /><label
               >Pesan / catatan
               <textarea
@@ -655,22 +822,73 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <a href="#beranda" class="footer-logo">
-          <img
-            src="assets/hidup-kedua.png"
-            alt="Hidup Kedua"
-            class="footer-logo-img"
-          />
-        </a>
 
-        <p>
-          SEBUAH NOVEL KARYA ANDI ARIEF<br />© <span id="year">2026</span> · ALL
-          RIGHTS RESERVED
-        </p>
-        <a href="#beranda">KEMBALI KE ATAS ↑</a>
+    <!-- FOOTER HIDUP KEDUA MANAGEMENT -->
+    <footer class="site-footer hk-footer">
+      <div class="hk-footer__inner">
+        <!-- LOGO TEKS -->
+        <div class="hk-footer__brand">
+          <div class="hk-footer__logo">
+            <span>Hidup</span>
+            <span>Kedua</span>
+          </div>
+
+          <span class="hk-footer__management"> m.a.n.a.g.e.m.e.n.t </span>
+        </div>
+
+        <!-- GARIS EMAS -->
+        <div class="hk-footer__divider"></div>
+
+        <!-- DESKRIPSI DAN COPYRIGHT -->
+        <div class="hk-footer__content">
+          <p>
+            Hidup Kedua Management adalah kumpulan sahabat, teman, kolega, adik,
+            junior, murid, kader, jaringan, keluarga, dan keluarga besar yang
+            terikat karena kenangan dan kesamaan perjuangan. Wadah yang tidak
+            sengaja terbentuk karena ingin mensukseskan penyelenggaraan event
+            peluncuran novel berjudul
+            <strong>Bab Terakhir Pelajaran Cinta</strong>
+            yang diorganisir dan dipimpin oleh
+            <strong>Ilham Mendrofa</strong>.
+          </p>
+
+          <!-- COPYRIGHT -->
+          <div class="hk-footer__copyright">
+            © <span id="year">2026</span> · ALL RIGHTS RESERVED
+          </div>
+        </div>
       </div>
     </footer>
+    <script>
+  (function () {
+    const kla = document.querySelector('.publisher-kla');
+    const heroArt = document.querySelector('.hero-art');
+    const mobileSlot = document.querySelector('.kla-mobile-slot');
+
+    if (!kla || !heroArt || !mobileSlot) return;
+
+    const originalParent = kla.parentElement;
+    const originalNextSibling = kla.nextElementSibling;
+
+    function moveKlaByScreen() {
+      if (window.innerWidth <= 680) {
+        if (!mobileSlot.contains(kla)) {
+          mobileSlot.appendChild(kla);
+        }
+      } else {
+        if (!originalParent.contains(kla)) {
+          if (originalNextSibling) {
+            originalParent.insertBefore(kla, originalNextSibling);
+          } else {
+            originalParent.appendChild(kla);
+          }
+        }
+      }
+    }
+
+    window.addEventListener('load', moveKlaByScreen);
+    window.addEventListener('resize', moveKlaByScreen);
+  })();
+</script>
   </body>
 </html>

@@ -1,7 +1,11 @@
 /* =========================================================
+
    HIDUP KEDUA - STYLESHEET
-   Refactored without changing existing page appearance.
+
+   Compact vertical spacing, preserving layout and typography.
+
    Keep this as the single source of truth for styles.
+
    ========================================================= */
 
 * {
@@ -14,18 +18,25 @@ html {
 
 body {
   margin: 0;
+
   background: var(--paper);
+
   color: var(--ink);
+
   font-family: "DM Sans", sans-serif;
+
   font-size: 14px;
 }
 
 a {
   text-decoration: none;
+
   color: inherit;
 }
 
-button,input,textarea {
+button,
+input,
+textarea {
   font: inherit;
 }
 
@@ -34,40 +45,55 @@ button {
 }
 
 /* GLOBAL LAYOUT */
+
 .container {
   width: min(1200px, calc(100% - 92px));
+
   margin-inline: auto;
 }
 
 .site-header {
   height: 66px;
+
   border-bottom: 1px solid #bbbfbf;
 }
 
 .header-inner {
   height: 100%;
+
   display: flex;
+
   align-items: center;
+
   gap: 42px;
 }
 
 .brand {
   display: flex;
+
   align-items: center;
+
   gap: 9px;
+
   white-space: nowrap;
 }
 
 /* HEADER NAVIGATION */
+
 .nav {
   display: flex;
+
   gap: 27px;
+
   flex: 1;
 }
 
-.nav a,.header-cta {
+.nav a,
+.header-cta {
   font-size: 10px;
+
   font-weight: 700;
+
   letter-spacing: 1px;
 }
 
@@ -77,7 +103,9 @@ button {
 
 .header-cta {
   background: var(--wine);
+
   color: white;
+
   padding: 12px 17px;
 }
 
@@ -90,50 +118,77 @@ button {
 }
 
 /* HERO SECTION */
+
 .hero {
-  min-height: 740px;
+  min-height: auto;
+
   display: grid;
+
   grid-template-columns: 1fr 1fr;
-  gap: 42px;
-  padding-top: 75px;
-  padding-bottom: 70px;
+
+  gap: 32px;
+
+  padding-top: 20px;
+
+  padding-bottom: 32px;
 }
 
 .section-heading i {
   height: 1px;
+
   background: #6e7780;
+
   flex: 1;
 }
 
 .hero-author {
-  margin: 58px 0 0;
-  font: 600 33px "Oswald", sans-serif;
+  margin: 8px 0 0;
+
+  font:
+    600 33px "Oswald",
+    sans-serif;
+
   letter-spacing: 1px;
 }
 
 .hero h1 {
   font-family: "Playfair Display", serif;
+
   color: var(--wine);
+
   font-size: clamp(28px, 8vw, 109px);
+
   line-height: 0.78;
+
   letter-spacing: -8px;
+
   font-weight: 600;
-  margin: 8px 0 40px;
+
+  margin: 4px 0 16px;
 }
 
 .hero-lead {
   max-width: 480px;
+
   font-size: 13px;
+
   font-weight: 700;
+
   letter-spacing: 1.65px;
+
   line-height: 1.7;
+  margin: 10px 0 0;
 }
 
 .hero-meta {
   display: flex;
+
   gap: 38px;
-  margin-top: 29px;
+
+  margin-top: 15px;
+
   font-size: 11px;
+
   line-height: 1.7;
 }
 
@@ -143,22 +198,31 @@ button {
 
 .hero-actions {
   display: flex;
+
   gap: 12px;
-  margin-top: 36px;
+
+  margin-top: 18px;
 }
 
 .btn {
   padding: 16px 22px;
+
   display: inline-flex;
+
   gap: 28px;
+
   align-items: center;
+
   font-size: 10px;
+
   font-weight: 700;
+
   letter-spacing: 0.9px;
 }
 
 .btn-maroon {
   background: var(--wine);
+
   color: white;
 }
 
@@ -168,130 +232,190 @@ button {
 
 .hero-topline {
   font-size: 10px;
+
   letter-spacing: 1.5px;
+
   text-transform: uppercase;
+
   text-align: center;
-  margin: 14px 0 64px;
+
+  margin: 0 0 12px;
 }
 
 .hero-art {
   height: 465px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 42px;
 }
 
 .publisher {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
+
   justify-content: end;
+
   font-size: 9px;
+
   letter-spacing: 1.4px;
 }
 
 .publisher img {
   width: 65px;
+
   max-height: 55px;
+
   object-fit: contain;
 }
 
 /* COUNTDOWN */
+
 .countdown-band {
   background: var(--navy);
+
   color: white;
-  padding: 45px 0 40px;
+
+  padding: 22px 0 20px;
+
   text-align: center;
 }
 
 .countdown-caption {
   font-size: 11px;
+
   letter-spacing: 5px;
-  margin-bottom: 24px;
+
+  margin-bottom: 12px;
 }
 
 .countdown-grid {
   display: flex;
+
   justify-content: center;
+
   gap: 0;
 }
 
 .count-cell {
   width: 145px;
+
   border-right: 1px solid #7c8ba5;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
-  height: 138px;
+
+  height: 112px;
 }
 
 .count-cell strong {
-  font: 600 91px/0.95 "Oswald", sans-serif;
+  font:
+    600 91px/0.95 "Oswald",
+    sans-serif;
+
   letter-spacing: -4px;
 }
 
 .count-cell small {
   margin-top: 10px;
+
   font-size: 9px;
+
   letter-spacing: 3px;
 }
 
 .count-cell.active {
   background: #f0f0ed;
+
   color: var(--wine);
+
   border: 0;
 }
 
 .countdown-footer {
   font-size: 9px;
+
   letter-spacing: 2px;
-  margin: 26px 0 0;
+
+  margin: 12px 0 0;
 }
 
 /* STORY AND QUOTE */
+
 .story-section {
-  padding-top: 86px;
-  padding-bottom: 110px;
+  padding-top: 30px;
+
+  padding-bottom: 34px;
 }
 
 .section-heading {
   display: flex;
+
   align-items: center;
+
   gap: 16px;
+
   font-size: 10px;
+
   font-weight: 700;
+
   letter-spacing: 3px;
-  margin-bottom: 30px;
+
+  margin-bottom: 16px;
 }
 
 .story-photo {
   height: 470px;
+
   overflow: hidden;
+
   background: #d4d9d5;
 }
 
 .story-photo img {
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
 }
 
 .story-columns {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 90px;
+
   align-items: start;
 }
 
-.story-copy h2,.event-intro h2,.rsvp-intro h2 {
-  font: 600 35px/1.1 "Oswald", sans-serif;
+.story-copy h2,
+.event-intro h2,
+.rsvp-intro h2 {
+  font:
+    600 35px/1.1 "Oswald",
+    sans-serif;
+
   letter-spacing: -0.5px;
+
   max-width: 480px;
 }
 
-.story-copy p,.rsvp-intro p {
+.story-copy p,
+.rsvp-intro p {
   line-height: 1.85;
   color: #505966;
   max-width: 465px;
@@ -299,135 +423,199 @@ button {
 
 .topic-tags {
   display: flex;
+
   gap: 9px;
+
   flex-wrap: wrap;
+
   margin-top: 24px;
 }
 
 .topic-tags span {
   border: 1px solid #aeb5b5;
+
   padding: 8px 12px;
+
   font-size: 9px;
+
   letter-spacing: 1px;
 }
 
 .chapter-panel {
   background: #d3d8d5;
+
   padding: 35px 42px;
 }
 
-.panel-kicker,.form-kicker {
+.panel-kicker,
+.form-kicker {
   font-size: 10px;
+
   font-weight: 700;
+
   letter-spacing: 2px;
 }
 
 .chapter-panel ol {
   padding: 0;
+
   margin: 28px 0 0;
+
   list-style: none;
 }
 
 .chapter-panel li {
   display: flex;
+
   gap: 27px;
+
   align-items: start;
+
   margin: 0 0 24px;
 }
 
 .chapter-panel li > strong {
   color: var(--wine);
-  font: 600 26px "Oswald", sans-serif;
+
+  font:
+    600 26px "Oswald",
+    sans-serif;
 }
 
 .chapter-panel b {
-  font: 600 17px "Oswald", sans-serif;
+  font:
+    600 17px "Oswald",
+    sans-serif;
 }
 
 .chapter-panel p {
   font-size: 11px;
+
   line-height: 1.5;
+
   margin: 5px 0;
+
   color: #5e676b;
 }
 
 /* TESTIMONIALS AND AUTHOR */
+
 .speakers-section {
   background: #e4e7e4;
-  padding: 80px 0 100px;
+
+  padding: 38px 0 42px;
 }
 
 .testimonials {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 36px;
 }
 
 .testimonial {
-  padding: 36px;
+  padding: 28px;
+
   background: #f5f6f3;
-  min-height: 270px;
+
+  min-height: 245px;
 }
 
 .testimonial-heading {
   display: flex;
+
   gap: 20px;
+
   align-items: center;
 }
 
 .placeholder-portrait {
   width: 70px;
+
   height: 70px;
+
   display: grid;
+
   place-items: center;
+
   flex-shrink: 0;
+
   background: #e0e3e0;
+
   color: #848e91;
-  font: italic 22px "Playfair Display", serif;
+
+  font:
+    italic 22px "Playfair Display",
+    serif;
 }
 
 .testimonial h3 {
-  font: 600 21px "Oswald", sans-serif;
+  font:
+    600 21px "Oswald",
+    sans-serif;
+
   margin: 0;
 }
 
 .testimonial-heading p {
   font-size: 9px;
+
   letter-spacing: 1.1px;
+
   margin-top: 5px;
 }
 
 .testimonial > p {
   line-height: 1.8;
+
   font-family: "Playfair Display", serif;
+
   font-size: 16px;
+
   color: #555f66;
 }
 
 .testimonial-sign {
   font-size: 9px;
+
   letter-spacing: 1.5px;
+
   border-top: 1px solid #c8d0cb;
+
   padding-top: 16px;
+
   display: flex;
+
   justify-content: space-between;
 }
 
 .author-block > img {
   width: 100%;
+
   height: 500px;
+
   object-fit: cover;
+
   object-position: top;
 }
 
-.author-block h2,.location-info h2 {
-  font: 600 44px "Oswald", sans-serif;
+.author-block h2,
+.location-info h2 {
+  font:
+    600 44px "Oswald",
+    sans-serif;
+
   letter-spacing: 1px;
+
   margin: 16px 0;
 }
 
 .author-script {
-  font: italic 25px/1.4 "Playfair Display", serif;
+  font:
+    italic 25px/1.4 "Playfair Display",
+    serif;
+
   color: var(--wine);
 }
 
@@ -436,41 +624,52 @@ button {
 }
 
 /* EVENT TIMELINE */
+
 .event-section {
-  padding-top: 85px;
-  padding-bottom: 100px;
+  padding-top: 36px;
+
+  padding-bottom: 42px;
 }
 
 .event-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 75px;
 }
 
 .event-intro h2 {
   font-size: 46px;
+
   margin-top: 20px;
 }
 
 .event-intro > p {
   font-size: 11px;
+
   letter-spacing: 1.3px;
 }
 
 /* RSVP FORM */
+
 .rsvp-section {
   background: #cdd4d0;
-  padding: 96px 0;
+
+  padding: 40px 0;
 }
 
 .rsvp-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 90px;
 }
 
 .rsvp-intro h2 {
   font-size: 47px;
+
   line-height: 1.05;
 }
 
@@ -480,9 +679,13 @@ button {
 
 .rsvp-form {
   background: #f8f8f5;
+
   padding: 34px;
+
   display: grid;
+
   gap: 12px;
+
   box-shadow: 0 5px 20px #40504710;
 }
 
@@ -492,78 +695,116 @@ button {
 
 .rsvp-form label {
   display: block;
+
   font-size: 10px;
+
   font-weight: 700;
+
   letter-spacing: 0.5px;
 }
 
-.rsvp-form input,.rsvp-form textarea {
+.rsvp-form input,
+.rsvp-form textarea {
   display: block;
+
   width: 100%;
+
   padding: 12px 13px;
+
   border: 1px solid #d4d7d4;
+
   background: white;
+
   margin-top: 6px;
+
   border-radius: 0;
+
   outline-color: var(--navy);
+
   font-size: 12px;
 }
 
 .form-cols {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 12px;
 }
 
 .choice-row {
   display: flex;
+
   gap: 8px;
 }
 
 .choice {
   flex: 1;
+
   background: white;
+
   border: 1px solid #d3d5d2;
+
   padding: 11px 7px;
+
   font-size: 11px;
+
   color: var(--ink);
 }
 
 .choice.active {
   background: var(--navy);
+
   border-color: var(--navy);
+
   color: white;
 }
 
 .submit-btn {
   border: 0;
+
   background: var(--wine);
+
   color: white;
+
   padding: 17px 20px;
+
   font-size: 10px;
+
   font-weight: 700;
+
   letter-spacing: 2px;
+
   display: flex;
+
   justify-content: space-between;
+
   margin-top: 8px;
 }
 
 .form-feedback {
   font-size: 12px;
+
   line-height: 1.5;
+
   margin: 0;
+
   color: var(--wine);
 }
 
 /* LOCATION AND MAP */
+
 .location-section {
-  padding: 84px 0 90px;
+  padding: 35px 0 30px;
 }
 
 .map-box {
   min-height: 440px;
+
   background: #d9dbd8;
+
   position: relative;
+
   overflow: hidden;
 }
 
@@ -592,10 +833,11 @@ button {
     height: 390px;
   }
 
-  .story-columns,.event-grid,.rsvp-grid {
+  .story-columns,
+  .event-grid,
+  .rsvp-grid {
     gap: 40px;
   }
-
 }
 
 @media (max-width: 680px) {
@@ -613,15 +855,25 @@ button {
 
   .nav {
     display: none;
+
     position: absolute;
+
     z-index: 20;
+
     left: 0;
+
     top: 58px;
+
     background: var(--paper);
+
     width: 100%;
+
     padding: 20px;
+
     box-shadow: 0 8px 14px #0002;
+
     flex-direction: column;
+
     gap: 17px;
   }
 
@@ -631,10 +883,15 @@ button {
 
   .menu-toggle {
     display: block;
+
     margin-left: auto;
+
     border: 0;
+
     background: none;
+
     font-size: 24px;
+
     color: var(--navy);
   }
 
@@ -644,19 +901,24 @@ button {
 
   .hero {
     grid-template-columns: 1fr;
-    padding-top: 32px;
-    padding-bottom: 55px;
-    gap: 30px;
+
+    padding-top: 8px;
+
+    padding-bottom: 22px;
+
+    gap: 18px;
   }
 
   .hero-author {
-    margin-top: 31px;
+    margin-top: 6px;
+
     font-size: 23px;
   }
 
   .hero h1 {
     font-size: clamp(77px, 19vw, 130px);
-    margin-bottom: 28px;
+
+    margin-bottom: 16px;
   }
 
   .hero-lead {
@@ -665,25 +927,30 @@ button {
 
   .hero-meta {
     gap: 18px;
+
     font-size: 10px;
+    margin-top: 12px;
   }
 
   .hero-actions {
-    margin-top: 25px;
+    margin-top: 16px;
   }
 
   .btn {
     padding: 14px 12px;
+
     font-size: 9px;
+
     gap: 12px;
   }
 
   .hero-topline {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
   }
 
   .hero-art {
     height: 310px;
+
     gap: 22px;
   }
 
@@ -692,16 +959,18 @@ button {
   }
 
   .countdown-band {
-    padding: 30px 0;
+    padding: 16px 0;
   }
 
   .countdown-caption {
     letter-spacing: 3px;
+    margin-bottom: 8px;
   }
 
   .count-cell {
     width: 25%;
-    height: 94px;
+
+    height: 82px;
   }
 
   .count-cell strong {
@@ -714,19 +983,26 @@ button {
 
   .countdown-footer {
     font-size: 8px;
+    margin: 8px 0 0;
   }
 
   .story-section {
-    padding-top: 45px;
-    padding-bottom: 58px;
+    padding-top: 24px;
+
+    padding-bottom: 26px;
   }
 
   .story-photo {
     height: 220px;
   }
 
-  .story-columns,.testimonials,.event-grid,.rsvp-grid,.location-grid {
+  .story-columns,
+  .testimonials,
+  .event-grid,
+  .rsvp-grid,
+  .location-grid {
     grid-template-columns: 1fr;
+
     gap: 25px;
   }
 
@@ -739,11 +1015,12 @@ button {
   }
 
   .speakers-section {
-    padding: 45px 0;
+    padding: 28px 0;
   }
 
   .testimonial {
     min-height: 230px;
+
     padding: 25px;
   }
 
@@ -764,15 +1041,16 @@ button {
   }
 
   .event-section {
-    padding: 50px 0;
+    padding: 26px 0;
   }
 
-  .event-intro h2,.rsvp-intro h2 {
+  .event-intro h2,
+  .rsvp-intro h2 {
     font-size: 41px;
   }
 
   .rsvp-section {
-    padding: 50px 0;
+    padding: 28px 0;
   }
 
   .rsvp-form {
@@ -780,7 +1058,7 @@ button {
   }
 
   .location-section {
-    padding: 50px 0;
+    padding: 28px 0;
   }
 
   .map-box {
@@ -789,8 +1067,8 @@ button {
 
   .footer-inner {
     align-items: start;
+    min-height: 56px;
   }
-
 }
 
 @media (max-width: 380px) {
@@ -804,76 +1082,100 @@ button {
 
   .author-block > img {
     max-width: 240px;
+
     height: 290px;
   }
 
   .form-cols {
     grid-template-columns: 1fr;
   }
-
 }
 
 .map-box.live-map iframe {
   display: block;
+
   width: 100%;
+
   height: 100%;
+
   border: 0;
 }
 
 .location-actions {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 12px;
-  margin: 24px 0 27px;
+
+  margin: 15px 0 17px;
 }
 
 .location-actions a {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 45px;
-  padding: 10px 17px;
-  text-decoration: none;
-  font: 500 13px Oswald,
 
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 45px;
+
+  padding: 10px 17px;
+
+  text-decoration: none;
+
+  font:
+    500 13px Oswald,
     sans-serif;
+
   letter-spacing: 1.8px;
 }
 
 .location-directions {
   background: #68162d;
+
   color: #fff;
 }
 
 .location-open {
   border: 2px solid #24365b;
+
   color: #24365b;
 }
 
 .location-detail {
-  padding: 18px 0;
+  padding: 12px 0;
+
   border-top: 2px dotted #24365b;
 }
 
 .location-detail h3 {
-  font: 500 14px Oswald,
-
+  font:
+    500 14px Oswald,
     sans-serif;
+
   color: #24365b;
+
   letter-spacing: 3px;
+
   margin: 0 0 16px;
 }
 
 .facility-list {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 8px;
 }
 
 .facility-list span {
   background: #e7e9e7;
+
   padding: 8px 11px;
+
   color: #24365b;
+
   font-size: 13px;
 }
 
@@ -881,29 +1183,38 @@ button {
   .location-actions a {
     font-size: 11px;
   }
-
 }
 
 .map-location-copy {
   display: flex;
+
   flex-direction: column;
+
   gap: 4px;
+
   min-width: 0;
 }
 
 @media (max-width: 680px) {
   .map-location-card {
     top: 10px;
+
     left: 10px;
+
     min-height: 76px;
+
     padding: 12px;
+
     gap: 11px;
+
     width: calc(100% - 20px);
   }
 
   .map-location-pin {
     height: 48px;
+
     width: 36px;
+
     flex-basis: 36px;
   }
 
@@ -914,52 +1225,77 @@ button {
   .map-location-copy span {
     font-size: 12px;
   }
-
 }
 
 :root {
   --paper: #f2f2ee;
+
   --navy: #23365d;
+
   --wine: #69172f;
+
   --gray: #dfe3e0;
+
   --ink: #27334a;
+
   --muted: #747b82;
+
   --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.nav a,.header-cta,.brand,.btn,.submit-btn,.choice,.location-actions a,.footer-inner a,.topic-tags span,.testimonial,.chapter-panel li,.story-photo img,.author-block > img {
-  transition: transform 0.38s var(--ease-editorial),
-
+.nav a,
+.header-cta,
+.brand,
+.btn,
+.submit-btn,
+.choice,
+.location-actions a,
+.footer-inner a,
+.topic-tags span,
+.testimonial,
+.chapter-panel li,
+.story-photo img,
+.author-block > img {
+  transition:
+    transform 0.38s var(--ease-editorial),
     background-color 0.25s ease,
-
     color 0.25s ease,
-
     box-shadow 0.38s ease,
-
     opacity 0.3s ease,
-
     border-color 0.25s ease;
 }
 
 .nav a {
   position: relative;
+
   padding-block: 7px;
 }
 
 .nav a::after {
   content: "";
+
   position: absolute;
+
   bottom: 0;
+
   left: 0;
+
   width: 100%;
+
   height: 1px;
+
   background: var(--wine);
+
   transform: scaleX(0);
+
   transform-origin: left;
+
   transition: transform 0.32s var(--ease-editorial);
 }
 
-.nav a:hover::after,.nav a:focus-visible::after,.nav a.is-current::after {
+.nav a:hover::after,
+.nav a:focus-visible::after,
+.nav a.is-current::after {
   transform: scaleX(1);
 }
 
@@ -967,19 +1303,31 @@ button {
   color: var(--wine);
 }
 
-.header-cta:hover,.btn-maroon:hover,.submit-btn:hover,.location-directions:hover {
+.header-cta:hover,
+.btn-maroon:hover,
+.submit-btn:hover,
+.location-directions:hover {
   background: #491024;
+
   box-shadow: 0 8px 20px #69172f26;
+
   transform: translateY(-2px);
 }
 
-.btn-outline:hover,.location-open:hover {
+.btn-outline:hover,
+.location-open:hover {
   background: var(--navy);
+
   color: #fff;
+
   transform: translateY(-2px);
 }
 
-.btn:active,.header-cta:active,.submit-btn:active,.choice:active,.location-actions a:active {
+.btn:active,
+.header-cta:active,
+.submit-btn:active,
+.choice:active,
+.location-actions a:active {
   transform: translateY(1px) scale(0.985);
 }
 
@@ -1001,6 +1349,7 @@ button {
 
 .testimonial:hover {
   transform: translateY(-5px);
+
   box-shadow: 0 16px 35px #26374c16;
 }
 
@@ -1010,17 +1359,21 @@ button {
 
 .author-block > img:hover {
   transform: scale(1.015);
+
   box-shadow: 0 14px 34px #172c3a2b;
 }
 
 .topic-tags span:hover {
   background: var(--navy);
+
   color: white;
+
   border-color: var(--navy);
 }
 
 .choice:hover:not(.active) {
   border-color: var(--navy);
+
   background: #e9edf0;
 }
 
@@ -1030,45 +1383,53 @@ button {
 
 :where(a, button, input, textarea):focus-visible {
   outline: 2px solid #9e2949;
+
   outline-offset: 4px;
 }
 
 [data-reveal].is-visible {
   opacity: 1;
+
   transform: translateY(0);
 }
 
 .has-motion [data-reveal]:not(.is-visible) {
   opacity: 0;
+
   transform: translateY(24px);
 }
 
 .has-motion [data-reveal] {
-  transition: opacity 0.8s ease,
-
+  transition:
+    opacity 0.8s ease,
     transform 0.8s var(--ease-editorial);
 }
 
 .site-header {
   position: relative;
+
   z-index: 30;
 }
 
 @media (min-width: 681px) {
   .site-header {
     position: sticky;
+
     top: 0;
+
     background: rgba(242, 242, 238, 0.96);
+
     backdrop-filter: blur(12px);
   }
-
 }
 
 @media (hover: none) {
-  .testimonial:hover,.author-block > img:hover,.story-photo:hover img,.chapter-panel li:hover {
+  .testimonial:hover,
+  .author-block > img:hover,
+  .story-photo:hover img,
+  .chapter-panel li:hover {
     transform: none;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1076,41 +1437,54 @@ button {
     scroll-behavior: auto;
   }
 
-  *,*::before,*::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
+
     transition-duration: 0.01ms !important;
   }
 
   .has-motion [data-reveal]:not(.is-visible) {
     opacity: 1;
+
     transform: none;
   }
-
 }
 
 /* INVITATION */
+
 .undangan-section {
   width: min(1654px, calc(100% - 10%));
+
   margin: 0 auto;
-  padding: 85px 0 45px;
+
+  padding: 30px 0 14px;
+
   color: #23365d;
 }
 
 .undangan-heading {
   display: flex;
+
   align-items: center;
+
   gap: 34px;
+
   width: 100%;
 }
 
 .undangan-line {
   height: 2px;
+
   background-color: #23365d;
+
   display: block;
 }
 
 .undangan-line.kiri {
   width: 194px;
+
   flex-shrink: 0;
 }
 
@@ -1120,34 +1494,49 @@ button {
 
 .undangan-heading h2 {
   margin: 0;
+
   font-family: "Oswald", sans-serif;
+
   font-size: 32px;
+
   font-weight: 500;
+
   letter-spacing: 11px;
+
   line-height: 1.2;
+
   white-space: nowrap;
+
   color: #23365d;
 }
 
 .undangan-subtitle {
-  margin: 34px 0 0;
+  margin: 16px 0 0;
+
   font-family: "Oswald", sans-serif;
+
   font-size: 23px;
+
   font-weight: 400;
+
   letter-spacing: 6px;
+
   line-height: 1.6;
+
   text-align: center;
+
   color: #23365d;
 }
 
 .undangan-section + .hero {
-  padding-top: 25px;
+  padding-top: 10px;
 }
 
 @media (max-width: 680px) {
   .undangan-section {
     width: calc(100% - 38px);
-    padding: 48px 0 30px;
+
+    padding: 22px 0 12px;
   }
 
   .undangan-heading {
@@ -1160,69 +1549,97 @@ button {
 
   .undangan-heading h2 {
     font-size: 23px;
+
     letter-spacing: 5px;
   }
 
   .undangan-subtitle {
-    margin-top: 25px;
+    margin-top: 12px;
+
     font-size: 12px;
+
     letter-spacing: 2.5px;
+
     line-height: 1.8;
   }
 
   .undangan-section + .hero {
-    padding-top: 15px;
+    padding-top: 8px;
   }
-
 }
 
 .quote-ornament {
   text-align: center;
+
   color: var(--wine);
-  font: 32px "Playfair Display", serif;
-  margin-top: 18px;
-  margin-bottom: 5px;
+
+  font:
+    32px "Playfair Display",
+    serif;
+
+  margin-top: 8px;
+
+  margin-bottom: 2px;
 }
 
 .story-quote {
-  font: italic 31px/1.45 "Playfair Display", serif;
+  font:
+    italic 31px/1.45 "Playfair Display",
+    serif;
+
   width: 100%;
+
   max-width: 100%;
-  margin: 5px auto 10px;
+
+  margin: 3px auto 6px;
+
   padding: 0 10px;
+
   font-family: "Playfair Display", serif;
+
   font-style: italic;
+
   font-weight: 500;
+
   font-size: clamp(18px, 2.1vw, 30px);
+
   line-height: 1.45;
+
   letter-spacing: -0.5px;
+
   color: #69172f;
+
   text-align: center;
 }
 
 .quote-credit {
   font-size: 9px;
+
   letter-spacing: 2px;
+
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 65px;
+
+  margin-top: 8px;
+
+  margin-bottom: 24px;
 }
 
 @media (max-width: 900px) {
   .story-quote {
     font-size: clamp(15px, 2.1vw, 23px);
   }
-
 }
 
 @media (max-width: 680px) {
   .quote-ornament {
-    margin-top: 15px;
+    margin-top: 6px;
   }
 
   .story-quote {
     font-size: 19px;
+
     line-height: 1.5;
+
     padding: 0 5px;
   }
 
@@ -1231,43 +1648,61 @@ button {
   }
 
   .quote-credit {
-    margin-bottom: 40px;
+    margin-bottom: 18px;
   }
-
 }
 
 .story-columns.story-columns-updated {
   display: grid;
+
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
   gap: 55px;
+
   align-items: start;
 }
 
 .story-columns-updated .story-copy {
   padding-top: 5px;
+
   min-width: 0;
 }
 
 .story-columns-updated .story-copy h2 {
   font-family: "Oswald", sans-serif;
+
   font-size: clamp(34px, 3vw, 46px);
+
   font-weight: 600;
+
   line-height: 1.12;
+
   letter-spacing: -0.7px;
+
   color: #23365d;
+
   margin: 0 0 28px;
+
   max-width: 100%;
 }
 
 .story-columns-updated .story-copy p {
   font-family: "DM Sans", sans-serif;
+
   font-size: 16px;
+
   font-weight: 400;
+
   line-height: 1.9;
+
   color: #39465b;
+
   margin: 0 0 24px;
+
   max-width: 100%;
+
   text-align: justify;
+
   text-align-last: left;
 }
 
@@ -1277,67 +1712,101 @@ button {
 
 .story-columns-updated .topic-tags {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 10px;
+
   margin-top: 25px;
 }
 
 .story-columns-updated .topic-tags span {
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   padding: 9px 14px;
+
   border: 1px solid #23365d;
+
   background: transparent;
+
   color: #23365d;
+
   font-family: "Oswald", sans-serif;
+
   font-size: 12px;
+
   font-weight: 400;
+
   letter-spacing: 2px;
+
   transition: all 0.3s ease;
 }
 
 .story-columns-updated .topic-tags span:hover {
   background: #23365d;
+
   color: #ffffff;
 }
 
 .story-columns-updated .chapter-panel {
   background: #cfd4d1;
+
   padding: 38px 34px;
+
   min-width: 0;
 }
 
 .story-columns-updated .panel-kicker {
   font-family: "Oswald", sans-serif;
+
   font-size: 13px;
+
   font-weight: 500;
+
   letter-spacing: 4px;
+
   color: #23365d;
+
   margin: 0 0 27px;
 }
 
 .story-columns-updated .chapter-two-columns {
   display: grid;
+
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
   gap: 22px;
+
   align-items: start;
 }
 
 .story-columns-updated .chapter-list {
   list-style: none;
+
   padding: 0;
+
   margin: 0;
+
   min-width: 0;
 }
 
 .story-columns-updated .chapter-list li {
   display: flex;
+
   align-items: flex-start;
+
   gap: 12px;
+
   padding: 0 0 18px;
+
   margin: 0 0 18px;
+
   border-bottom: 2px dotted #8391a2;
+
   min-width: 0;
 }
 
@@ -1347,31 +1816,44 @@ button {
 
 .story-columns-updated .chapter-list li > strong {
   font-family: "Oswald", sans-serif;
+
   font-size: 27px;
+
   font-weight: 600;
+
   line-height: 1.2;
+
   color: #69172f;
+
   flex-shrink: 0;
 }
 
 .story-columns-updated .chapter-list li > div {
   min-width: 0;
+
   padding-top: 3px;
 }
 
 .story-columns-updated .chapter-list b {
   display: block;
+
   font-family: "Oswald", sans-serif;
+
   font-size: 17px;
+
   font-weight: 600;
+
   line-height: 1.4;
+
   color: #23365d;
+
   overflow-wrap: break-word;
 }
 
 @media (max-width: 1050px) {
   .story-columns.story-columns-updated {
     grid-template-columns: 1fr;
+
     gap: 40px;
   }
 
@@ -1386,7 +1868,6 @@ button {
   .story-columns-updated .chapter-two-columns {
     gap: 35px;
   }
-
 }
 
 @media (max-width: 600px) {
@@ -1396,13 +1877,17 @@ button {
 
   .story-columns-updated .story-copy h2 {
     font-size: 32px;
+
     line-height: 1.2;
+
     margin-bottom: 22px;
   }
 
   .story-columns-updated .story-copy p {
     font-size: 14px;
+
     line-height: 1.85;
+
     margin-bottom: 20px;
   }
 
@@ -1412,6 +1897,7 @@ button {
 
   .story-columns-updated .topic-tags span {
     font-size: 10px;
+
     padding: 8px 11px;
   }
 
@@ -1421,6 +1907,7 @@ button {
 
   .story-columns-updated .chapter-two-columns {
     grid-template-columns: 1fr;
+
     gap: 0;
   }
 
@@ -1431,24 +1918,33 @@ button {
   .story-columns-updated .chapter-list b {
     font-size: 19px;
   }
-
 }
 
 .author-block {
   display: grid;
+
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
   gap: 75px;
+
   align-items: center;
+
   max-width: 1150px;
-  margin: 100px auto 0;
+
+  margin: 36px auto 0;
 }
 
 .author-block > .author-photo {
   width: 100%;
+
   height: 600px;
+
   object-fit: contain;
+
   object-position: center;
+
   background: transparent;
+
   box-shadow: none;
 }
 
@@ -1458,52 +1954,78 @@ button {
 
 .author-bio .panel-kicker {
   font-family: "Oswald", sans-serif;
+
   font-size: 13px;
+
   font-weight: 500;
+
   letter-spacing: 3px;
+
   color: #23365d;
+
   margin: 0 0 18px;
 }
 
 .author-bio .author-name-img {
   display: block;
+
   width: min(100%, 360px);
+
   height: auto;
+
   max-height: 100px;
+
   object-fit: contain;
+
   object-position: left center;
+
   margin: 0 0 25px;
 }
 
 .author-bio .author-script {
   font-family: "Playfair Display", serif;
+
   font-style: italic;
+
   font-size: clamp(20px, 2.1vw, 27px);
+
   font-weight: 500;
+
   line-height: 1.5;
+
   color: #69172f;
+
   margin: 0 0 28px;
 }
 
 .author-bio .author-description p {
   font-family: "DM Sans", sans-serif;
+
   font-size: 13px;
+
   line-height: 1.9;
+
   font-weight: 400;
+
   color: #344158;
+
   text-align: justify;
+
   text-align-last: left;
+
   margin: 0 0 17px;
 }
 
 .author-bio .author-description strong {
   font-weight: 700;
+
   color: #23365d;
 }
 
 @media (max-width: 1000px) {
   .author-block {
     grid-template-columns: 0.85fr 1.15fr;
+
     gap: 35px;
   }
 
@@ -1514,134 +2036,189 @@ button {
   .author-bio .author-script {
     font-size: 21px;
   }
-
 }
 
 @media (max-width: 680px) {
   .author-block {
     grid-template-columns: 1fr;
-    gap: 25px;
-    margin-top: 50px;
+
+    gap: 16px;
+
+    margin-top: 24px;
   }
 
   .author-block > .author-photo {
     width: 100%;
+
     height: 350px;
+
     object-fit: contain;
   }
 
   .author-bio .author-name-img {
     max-width: 270px;
+
     max-height: 80px;
   }
 
   .author-bio .author-script {
     font-size: 21px;
+
     line-height: 1.5;
   }
 
   .author-bio .author-description p {
     font-size: 13px;
+
     line-height: 1.85;
   }
-
 }
 
 /* EXPANDABLE PROGRAM RUNDOWN */
+
 .event-interactive {
   display: grid;
-  grid-template-columns: minmax(0,1fr) minmax(0,1.08fr);
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+
   gap: 65px;
+
   align-items: start;
 }
 
 .event-interactive .event-intro h2 {
   font-family: "Oswald", sans-serif;
+
   font-size: clamp(40px, 4vw, 58px);
+
   line-height: 1.08;
+
   color: #23365d;
-  margin: 10px 0 22px;
+
+  margin: 5px 0 14px;
 }
 
 .event-instruction {
   font-family: "DM Sans", sans-serif;
+
   font-size: 14px;
+
   line-height: 1.9;
+
   color: #697588;
+
   max-width: 440px;
-  margin-bottom: 27px;
+
+  margin-bottom: 15px;
 }
 
 .event-feature {
   background: #23365d;
+
   color: #fff;
+
   padding: 30px;
+
   min-height: 260px;
-  transition: background .3s ease;
+
+  transition: background 0.3s ease;
 }
 
 .event-feature-top {
   display: flex;
+
   justify-content: space-between;
+
   flex-wrap: wrap;
+
   gap: 12px;
+
   font-family: "Oswald", sans-serif;
+
   font-size: 12px;
+
   letter-spacing: 3px;
+
   color: #c6cddd;
 }
 
 #eventActiveTime {
   display: block;
+
   margin: 15px 0 8px;
+
   font-family: "Oswald", sans-serif;
+
   font-size: clamp(50px, 6vw, 88px);
+
   font-weight: 600;
+
   line-height: 1.1;
+
   letter-spacing: -2px;
+
   overflow-wrap: anywhere;
 }
 
 #eventActiveTitle {
   font-family: "Oswald", sans-serif;
+
   font-size: 22px;
+
   line-height: 1.4;
+
   font-weight: 500;
+
   margin: 0;
 }
 
 #eventActiveRange {
   font-family: "DM Sans", sans-serif;
+
   font-size: 12px;
+
   color: #c6cddd;
+
   margin: 9px 0 0;
 }
 
 .event-controls {
   display: flex;
+
   gap: 10px;
+
   margin-top: 24px;
 }
 
 .event-controls button {
   width: 47px;
+
   height: 47px;
+
   background: transparent;
+
   border: 1px solid #8998b5;
+
   color: #fff;
+
   font-size: 24px;
-  transition: all .25s ease;
+
+  transition: all 0.25s ease;
+
   cursor: pointer;
 }
 
 .event-controls button:hover:not(:disabled) {
   background: #fff;
+
   color: #23365d;
+
   transform: translateY(-2px);
 }
 
 .event-controls button:disabled {
-  opacity: .35;
+  opacity: 0.35;
+
   cursor: not-allowed;
 }
 
@@ -1651,38 +2228,58 @@ button {
 
 .event-schedule-heading {
   display: flex;
+
   justify-content: space-between;
+
   font-family: "Oswald", sans-serif;
+
   letter-spacing: 3px;
+
   font-size: 12px;
+
   color: #23365d;
+
   margin: 0 0 20px;
 }
 
 .agenda-list {
   position: relative;
+
   max-height: 660px;
+
   overflow-y: auto;
+
   overflow-x: hidden;
+
   scrollbar-width: thin;
+
   scrollbar-color: #9ca8b6 transparent;
 }
 
 .agenda-list::before {
   content: "";
+
   position: absolute;
+
   top: 22px;
+
   bottom: 22px;
+
   left: 108px;
+
   width: 2px;
+
   background: #aab4c2;
+
   pointer-events: none;
 }
 
 .agenda-item {
   position: relative;
+
   border-bottom: 1px solid #d0d5d9;
-  transition: background .3s ease;
+
+  transition: background 0.3s ease;
 }
 
 .agenda-item.active {
@@ -1699,47 +2296,73 @@ button {
 
 .agenda-trigger {
   display: grid;
-  grid-template-columns: 66px 28px minmax(0,1fr) 20px;
+
+  grid-template-columns: 66px 28px minmax(0, 1fr) 20px;
+
   align-items: center;
+
   gap: 14px;
+
   width: 100%;
+
   padding: 18px 14px;
+
   background: transparent;
+
   border: 0;
+
   color: #23365d;
+
   text-align: left;
+
   cursor: pointer;
 }
 
 .agenda-time {
   font-family: "Oswald", sans-serif;
+
   font-size: 18px;
+
   font-weight: 600;
+
   white-space: nowrap;
 }
 
 .agenda-dot {
   position: relative;
+
   z-index: 1;
+
   width: 21px;
+
   height: 21px;
+
   border-radius: 50%;
+
   border: 2px solid #23365d;
+
   background: var(--paper, #f2f2ee);
+
   justify-self: center;
-  transition: all .3s ease;
+
+  transition: all 0.3s ease;
 }
 
 .agenda-item.active .agenda-dot {
   background: #69172f;
+
   border-color: #69172f;
+
   box-shadow: 0 0 0 4px #69172f18;
 }
 
 .agenda-title {
   font-family: "Oswald", sans-serif;
+
   font-size: 17px;
+
   font-weight: 600;
+
   line-height: 1.4;
 }
 
@@ -1749,7 +2372,8 @@ button {
 
 .agenda-chevron {
   font-size: 18px;
-  transition: transform .3s ease;
+
+  transition: transform 0.3s ease;
 }
 
 .agenda-item.active .agenda-chevron {
@@ -1758,20 +2382,25 @@ button {
 
 .agenda-expand {
   display: grid;
-  grid-template-rows: 0fr;
-  opacity: 0;
-  transition: grid-template-rows .4s cubic-bezier(.22,1,.36,1),
 
-    opacity .3s ease;
+  grid-template-rows: 0fr;
+
+  opacity: 0;
+
+  transition:
+    grid-template-rows 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.3s ease;
 }
 
 .agenda-item.active .agenda-expand {
   grid-template-rows: 1fr;
+
   opacity: 1;
 }
 
 .agenda-expand-inner {
   min-height: 0;
+
   overflow: hidden;
 }
 
@@ -1781,17 +2410,25 @@ button {
 
 .agenda-description {
   font-family: "DM Sans", sans-serif;
+
   font-size: 12px;
+
   line-height: 1.75;
+
   color: #505b6a;
+
   margin: 0 0 15px;
 }
 
 .agenda-meta-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 14px;
+
   border-top: 1px dotted #b9c0c6;
+
   padding-top: 15px;
 }
 
@@ -1801,32 +2438,42 @@ button {
 
 .agenda-meta-label {
   display: block;
+
   font-family: "Oswald", sans-serif;
+
   font-size: 10px;
+
   letter-spacing: 1.5px;
+
   color: #69172f;
+
   margin-bottom: 4px;
 }
 
 .agenda-meta-value {
   display: block;
+
   font-family: "DM Sans", sans-serif;
+
   font-size: 11px;
+
   line-height: 1.6;
+
   color: #344158;
+
   overflow-wrap: break-word;
 }
 
 @media (max-width: 1050px) {
   .event-interactive {
     grid-template-columns: 1fr;
+
     gap: 40px;
   }
 
   .event-feature {
     min-height: auto;
   }
-
 }
 
 @media (max-width: 600px) {
@@ -1839,8 +2486,10 @@ button {
   }
 
   .agenda-trigger {
-    grid-template-columns: 48px 24px minmax(0,1fr) 14px;
+    grid-template-columns: 48px 24px minmax(0, 1fr) 14px;
+
     gap: 9px;
+
     padding: 17px 9px;
   }
 
@@ -1858,6 +2507,7 @@ button {
 
   .agenda-dot {
     width: 17px;
+
     height: 17px;
   }
 
@@ -1867,85 +2517,122 @@ button {
 
   .agenda-meta-grid {
     grid-template-columns: 1fr;
+
     gap: 12px;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .agenda-expand,.agenda-dot,.agenda-chevron {
+  .agenda-expand,
+  .agenda-dot,
+  .agenda-chevron {
     transition: none;
   }
-
 }
 
 .contact-rsvp {
   font-size: 10px;
+
   letter-spacing: 1.8px;
+
   line-height: 2;
-  margin-top: 48px;
+
+  margin-top: 20px;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: flex-start;
+
   gap: 12px;
 }
 
 /* RSVP WHATSAPP CONTACT */
+
 .contact-rsvp .contact-label {
   font-family: "Oswald", sans-serif;
+
   font-size: 12px;
+
   font-weight: 500;
+
   letter-spacing: 3px;
+
   color: #23365d;
 }
 
 .contact-rsvp h3 {
   font-family: "Oswald", sans-serif;
+
   font-size: 22px;
+
   font-weight: 500;
+
   letter-spacing: 1.5px;
+
   color: #23365d;
+
   margin: 0;
 }
 
 .contact-whatsapp {
   display: inline-flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 20px;
+
   padding: 15px 20px;
+
   border: 1px solid #23365d;
+
   color: #23365d;
+
   text-decoration: none;
-  transition: all .3s ease;
+
+  transition: all 0.3s ease;
 }
 
 .contact-phone {
   font-family: "Oswald", sans-serif;
+
   font-size: 22px;
+
   font-weight: 500;
+
   letter-spacing: 1px;
+
   line-height: 1.3;
 }
 
 .contact-whatsapp:hover {
   background: #23365d;
+
   color: #fff;
+
   transform: translateY(-3px);
 }
 
 .contact-hint {
   font-family: "DM Sans", sans-serif;
+
   font-size: 11px;
+
   color: #667382;
+
   letter-spacing: 0;
+
   line-height: 1.5;
+
   margin: 0;
 }
 
 @media (max-width: 680px) {
   .contact-rsvp {
-    margin-top: 30px;
+    margin-top: 18px;
   }
 
   .contact-phone {
@@ -1955,100 +2642,148 @@ button {
   .contact-whatsapp {
     padding: 13px 16px;
   }
-
 }
 
 .location-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 50px;
+
   align-items: start;
 }
 
 .map-box.live-map {
   position: relative;
+
   overflow: hidden;
+
   background: #e4e6e6;
+
   padding: 0;
+
   height: 585px;
+
   min-height: 0;
+
   border: 2px solid #23365d;
 }
 
 .map-location-card {
   position: absolute;
+
   z-index: 2;
+
   display: flex;
+
   align-items: center;
+
   background: #f4f4f1;
+
   box-shadow: 0 3px 18px #0002;
+
   pointer-events: none;
+
   width: min(340px, calc(100% - 24px));
+
   min-height: 80px;
+
   top: 12px;
+
   left: 12px;
+
   padding: 14px 16px;
+
   gap: 12px;
 }
 
 .map-location-pin {
   width: 38px;
+
   height: 52px;
+
   flex: 0 0 38px;
 }
 
 .map-location-copy strong {
-  font: 600 clamp(21px, 2vw, 31px)/1.15 "Oswald", sans-serif;
+  font:
+    600 clamp(21px, 2vw, 31px)/1.15 "Oswald",
+    sans-serif;
+
   color: #23365d;
+
   letter-spacing: 0.1px;
+
   font-size: 19px;
 }
 
 .map-location-copy span {
-  font: 400 clamp(13px, 1.25vw, 20px)/1.4 "DM Sans", sans-serif;
+  font:
+    400 clamp(13px, 1.25vw, 20px)/1.4 "DM Sans",
+    sans-serif;
+
   color: #5f6c81;
+
   font-size: 12px;
 }
 
 .location-info h2 {
   margin: 0;
+
   font-size: 44px;
+
   line-height: 1.1;
+
   margin-bottom: 15px;
 }
 
 .location-info > p {
   font-size: 14px;
+
   line-height: 1.8;
 }
 
 .access-item {
   margin: 0 0 15px;
+
   line-height: 1.6;
+
   display: grid;
+
   grid-template-columns: 110px minmax(0, 1fr);
+
   gap: 15px;
+
   align-items: start;
-  margin-bottom: 20px;
+
+  margin-bottom: 12px;
 }
 
 .access-item strong {
   font-family: Oswald, sans-serif;
+
   color: #68162d;
+
   letter-spacing: 0.6px;
+
   font-size: 15px;
 }
 
 .access-item span {
   color: #414b5b;
+
   font-size: 13px;
+
   line-height: 1.8;
+
   text-align: left;
 }
 
 @media (max-width: 760px) {
   .location-grid {
     grid-template-columns: 1fr;
+
     gap: 30px;
   }
 
@@ -2062,50 +2797,75 @@ button {
 
   .access-item {
     grid-template-columns: 100px minmax(0, 1fr);
+
     gap: 12px;
   }
 
-  .access-item strong,.access-item span {
+  .access-item strong,
+  .access-item span {
     font-size: 12px;
   }
-
 }
 
 /* FOOTER */
+
 .site-footer {
-  padding: 12px 0 !important;
+  padding: 8px 0 !important;
+
   border-top: 1px solid #23365d;
 }
 
 .footer-inner {
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   gap: 30px;
-  min-height: 75px;
+
+  min-height: 62px;
 }
 
 .footer-logo {
-  font: 600 25px/0.8 "Playfair Display", serif;
+  font:
+    600 25px/0.8 "Playfair Display",
+    serif;
+
   color: var(--wine);
+
   position: relative;
+
   display: block;
+
   width: 145px;
+
   height: 70px;
+
   flex: 0 0 145px;
+
   overflow: hidden;
 }
 
 /* FOOTER PNG LOGO */
+
 .footer-logo-img {
   position: absolute;
+
   top: 50%;
+
   left: 50%;
+
   width: 300px !important;
+
   height: auto !important;
+
   max-width: none !important;
+
   max-height: none !important;
+
   object-fit: contain;
+
   transform: translate(-50%, -50%);
 }
 
@@ -2115,30 +2875,38 @@ button {
 
 .footer-inner p {
   margin: 0;
+
   font-size: 10px;
+
   line-height: 1.7;
+
   letter-spacing: 1.2px;
 }
 
 .footer-inner > a:last-child {
   font-size: 10px;
+
   font-weight: 700;
+
   white-space: nowrap;
 }
 
 @media (max-width: 680px) {
   .site-footer {
-    padding: 12px 0 !important;
+    padding: 8px 0 !important;
   }
 
   .footer-inner {
-    min-height: 65px;
+    min-height: 56px;
+
     gap: 12px;
   }
 
   .footer-logo {
     width: 95px;
+
     height: 55px;
+
     flex-basis: 95px;
   }
 
@@ -2148,20 +2916,24 @@ button {
 
   .footer-inner p {
     font-size: 8px;
+
     letter-spacing: 0.4px;
   }
 
   .footer-inner > a:last-child {
     font-size: 8px;
   }
-
 }
 
 .header-logo-img {
   display: block;
+
   width: 155px;
+
   height: 60px;
+
   object-fit: contain;
+
   transition: transform 0.3s ease;
 }
 
@@ -2172,283 +2944,505 @@ button {
 @media (max-width: 680px) {
   .header-logo-img {
     width: 115px;
+
     height: 52px;
   }
-
 }
 
 @media (max-width: 680px) {
   .site-header .header-logo-img {
     height: 52px !important;
+
     transform: scale(1.1);
   }
-
 }
 
 /* FINAL HEADER PNG LOGO SIZE */
+
 .site-header .brand {
   flex-shrink: 0;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   width: 175px !important;
+
   height: 66px !important;
+
   flex: 0 0 175px !important;
+
   position: relative;
+
   overflow: hidden !important;
 }
 
 .site-header .header-logo-img {
   position: absolute;
+
   top: 50%;
+
   left: 50%;
+
   width: 300px !important;
+
   height: auto !important;
+
   max-width: none !important;
+
   max-height: none !important;
+
   object-fit: contain;
+
   transform: translate(-50%, -50%) !important;
 }
 
 @media (max-width: 680px) {
   .site-header .brand {
     width: 125px !important;
+
     height: 58px !important;
+
     flex-basis: 125px !important;
   }
 
   .site-header .header-logo-img {
     width: 220px !important;
   }
-
 }
 
 /* ==============================================================
+
    BUKU 3D - COVER REVISI.PDF
+
    3 tekstur dari PDF: cover depan / belakang / punggung.
+
    Bayangan di viewport (bukan di .book-3d) agar tidak flatten 3D.
+
    ============================================================== */
+
 .hero-art.hero-art-3d {
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: clamp(10px, 2.5vw, 32px);
+
   height: auto;
-  min-height: 465px;
+
+  min-height: 405px;
+
   overflow: visible;
 }
 
 .book-stage {
   --book-width: clamp(145px, 15vw, 218px);
+
   --book-height: calc(var(--book-width) * 1.586);
+
   /* Sesuai perbandingan lebar spine terhadap cover asli PDF. */
-  --book-depth: calc(var(--book-width) * .245);
+
+  --book-depth: calc(var(--book-width) * 0.245);
+
   display: flex;
+
   flex: 0 0 auto;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 10px;
+
   min-width: 0;
 }
 
 .book-viewport {
   position: relative;
+
   width: var(--book-width);
+
   height: var(--book-height);
+
   perspective: 1150px;
+
   cursor: grab;
+
   touch-action: pan-y;
+
   user-select: none;
+
   -webkit-user-select: none;
+
   -webkit-tap-highlight-color: transparent;
 }
 
 /* Bayangan terpisah supaya 6 bidang buku tetap 3D ketika berputar. */
+
 .book-viewport::before {
   content: "";
+
   position: absolute;
+
   z-index: -1;
+
   left: 6%;
+
   right: -10%;
+
   bottom: -16px;
+
   height: 22px;
+
   border-radius: 50%;
-  background: rgba(25, 33, 41, .24);
+
+  background: rgba(25, 33, 41, 0.24);
+
   filter: blur(12px);
+
   transform: rotate(-3deg);
+
   pointer-events: none;
 }
 
-.book-viewport.is-dragging { cursor: grabbing; }
+.book-viewport.is-dragging {
+  cursor: grabbing;
+}
 
 .book-3d {
   position: relative;
+
   width: 100%;
+
   height: 100%;
+
   transform-style: preserve-3d;
+
   -webkit-transform-style: preserve-3d;
+
   transform: rotateX(var(--book-x, -5deg)) rotateY(var(--book-y, 25deg));
-  transition: transform .65s cubic-bezier(.22, 1, .36, 1);
+
+  transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+
   will-change: transform;
+
   pointer-events: none;
+
   /* JANGAN pasang filter, opacity <1, atau overflow:hidden di sini: flatten 3D. */
 }
 
-.book-viewport.is-dragging .book-3d { transition: none; }
+.book-viewport.is-dragging .book-3d {
+  transition: none;
+}
 
 .book-face {
   position: absolute;
+
   inset: 0;
+
   overflow: hidden;
+
   backface-visibility: hidden;
+
   -webkit-backface-visibility: hidden;
 }
 
 .book-face img {
   display: block;
+
   width: 100%;
+
   height: 100%;
+
   object-fit: fill;
+
   -webkit-user-drag: none;
+
   user-select: none;
 }
 
 .book-face::after {
   content: "";
+
   position: absolute;
+
   inset: 0;
+
   pointer-events: none;
 }
 
 .book-front {
   background: #fe3a00;
+
   transform: translateZ(calc(var(--book-depth) / 2));
 }
+
 .book-front::after {
-  background: linear-gradient(90deg, rgba(0,0,0,.18), transparent 6%, transparent 91%, rgba(255,255,255,.14));
-}
-.book-back {
-  background: #70cdbc;
-  transform: rotateY(180deg) translateZ(calc(var(--book-depth) / 2));
-}
-.book-back::after {
-  background: linear-gradient(270deg, rgba(0,0,0,.14), transparent 6%);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.18),
+    transparent 6%,
+    transparent 91%,
+    rgba(255, 255, 255, 0.14)
+  );
 }
 
-.book-spine, .book-pages {
+.book-back {
+  background: #70cdbc;
+
+  transform: rotateY(180deg) translateZ(calc(var(--book-depth) / 2));
+}
+
+.book-back::after {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.14), transparent 6%);
+}
+
+.book-spine,
+.book-pages {
   position: absolute;
+
   left: calc(50% - var(--book-depth) / 2);
+
   top: 0;
+
   width: var(--book-depth);
+
   height: 100%;
+
   backface-visibility: hidden;
+
   -webkit-backface-visibility: hidden;
 }
 
 .book-spine {
   background: #70cdbc url("assets/book-spine.png") center / 100% 100% no-repeat;
+
   transform: rotateY(-90deg) translateZ(calc(var(--book-width) / 2));
 }
+
 .book-spine::after {
   content: "";
+
   position: absolute;
+
   inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,.20), transparent 28%, rgba(255,255,255,.10) 85%, rgba(0,0,0,.11));
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.2),
+    transparent 28%,
+    rgba(255, 255, 255, 0.1) 85%,
+    rgba(0, 0, 0, 0.11)
+  );
 }
 
 .book-pages {
   background:
-    linear-gradient(90deg, rgba(0,0,0,.13), transparent 13%, rgba(255,255,255,.28) 90%, rgba(0,0,0,.12)),
-    repeating-linear-gradient(0deg, #f8f2e5 0px, #f8f2e5 2px, #d7cbbb 2.5px, #f4ede0 4px);
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.13),
+      transparent 13%,
+      rgba(255, 255, 255, 0.28) 90%,
+      rgba(0, 0, 0, 0.12)
+    ),
+    repeating-linear-gradient(
+      0deg,
+      #f8f2e5 0px,
+      #f8f2e5 2px,
+      #d7cbbb 2.5px,
+      #f4ede0 4px
+    );
+
   transform: rotateY(90deg) translateZ(calc(var(--book-width) / 2));
 }
 
-.book-page-top, .book-page-bottom {
+.book-page-top,
+.book-page-bottom {
   position: absolute;
-  top: calc(50% - var(--book-depth) / 2);
-  left: 0;
-  width: 100%;
-  height: var(--book-depth);
-  background:
-    linear-gradient(0deg, rgba(0,0,0,.1), transparent 18%, rgba(255,255,255,.25) 90%),
-    repeating-linear-gradient(90deg, #f4ead7 0px, #f4ead7 3px, #d9cbb4 3.5px, #fbf6ed 5px);
-}
-.book-page-top { transform: rotateX(90deg) translateZ(calc(var(--book-height) / 2)); }
-.book-page-bottom { transform: rotateX(-90deg) translateZ(calc(var(--book-height) / 2)); }
 
-.book-controls { display: flex; justify-content: center; align-items: center; gap: 7px; }
+  top: calc(50% - var(--book-depth) / 2);
+
+  left: 0;
+
+  width: 100%;
+
+  height: var(--book-depth);
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1),
+      transparent 18%,
+      rgba(255, 255, 255, 0.25) 90%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #f4ead7 0px,
+      #f4ead7 3px,
+      #d9cbb4 3.5px,
+      #fbf6ed 5px
+    );
+}
+
+.book-page-top {
+  transform: rotateX(90deg) translateZ(calc(var(--book-height) / 2));
+}
+
+.book-page-bottom {
+  transform: rotateX(-90deg) translateZ(calc(var(--book-height) / 2));
+}
+
+.book-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
 .book-controls button {
   min-width: 34px;
+
   height: 32px;
+
   padding: 0 9px;
+
   border: 1px solid var(--navy);
+
   background: transparent;
+
   color: var(--navy);
-  font: 500 12px "Oswald", sans-serif;
+
+  font:
+    500 12px "Oswald",
+    sans-serif;
+
   cursor: pointer;
-  transition: background-color .2s, color .2s;
+
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
-.book-controls button:hover { background: var(--navy); color: #fff; }
-.book-controls button:active { transform: scale(.96); }
+
+.book-controls button:hover {
+  background: var(--navy);
+  color: #fff;
+}
+
+.book-controls button:active {
+  transform: scale(0.96);
+}
+
 .book-help {
   margin: 0;
+
   color: #657086;
-  font: 500 9px "DM Sans", sans-serif;
+
+  font:
+    500 9px "DM Sans",
+    sans-serif;
+
   letter-spacing: 1px;
+
   text-align: center;
 }
 
 .hero-art-3d .hero-author-portrait {
   display: block;
+
   flex: 0 1 auto;
+
   width: clamp(130px, 12vw, 190px);
+
   max-width: 42%;
+
   max-height: 395px;
+
   height: auto;
+
   object-fit: contain;
+
   object-position: center bottom;
+
   -webkit-user-drag: none;
-  filter: drop-shadow(2px 10px 7px rgba(35, 54, 93, .09));
+
+  filter: drop-shadow(2px 10px 7px rgba(35, 54, 93, 0.09));
 }
 
 @media (max-width: 680px) {
-  .hero-art.hero-art-3d { min-height: 345px; gap: 12px; }
-  .book-stage { --book-width: clamp(123px, 38vw, 165px); }
-  .hero-art-3d .hero-author-portrait { width: min(39%, 155px); max-height: 300px; }
-  .book-controls button { min-width: 30px; height: 30px; }
-  .book-help { font-size: 8px; letter-spacing: .4px; }
+  .hero-art.hero-art-3d {
+    min-height: 320px;
+    gap: 12px;
+  }
+
+  .book-stage {
+    --book-width: clamp(123px, 38vw, 165px);
+  }
+
+  .hero-art-3d .hero-author-portrait {
+    width: min(39%, 155px);
+    max-height: 300px;
+  }
+
+  .book-controls button {
+    min-width: 30px;
+    height: 30px;
+  }
+
+  .book-help {
+    font-size: 8px;
+    letter-spacing: 0.4px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .book-3d, .book-controls button { transition: none; }
+  .book-3d,
+  .book-controls button {
+    transition: none;
+  }
 }
 
 /* SEBUAH NOVEL DI SAMPING KATA CINTA */
 
 .hero #heroTitle .hero-title-final {
   display: block;
+
   white-space: nowrap;
 }
 
 .hero #heroTitle .hero-title-label {
   display: inline-block;
+
   font-family: "Oswald", sans-serif;
+
   font-size: clamp(12px, 1.15vw, 17px);
+
   font-weight: 400;
+
   font-style: normal;
+
   letter-spacing: 2px;
+
   line-height: 1.3;
+
   color: #23365d;
 
   margin-left: 12px;
+
   vertical-align: baseline;
 }
 
 /* MOBILE */
+
 @media (max-width: 680px) {
   .hero #heroTitle .hero-title-label {
     font-size: 11px;
+
     letter-spacing: 1px;
+
     margin-left: 6px;
   }
 }
@@ -2457,14 +3451,23 @@ button {
 
 .testimonial-photo {
   width: 70px;
+
   height: 70px;
+
   min-width: 70px;
+
   border-radius: 50%;
+
   object-fit: cover;
+
   object-position: center top;
+
   display: block;
+
   flex-shrink: 0;
+
   border: 2px solid #d0d5d1;
+
   transition: transform 0.3s ease;
 }
 
@@ -2475,7 +3478,9 @@ button {
 @media (max-width: 680px) {
   .testimonial-photo {
     width: 60px;
+
     height: 60px;
+
     min-width: 60px;
   }
 }
@@ -2485,63 +3490,92 @@ button {
 .hero-refined .publisher.publisher-kla,
 .publisher.publisher-kla {
   display: flex;
+
   align-items: center;
+
   justify-content: flex-start;
+
   gap: 14px;
 
   width: fit-content;
+
   margin: 20px 0 0 auto;
+
   padding: 10px 12px;
 
   border: 1px solid #b8c2d0;
+
   background: transparent;
+
   box-sizing: border-box;
 }
 
 /* LOGO KLA PROJECT */
+
 .publisher-kla .kla-logo {
   display: block;
+
   width: 60px;
+
   height: 78px;
+
   max-height: none;
+
   object-fit: contain;
+
   flex-shrink: 0;
 }
 
 /* TEKS */
+
 .kla-info {
   display: flex;
+
   flex-direction: column;
+
   gap: 3px;
+
   white-space: nowrap;
 }
 
 .kla-info span {
   font-family: "Oswald", sans-serif;
+
   font-size: 11px;
+
   font-weight: 400;
+
   letter-spacing: 2.5px;
+
   color: #23365d;
 }
 
 .kla-info strong {
   font-family: "Oswald", sans-serif;
+
   font-size: 19px;
+
   font-weight: 600;
+
   letter-spacing: 1px;
+
   color: #23365d;
 }
 
 /* MOBILE */
+
 @media (max-width: 680px) {
   .publisher.publisher-kla {
-    margin: 20px auto 0;
+    margin: 10px auto 0;
+
     gap: 10px;
+
     padding: 8px 10px;
   }
 
   .publisher-kla .kla-logo {
     width: 48px;
+
     height: 65px;
   }
 
@@ -2551,5 +3585,4168 @@ button {
 
   .kla-info span {
     font-size: 9px;
+  }
+}
+/* =====================================
+   HERO FINAL - DUA BARIS & RAPI
+===================================== */
+
+/* Layout utama */
+.hero.hero-refined {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: 28px;
+  min-height: auto;
+  padding-bottom: 30px;
+}
+
+/* JUDUL HANYA 2 BARIS */
+.hero.hero-refined h1.hero-title-two-lines {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 3.4vw, 54px) !important;
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+  color: #69172f;
+  margin: 10px 0 20px;
+}
+
+/* Baris judul */
+.hero.hero-refined .hero-title-row {
+  display: block;
+  white-space: nowrap;
+}
+
+/* SEBUAH NOVEL DI SAMPING CINTA */
+.hero.hero-refined .hero-title-label {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(9px, 0.85vw, 13px) !important;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #23365d;
+  margin-left: 5px;
+  vertical-align: baseline;
+}
+
+/* =====================================
+   BAGIAN KANAN LEBIH RAPAT
+===================================== */
+
+.hero-refined .hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  width: 100%;
+}
+
+/* Tulisan atas buku */
+.hero-refined .hero-topline {
+  margin: 0 0 5px;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+/* Buku dan foto penulis */
+.hero-refined .hero-art.hero-art-3d {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+}
+
+/* Ukuran buku 3D */
+.hero-refined .book-stage {
+  --book-width: clamp(145px, 15vw, 210px);
+  gap: 6px;
+}
+
+/* Foto Andi Arief */
+.hero-refined .hero-author-portrait {
+  display: block;
+  width: clamp(100px, 11vw, 155px);
+  max-width: 35%;
+  max-height: 340px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tombol rotasi buku */
+.hero-refined .book-controls {
+  margin-top: 3px;
+}
+
+.hero-refined .book-help {
+  margin: 3px 0 0;
+}
+
+/* KLa Project tepat di bawah gambar */
+.hero-refined .publisher.publisher-kla {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  gap: 10px;
+  margin: 8px auto 0;
+  padding: 7px 11px;
+  border: 1px solid #b8c2d0;
+}
+
+/* Logo KLa */
+.hero-refined .publisher-kla .kla-logo {
+  width: 48px;
+  height: 62px;
+  max-height: none;
+  object-fit: contain;
+}
+
+.hero-refined .kla-info strong {
+  font-size: 17px;
+}
+
+.hero-refined .kla-info span {
+  font-size: 10px;
+}
+
+/* =====================================
+   RESPONSIVE MOBILE
+===================================== */
+
+@media (max-width: 680px) {
+  .hero.hero-refined {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-bottom: 25px;
+  }
+
+  .hero.hero-refined h1.hero-title-two-lines {
+    font-size: clamp(23px, 6vw, 38px) !important;
+    letter-spacing: -1.2px;
+    line-height: 1.12;
+  }
+
+  .hero.hero-refined .hero-title-label {
+    font-size: 9px !important;
+    letter-spacing: 0.3px;
+    margin-left: 3px;
+  }
+
+  .hero-refined .hero-art.hero-art-3d {
+    gap: 10px;
+  }
+
+  .hero-refined .book-stage {
+    --book-width: clamp(120px, 36vw, 165px);
+  }
+
+  .hero-refined .hero-author-portrait {
+    width: 35%;
+    max-height: 280px;
+  }
+
+  .hero-refined .publisher.publisher-kla {
+    margin-top: 8px;
+  }
+}
+
+/* LOGO PENERBIT */
+.hero-publisher {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.hero-publisher .publisher-logo {
+  display: block;
+  width: 90px;
+  height: 34px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+/* KUTIPAN HERO - RATA TENGAH */
+
+.hero-refined .hero-right .hero-topline {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto 12px;
+
+  text-align: center !important;
+  text-align-last: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  line-height: 1.7;
+  color: #23365d;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-right .hero-topline {
+    max-width: 100%;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+  }
+}
+
+/* KUTIPAN TEPAT DI TENGAH SELURUH HERO */
+
+.hero.hero-refined > .hero-topline {
+  grid-column: 1 / -1 !important;
+  grid-row: 1 !important;
+
+  width: 100% !important;
+  max-width: none !important;
+  justify-self: stretch !important;
+
+  margin: 0 0 5px !important;
+  padding: 0 !important;
+
+  text-align: center !important;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+  color: #23365d;
+}
+
+.hero.hero-refined > .hero-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.hero.hero-refined > .hero-right {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+@media (max-width: 680px) {
+  .hero.hero-refined > .hero-topline {
+    font-size: 11px;
+    padding: 0 8px !important;
+  }
+
+  .hero.hero-refined > .hero-topline br {
+    display: none;
+  }
+
+  .hero.hero-refined > .hero-left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .hero.hero-refined > .hero-right {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+/* =====================================
+   BAB UTAMA - 1 KOLOM RAPAT
+===================================== */
+
+/* Semua bab menjadi satu kolom */
+.story-columns-updated .chapter-two-columns {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+/* Hilangkan jarak antar daftar */
+.story-columns-updated .chapter-list {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Setiap bab lebih rapat */
+.story-columns-updated .chapter-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 9px 0 !important;
+  margin: 0 !important;
+  border-bottom: 1px dotted #8391a2;
+}
+
+/* Nomor bab */
+.story-columns-updated .chapter-list li > strong {
+  font-size: 24px;
+  line-height: 1.2;
+  min-width: 30px;
+}
+
+/* Judul bab */
+.story-columns-updated .chapter-list li > div {
+  padding-top: 0;
+}
+
+.story-columns-updated .chapter-list b {
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+/* Rapatkan panel */
+.story-columns-updated .chapter-panel {
+  padding: 25px 32px;
+}
+
+/* Judul BAB-BAB UTAMA */
+.story-columns-updated .panel-kicker {
+  margin-bottom: 15px;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .story-columns-updated .chapter-panel {
+    padding: 20px 22px;
+  }
+
+  .story-columns-updated .chapter-list li {
+    padding: 8px 0 !important;
+  }
+
+  .story-columns-updated .chapter-list b {
+    font-size: 16px;
+  }
+}
+
+/* PARAGRAF SINOPSIS KIRI - LEBIH KECIL */
+
+.story-columns-updated .story-copy p {
+  font-size: 13px !important;
+  line-height: 1.8 !important;
+  text-align: justify;
+  margin-bottom: 15px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .story-columns-updated .story-copy p {
+    font-size: 12px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* =====================================
+   SINOPSIS - LAYOUT 70% / 30%
+===================================== */
+
+.story-columns.story-columns-updated {
+  display: grid !important;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 3fr) !important;
+  gap: 30px !important;
+  align-items: center !important;
+}
+
+/* TEKS KIRI - 70% */
+.story-columns-updated .story-copy {
+  width: 100%;
+  min-width: 0;
+  align-self: center;
+}
+
+/* PANEL BAB KANAN - 30% */
+.story-columns-updated .chapter-panel {
+  width: 100%;
+  min-width: 0;
+  align-self: center !important;
+  padding: 22px 20px !important;
+}
+
+/* RAPATKAN DAFTAR BAB */
+.story-columns-updated .chapter-list li {
+  gap: 10px;
+  padding: 8px 0 !important;
+}
+
+.story-columns-updated .chapter-list li > strong {
+  font-size: 21px;
+}
+
+.story-columns-updated .chapter-list b {
+  font-size: 15px;
+}
+
+/* TABLET & MOBILE */
+@media (max-width: 900px) {
+  .story-columns.story-columns-updated {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+  }
+
+  .story-columns-updated .chapter-panel {
+    width: 100%;
+  }
+}
+
+/* =====================================
+   PROFIL PENULIS - COMPACT DESIGN
+===================================== */
+
+.speakers-section {
+  padding: 35px 0 48px;
+}
+
+.speakers-section .section-heading {
+  margin-bottom: 20px;
+}
+
+/* DUA KARTU BERDAMPINGAN */
+
+.writer-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* KARTU PENULIS */
+
+.writer-profile-card {
+  display: grid;
+  grid-template-columns: 135px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+
+  background: #f5f6f3;
+  border: 1px solid #ccd2d2;
+  padding: 24px;
+
+  min-width: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.writer-profile-card:hover {
+  box-shadow: 0 8px 24px rgba(35, 54, 93, 0.08);
+}
+
+/* FOTO */
+
+.writer-profile-photo {
+  width: 100%;
+  height: 185px;
+  overflow: hidden;
+  background: #e3e6e3;
+}
+
+.writer-profile-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* KONTEN */
+
+.writer-profile-content {
+  min-width: 0;
+}
+
+.writer-profile-label {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: #69172f;
+  margin-bottom: 6px;
+}
+
+.writer-profile-content h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #23365d;
+  margin: 0 0 14px;
+}
+
+.writer-profile-bio {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #39465b;
+  text-align: justify;
+  margin: 0 0 16px;
+}
+
+/* KARYA PENULIS */
+
+.writer-profile-works {
+  border-top: 2px dotted #9ba9b7;
+  padding-top: 12px;
+}
+
+.writer-profile-works h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #23365d;
+  margin: 0 0 10px;
+}
+
+.writer-work {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #465164;
+}
+
+.writer-work span {
+  color: #79859a;
+  flex-shrink: 0;
+}
+
+/* RAPATKAN KE BIOGRAFI ANDI ARIEF */
+
+.speakers-section .author-block {
+  margin-top: 40px;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .writer-profile-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .writer-profile-card {
+    grid-template-columns: 160px minmax(0, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .speakers-section {
+    padding: 25px 0 35px;
+  }
+
+  .writer-profile-card {
+    grid-template-columns: 95px minmax(0, 1fr);
+    gap: 13px;
+    padding: 15px;
+  }
+
+  .writer-profile-photo {
+    height: 130px;
+  }
+
+  .writer-profile-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .writer-profile-bio {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .writer-work {
+    font-size: 10px;
+  }
+
+  .speakers-section .author-block {
+    margin-top: 25px;
+  }
+}
+
+/* BIOGRAFI + PNG ANDI ARIEF SEJAJAR */
+
+.author-bio .author-bio-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.author-bio-heading span {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #23365d;
+}
+
+.author-bio .author-bio-heading .author-name-img {
+  display: block;
+  width: 180px;
+  max-height: 65px;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .author-bio-heading span {
+    font-size: 15px;
+  }
+
+  .author-bio .author-bio-heading .author-name-img {
+    width: 130px;
+  }
+}
+
+/* FOOTER - TEKS TEPAT DI TENGAH */
+
+.footer-inner {
+  display: grid !important;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-inner > p {
+  text-align: center !important;
+  justify-self: center;
+  margin: 0 !important;
+  max-width: 650px;
+  line-height: 1.7;
+}
+
+.footer-inner > a:last-child {
+  justify-self: end;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 12px;
+  }
+
+  .footer-inner > p {
+    text-align: center !important;
+    font-size: 10px;
+  }
+
+  .footer-inner > a:last-child {
+    justify-self: center;
+  }
+}
+
+/* =====================================
+   LOKASI - SPACING LEBIH RAPAT
+===================================== */
+
+/* Jarak tombol ke bagian akses */
+.location-actions {
+  margin: 14px 0 15px !important;
+  gap: 10px;
+}
+
+/* Garis pemisah dan isi */
+.location-detail {
+  padding: 12px 0 !important;
+}
+
+/* Judul AKSES dan FASILITAS */
+.location-detail h3 {
+  margin: 0 0 10px !important;
+}
+
+/* MRT, TRANSJAKARTA, KENDARAAN */
+.location-detail .access-item {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+
+  margin: 0 0 9px !important;
+  padding: 0 !important;
+  line-height: 1.45;
+}
+
+/* Hilangkan jarak tambahan terakhir */
+.location-detail .access-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Teks akses */
+.location-detail .access-item strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.location-detail .access-item span {
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* Fasilitas */
+.facility-list {
+  gap: 6px;
+}
+
+.facility-list span {
+  padding: 6px 9px;
+  font-size: 12px;
+}
+/* VIDEO SETELAH KUTIPAN */
+
+.story-video {
+  width: 100%;
+  max-width: 1000px;
+  margin: 15px auto 35px;
+}
+
+.novel-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  background: #111;
+  object-fit: contain;
+  border: 1px solid #d0d5d1;
+}
+
+/* RAPATKAN JARAK KUTIPAN KE VIDEO */
+.story-section .quote-credit {
+  margin-bottom: 15px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .story-video {
+    margin: 10px auto 25px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .location-detail .access-item {
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 8px;
+    margin-bottom: 8px !important;
+  }
+
+  .location-detail .access-item strong,
+  .location-detail .access-item span {
+    font-size: 11px;
+  }
+}
+
+/* VIDEO MP4 - UKURAN PIXEL */
+
+.story-video {
+  width: 640px;
+  max-width: 100%;
+  margin: 15px auto 30px;
+}
+
+.novel-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #111;
+  border: 1px solid #d0d5d1;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 680px) {
+  .story-video {
+    width: 100%;
+    margin: 10px auto 20px;
+  }
+}
+
+/* ====================================
+   CINEMATIC VIDEO - FULL WIDTH BANNER
+==================================== */
+
+.story-video {
+  position: relative;
+  width: 100vw;
+  max-width: none;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0 30px;
+  aspect-ratio: 4 / 1;
+  overflow: hidden;
+  background: #000;
+}
+
+.novel-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: none;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .story-video {
+    aspect-ratio: 3 / 1;
+    margin: 12px 0 25px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .story-video {
+    aspect-ratio: 16 / 9;
+    margin: 10px 0 20px;
+  }
+
+  .novel-video {
+    object-position: center;
+  }
+}
+
+/* VIDEO OTOMATIS TANPA KONTROL */
+
+.novel-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.novel-video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* BIOGRAFI + PNG ANDI ARIEF LEBIH RAPAT */
+
+.author-bio .author-bio-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0 !important;
+  margin-bottom: 14px;
+}
+
+.author-bio .author-bio-heading span {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.author-bio .author-bio-heading .author-name-img {
+  width: 130px !important;
+  height: 48px;
+  max-height: 48px;
+  object-fit: contain;
+  object-position: left center;
+  margin: 0 0 0 -12px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .author-bio .author-bio-heading .author-name-img {
+    width: 110px !important;
+    margin-left: -10px !important;
+  }
+}
+/* BIOGRAFI + PNG ANDI ARIEF LEBIH BESAR */
+.author-bio .author-bio-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+
+.author-bio .author-bio-heading span {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.author-bio .author-bio-heading .author-name-img {
+  width: 210px !important;
+  height: auto !important;
+  max-height: 70px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+  margin: 0 0 0 -6px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .author-bio .author-bio-heading {
+    gap: 2px;
+  }
+
+  .author-bio .author-bio-heading .author-name-img {
+    width: 140px !important;
+    max-height: 56px;
+    margin-left: -4px !important;
+  }
+}
+
+/* TRUE STORY + PNG ANDI ARIEF */
+
+.hero-refined .hero-author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  margin-bottom: 12px;
+}
+
+.hero-refined .hero-author span {
+  white-space: nowrap;
+}
+
+.hero-refined .hero-andi-logo {
+  display: block;
+  width: 280px;
+  height: 85px;
+  max-width: none;
+  object-fit: contain;
+  object-position: left center;
+  margin-left: -12px;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-andi-logo {
+    width: 175px;
+    height: 58px;
+    margin-left: -8px;
+  }
+}
+
+/* RAPATKAN TRUE STORY KE JUDUL NOVEL */
+
+.hero-refined .hero-left .hero-author {
+  display: flex;
+  align-items: center;
+  gap: 0 !important;
+  margin-bottom: -22px !important;
+  padding: 0 !important;
+}
+
+.hero-refined .hero-left h1.hero-title-two-lines {
+  margin-top: 0 !important;
+  margin-bottom: 14px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-left .hero-author {
+    margin-bottom: -12px !important;
+  }
+}
+
+/* =====================================
+   BUKU 3D - AUTO ROTATE 360 DEG
+===================================== */
+
+/* Putar buku otomatis */
+.hero-refined .book-3d {
+  animation: bookAutoRotate 30s linear infinite !important;
+  transform-style: preserve-3d !important;
+  -webkit-transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Rotasi penuh */
+@keyframes bookAutoRotate {
+  from {
+    transform: rotateY(-12deg);
+  }
+
+  to {
+    transform: rotateY(348deg);
+  }
+}
+
+/* Hilangkan tombol dan petunjuk */
+.hero-refined .book-controls,
+.hero-refined .book-help {
+  display: none !important;
+}
+
+/* Nonaktifkan drag manual */
+.hero-refined .book-viewport {
+  pointer-events: none;
+  cursor: default !important;
+}
+
+/* Tetap terlihat 3D */
+.hero-refined .book-viewport {
+  perspective: 1200px;
+}
+
+/* Responsif */
+@media (max-width: 680px) {
+  .hero-refined .book-3d {
+    animation-duration: 30s !important;
+  }
+}
+
+/* Aksesibilitas */
+@media (prefers-reduced-motion: reduce) {
+  .hero-refined .book-3d {
+    animation: none !important;
+    transform: rotateY(-12deg);
+  }
+}
+
+/* =========================================
+   VIDEO CINEMATIC RESPONSIVE - FINAL
+   DESKTOP / TABLET / MOBILE
+========================================= */
+
+.story-video {
+  position: relative;
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  aspect-ratio: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0 25px;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  line-height: 0;
+  box-sizing: border-box;
+}
+
+.story-video .novel-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+/* SEMBUNYIKAN KONTROL */
+.novel-video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .story-video {
+    width: 100vw;
+    height: auto;
+    margin: 12px 0 20px;
+  }
+}
+
+/* MOBILE - IPHONE & ANDROID */
+@media (max-width: 680px) {
+  .story-video {
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    aspect-ratio: auto;
+    margin: 10px 0 18px;
+    overflow: hidden;
+  }
+
+  .story-video .novel-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+}
+
+/* CEGAH SCROLL HORIZONTAL */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* =====================================
+   HERO TITLE - 4 BARIS
+===================================== */
+
+.hero.hero-refined h1#heroTitle.hero-title-four-lines {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(58px, 6vw, 94px) !important;
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -3px;
+  color: #69172f;
+  margin: 0 0 20px !important;
+}
+
+.hero-title-four-lines .hero-title-row {
+  display: block !important;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.hero-title-four-lines .hero-title-last {
+  display: flex !important;
+  align-items: baseline;
+  gap: 12px;
+}
+
+/* SEBUAH NOVEL KECIL */
+.hero.hero-refined
+.hero-title-four-lines .hero-title-label {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px !important;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #23365d;
+  white-space: nowrap;
+  margin: 0 !important;
+}
+
+/* =====================================
+   KLA PROJECT - VERTICAL
+===================================== */
+
+.hero-refined .publisher.publisher-kla {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: 170px;
+  min-width: 150px;
+  height: auto;
+
+  padding: 14px 12px;
+  margin: 0 !important;
+  gap: 10px;
+
+  border: 1px solid #b8c2d0;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* MENAMPILKAN */
+.publisher-kla .kla-heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  color: #23365d;
+  line-height: 1.3;
+}
+
+/* GAMBAR KLA PROJECT */
+.hero-refined .publisher-kla .kla-logo {
+  display: block;
+  width: 110px !important;
+  height: 110px !important;
+  max-height: none !important;
+  object-fit: contain;
+  flex-shrink: 0;
+
+  /* Efek warna maroon pada gambar */
+  filter: sepia(1) saturate(2.5)
+          hue-rotate(305deg) contrast(1.1);
+}
+
+/* NAMA KLA PROJECT */
+.publisher-kla .kla-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+  color: #23365d;
+  white-space: nowrap;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+  .hero.hero-refined h1#heroTitle.hero-title-four-lines {
+    font-size: clamp(43px, 5.6vw, 70px) !important;
+    letter-spacing: -2px;
+  }
+
+  .hero-refined .publisher.publisher-kla {
+    width: 135px;
+    min-width: 115px;
+    padding: 10px;
+  }
+
+  .hero-refined .publisher-kla .kla-logo {
+    width: 85px !important;
+    height: 85px !important;
+  }
+
+  .publisher-kla .kla-title {
+    font-size: 17px;
+  }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 680px) {
+  .hero.hero-refined h1#heroTitle.hero-title-four-lines {
+    font-size: clamp(36px, 9vw, 58px) !important;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    margin-bottom: 15px !important;
+  }
+
+  .hero-title-four-lines .hero-title-last {
+    gap: 7px;
+  }
+
+  .hero.hero-refined
+  .hero-title-four-lines .hero-title-label {
+    font-size: 10px !important;
+    letter-spacing: .5px;
+  }
+
+  .hero-refined .publisher.publisher-kla {
+    width: 110px;
+    min-width: 95px;
+    padding: 8px 6px;
+    gap: 6px;
+  }
+
+  .publisher-kla .kla-heading {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .hero-refined .publisher-kla .kla-logo {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .publisher-kla .kla-title {
+    font-size: 13px;
+    letter-spacing: .4px;
+  }
+}
+.undangan-heading h2 {
+  color: #b08d57 !important; /* gold elegan */
+}
+
+/* UNDANGAN - NAIKKAN & RAPATKAN */
+
+.undangan-section {
+  padding-top: 12px !important;
+  padding-bottom: 5px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.undangan-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 auto 8px !important;
+}
+
+.undangan-heading h2 {
+  color: #b08d57 !important;
+  margin: 0 !important;
+  line-height: 1.1;
+}
+
+.undangan-heading .undangan-line {
+  background-color: #b08d57 !important;
+}
+
+.undangan-subtitle {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.4;
+}
+
+/* RAPATKAN UNDANGAN KE HERO */
+.undangan-section + .hero {
+  margin-top: 0 !important;
+  padding-top: 8px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .undangan-section {
+    padding-top: 8px !important;
+    padding-bottom: 3px !important;
+  }
+
+  .undangan-heading {
+    gap: 10px;
+    margin-bottom: 6px !important;
+  }
+
+  .undangan-section + .hero {
+    padding-top: 5px !important;
+  }
+}
+
+/* ==========================================
+   HEADER, UNDANGAN & HERO - FINAL SPACING
+========================================== */
+
+/* 1. LOGO HEADER TIDAK MENEMPEL GARIS */
+
+.site-header .brand {
+  position: relative;
+  top: -8px;
+}
+
+/* 2. UNDANGAN LEBIH RAPAT */
+
+.undangan-section {
+  padding: 10px 0 0 !important;
+  margin: 0 !important;
+}
+
+.undangan-heading {
+  margin: 0 auto 5px !important;
+  gap: 18px;
+  align-items: center;
+}
+
+.undangan-heading h2 {
+  margin: 0 !important;
+  line-height: 1.1;
+  color: #b08d57 !important;
+}
+
+.undangan-heading .undangan-line {
+  background-color: #b08d57 !important;
+}
+
+.undangan-subtitle {
+  margin: 3px auto 0 !important;
+  padding: 0 !important;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* KUTIPAN LANGSUNG DI BAWAH UNDANGAN */
+
+.undangan-section .hero-topline {
+  display: block;
+  width: min(100% - 32px, 1050px);
+  max-width: 1050px;
+  margin: 8px auto 0 !important;
+  padding: 0 !important;
+
+  text-align: center !important;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: .3px;
+  color: #23365d;
+}
+
+/* 3. HERO LEBIH DEKAT KE KUTIPAN */
+
+.hero.hero-refined {
+  padding-top: 12px !important;
+  margin-top: 0 !important;
+  row-gap: 0 !important;
+  align-items: center;
+}
+
+/* Karena kutipan dipindahkan ke undangan,
+   kedua kolom hero kembali ke baris pertama */
+
+.hero.hero-refined > .hero-left {
+  grid-column: 1;
+  grid-row: 1 !important;
+}
+
+.hero.hero-refined > .hero-right {
+  grid-column: 2;
+  grid-row: 1 !important;
+}
+
+/* 4. TRUE STORY KECIL + PNG BESAR */
+
+.hero-refined .hero-left .hero-author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px !important;
+  padding: 0 !important;
+  margin: 0 0 -15px !important;
+}
+
+.hero-refined .hero-author span {
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(14px, 1.3vw, 20px) !important;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  color: #23365d;
+}
+
+.hero-refined .hero-andi-logo {
+  display: block;
+  width: clamp(200px, 20vw, 300px) !important;
+  height: 78px !important;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: left center;
+  margin: 0 0 0 -10px !important;
+}
+
+/* 5. JUDUL EMPAT BARIS */
+
+.hero.hero-refined h1#heroTitle.hero-title-four-lines {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(48px, 5vw, 78px) !important;
+  font-weight: 500;
+  line-height: .98 !important;
+  letter-spacing: -2.5px;
+  color: #69172f;
+
+  margin: 0 0 15px !important;
+  padding: 0 !important;
+}
+
+.hero-title-four-lines .hero-title-row {
+  display: block !important;
+  white-space: nowrap;
+  line-height: .98 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hero-title-four-lines .hero-title-last {
+  display: flex !important;
+  align-items: baseline;
+  gap: 10px;
+}
+
+/* SEBUAH NOVEL */
+
+.hero.hero-refined
+.hero-title-four-lines .hero-title-label {
+  display: inline-block;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px !important;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  line-height: 1.3;
+  color: #23365d;
+  white-space: nowrap;
+  margin: 0 !important;
+}
+
+/* ==========================================
+   MOBILE - IPHONE & ANDROID
+========================================== */
+
+@media (max-width: 680px) {
+
+  .site-header .brand {
+    top: -5px;
+  }
+
+  .undangan-section {
+    padding-top: 8px !important;
+  }
+
+  .undangan-heading {
+    gap: 8px;
+    margin-bottom: 5px !important;
+  }
+
+  .undangan-subtitle {
+    font-size: clamp(10px, 2.8vw, 14px);
+    line-height: 1.4;
+  }
+
+  .undangan-section .hero-topline {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 7px !important;
+  }
+
+  .undangan-section .hero-topline br {
+    display: none;
+  }
+
+  .hero.hero-refined {
+    padding-top: 12px !important;
+  }
+
+  .hero.hero-refined > .hero-left {
+    grid-column: 1;
+    grid-row: 1 !important;
+  }
+
+  .hero.hero-refined > .hero-right {
+    grid-column: 1;
+    grid-row: 2 !important;
+  }
+
+  .hero-refined .hero-left .hero-author {
+    margin-bottom: -10px !important;
+  }
+
+  .hero-refined .hero-author span {
+    font-size: 14px !important;
+  }
+
+.hero-refined .hero-andi-logo {
+  display: block;
+  width: 270px !important;
+  height: 90px !important;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: left center;
+  margin: 0 0 0 -6px !important;
+}
+
+  .hero.hero-refined h1#heroTitle.hero-title-four-lines {
+    font-size: clamp(33px, 9vw, 52px) !important;
+    letter-spacing: -1.5px;
+    margin-bottom: 12px !important;
+  }
+
+  .hero-title-four-lines .hero-title-last {
+    gap: 6px;
+  }
+
+  .hero.hero-refined
+  .hero-title-four-lines .hero-title-label {
+    font-size: 10px !important;
+    letter-spacing: .5px;
+  }
+}
+
+/* =====================================
+   GAMBAR KUTIPAN UNDANGAN
+===================================== */
+
+.undangan-quote-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 6px auto 0;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.undangan-quote-image img {
+  display: block;
+  width: 850px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* =====================================
+   JUDUL NOVEL - 4 BARIS LEBIH RAPAT
+===================================== */
+
+.hero.hero-refined h1#heroTitle.hero-title-four-lines {
+  line-height: 0.88 !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+.hero.hero-refined
+.hero-title-four-lines .hero-title-row {
+  display: block !important;
+  line-height: 0.90 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.hero.hero-refined
+.hero-title-four-lines .hero-title-last {
+  display: flex !important;
+  align-items: baseline;
+  gap: 9px;
+}
+
+/* TRUE STORY KE JUDUL LEBIH DEKAT */
+
+.hero-refined .hero-left .hero-author {
+  margin-bottom: -20px !important;
+}
+
+/* =====================================
+   RESPONSIVE MOBILE
+===================================== */
+
+@media (max-width: 680px) {
+
+  .undangan-quote-image {
+    margin-top: 5px;
+    padding: 0 12px;
+  }
+
+  .undangan-quote-image img {
+    width: 100%;
+  }
+
+  .hero.hero-refined h1#heroTitle.hero-title-four-lines {
+    line-height: 0.92 !important;
+  }
+
+  .hero.hero-refined
+  .hero-title-four-lines .hero-title-row {
+    line-height: 0.93 !important;
+  }
+
+  .hero-refined .hero-left .hero-author {
+    margin-bottom: -12px !important;
+  }
+}
+
+/* =====================================
+   PNG PELUNCURAN NOVEL - KECIL & RAPAT
+===================================== */
+
+.undangan-section .undangan-quote-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 95px !important;
+  max-width: 100%;
+  margin: 4px auto 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.undangan-section .undangan-quote-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 450px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain;
+}
+
+/* RAPATKAN UNDANGAN KE HERO */
+.undangan-section {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.undangan-section + .hero {
+  margin-top: 0 !important;
+  padding-top: 5px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .undangan-section .undangan-quote-image {
+    height: 65px !important;
+    margin-top: 3px !important;
+  }
+
+  .undangan-section .undangan-quote-image img {
+    width: 300px !important;
+  }
+
+  .undangan-section + .hero {
+    padding-top: 5px !important;
+  }
+}
+
+/* PERBESAR PNG ANDI ARIEF DI HERO */
+
+.hero-refined .hero-left .hero-author {
+  display: flex;
+  align-items: center;
+  gap: 0 !important;
+  margin-bottom: -20px !important;
+}
+
+.hero-refined .hero-left .hero-andi-logo {
+  width: 340px !important;
+  height: 105px !important;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: left center;
+  margin-left: -12px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-left .hero-andi-logo {
+    width: 220px !important;
+    height: 75px !important;
+    margin-left: -8px !important;
+  }
+}
+
+/* TRUE STORY + PNG ANDI ARIEF - RAPI & RAPAT */
+
+.hero-refined .hero-left .hero-author {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 22px !important;
+  height: 78px !important;
+  padding: 0 !important;
+  margin: 0 0 -8px !important;
+  overflow: visible !important;
+}
+
+/* TRUE STORY */
+.hero-refined .hero-left .hero-author span {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px !important;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin: 0 !important;
+  line-height: 1.2;
+}
+
+/* PNG ANDI ARIEF */
+.hero-refined .hero-left .hero-andi-logo {
+  display: block !important;
+  width: 320px !important;
+  height: 95px !important;
+  max-width: none !important;
+  object-fit: contain;
+  object-position: left center;
+  flex-shrink: 0;
+  margin: 0 0 0 12px !important;
+  transform: none !important;
+}
+
+/* RAPATKAN KE JUDUL BAB */
+.hero-refined .hero-left #heroTitle {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-left .hero-author {
+    gap: 10px !important;
+    height: 55px !important;
+    margin-bottom: -5px !important;
+  }
+
+  .hero-refined .hero-left .hero-author span {
+    font-size: 15px !important;
+  }
+
+  .hero-refined .hero-left .hero-andi-logo {
+    width: min(210px, 48vw) !important;
+    height: 65px !important;
+    margin-left: 5px !important;
+  }
+}
+
+/* PNG ANDI ARIEF - UKURAN PAS */
+
+.hero-refined .hero-left .hero-andi-logo {
+  width: 260px !important;
+  height: 80px !important;
+  margin-left: 5px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-left .hero-andi-logo {
+    width: min(180px, 45vw) !important;
+    height: 58px !important;
+    margin-left: 3px !important;
+  }
+}
+
+/* RAPATKAN PNG ANDI ARIEF KE TRUE STORY */
+
+.hero-refined .hero-left .hero-author {
+  gap: 5px !important;
+}
+
+.hero-refined .hero-left .hero-andi-logo {
+  margin-left: 0 !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-left .hero-author {
+    gap: 3px !important;
+  }
+
+  .hero-refined .hero-left .hero-andi-logo {
+    margin-left: 0 !important;
+  }
+}
+
+/* DESKRIPSI DI BAWAH BUKU 3D & KLA PROJECT */
+
+.hero-refined .hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  gap: 0 !important;
+}
+
+.hero-refined .hero-right .hero-art {
+  margin-bottom: 0 !important;
+}
+
+.hero-refined .hero-right-description {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 4px auto 0 !important;
+  padding: 0 8px;
+  box-sizing: border-box;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: #23365d;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-right-description {
+    max-width: 100%;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    margin-top: 3px !important;
+    padding: 0 12px;
+  }
+}
+
+/* DESKRIPSI DI BAWAH BUKU 3D & KLA PROJECT */
+
+.hero-refined .hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  gap: 0 !important;
+}
+
+.hero-refined .hero-right .hero-art {
+  margin-bottom: 0 !important;
+}
+
+.hero-refined .hero-right-description {
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin: 4px auto 0 !important;
+  padding: 0 8px;
+  box-sizing: border-box;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: #23365d;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-right-description {
+    max-width: 100%;
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    margin-top: 3px !important;
+    padding: 0 12px;
+  }
+}
+
+/* JARAK TEKS DENGAN BUKU 3D */
+
+.hero.hero-refined .hero-right > .hero-right-description {
+  margin: 20px auto 0 !important;
+  padding: 0 10px !important;
+  text-align: center !important;
+  line-height: 1.6;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero.hero-refined .hero-right > .hero-right-description {
+    margin-top: 14px !important;
+  }
+}
+
+/* =====================================
+   KLA PROJECT - SETINGGI BUKU 3D
+   WARNA PNG ORIGINAL
+===================================== */
+
+/* Buku dan KLA sejajar */
+.hero-refined .hero-art-3d {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  justify-content: center;
+  gap: 18px !important;
+}
+
+/* Pertahankan ukuran buku */
+.hero-refined .book-stage {
+  flex-shrink: 0;
+}
+
+/* Kotak KLA mengikuti tinggi buku */
+.hero-refined .publisher.publisher-kla {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  align-self: stretch !important;
+  width: 180px !important;
+  min-width: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+
+  padding: 14px !important;
+  margin: 0 !important;
+  gap: 12px !important;
+
+  border: 1px solid #bcc5d0;
+  background: transparent !important;
+  box-sizing: border-box;
+}
+
+/* PNG ORIGINAL TANPA FILTER WARNA */
+.hero-refined .publisher-kla .kla-logo {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 75% !important;
+
+  object-fit: contain !important;
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Tulisan */
+.hero-refined .publisher-kla .kla-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-art-3d {
+    gap: 8px !important;
+  }
+
+  .hero-refined .publisher.publisher-kla {
+    width: 105px !important;
+    padding: 8px !important;
+    gap: 6px !important;
+  }
+
+  .hero-refined .publisher-kla .kla-logo {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 70% !important;
+  }
+
+  .hero-refined .publisher-kla .kla-info strong {
+    font-size: 12px !important;
+  }
+
+  .hero-refined .publisher-kla .kla-info span {
+    font-size: 9px !important;
+  }
+}
+
+/* =====================================
+   KLA PROJECT - FOTO SETINGGI BUKU
+   TANPA KOTAK / GARIS
+===================================== */
+
+.hero-refined .hero-art-3d {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px !important;
+}
+
+/* KLA tanpa kotak */
+.hero-refined .publisher.publisher-kla {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 185px !important;
+  height: 390px !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 6px !important;
+
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* FOTO PNG ORIGINAL */
+.hero-refined .publisher-kla .kla-logo {
+  display: block !important;
+  width: 100% !important;
+  height: 340px !important;
+  max-height: none !important;
+  object-fit: contain !important;
+
+  filter: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+}
+
+/* Tulisan di bawah foto */
+.hero-refined .publisher-kla .kla-info {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 3px !important;
+  margin: 0 !important;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-art-3d {
+    gap: 8px !important;
+  }
+
+  .hero-refined .publisher.publisher-kla {
+    width: 105px !important;
+    height: 260px !important;
+    padding: 0 !important;
+  }
+
+  .hero-refined .publisher-kla .kla-logo {
+    height: 225px !important;
+  }
+
+  .hero-refined .publisher-kla .kla-info strong {
+    font-size: 12px !important;
+  }
+
+  .hero-refined .publisher-kla .kla-info span {
+    font-size: 9px !important;
+  }
+}
+
+/* KLA PROJECT - FOTO SEJAJAR BUKU 3D */
+
+.hero-refined .hero-art-3d {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 16px !important;
+}
+
+/* Hilangkan kotak lama */
+.hero-refined .publisher.publisher-kla {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 195px !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 5px !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Area foto setinggi buku */
+.hero-refined .kla-image-frame {
+  display: block;
+  width: 195px;
+  height: 390px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Foto diperbesar agar ruang kosong terpotong */
+.hero-refined .kla-image-frame .kla-logo {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transform: scale(1.12);
+  transform-origin: center;
+  filter: none !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+}
+
+/* Nama di bawah foto */
+.hero-refined .publisher-kla .kla-info {
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: center;
+}
+
+.hero-refined .publisher-kla .kla-info strong {
+  font-family: "Oswald", sans-serif;
+  font-size: 19px;
+  color: #23365d;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero-refined .hero-art-3d {
+    gap: 8px !important;
+  }
+
+  .hero-refined .publisher.publisher-kla {
+    width: 110px !important;
+  }
+
+  .hero-refined .kla-image-frame {
+    width: 110px;
+    height: 245px;
+  }
+
+  .hero-refined .kla-image-frame .kla-logo {
+    transform: scale(1.12);
+  }
+
+  .hero-refined .publisher-kla .kla-info strong {
+    font-size: 12px;
+  }
+}
+
+/* =========================================
+   FINAL - RAPIIKAN BUKU 3D & KLA PROJECT
+========================================= */
+
+/* POSISI BUKU DAN FOTO KLA */
+.hero.hero-refined .hero-art-3d {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  width: 100%;
+  margin: 0 !important;
+}
+
+/* BUKU 3D TETAP */
+.hero-refined .book-stage {
+  flex-shrink: 0;
+}
+
+/* KLA PROJECT TANPA BORDER */
+.hero-refined .publisher.publisher-kla {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 185px !important;
+  height: 390px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  gap: 6px !important;
+  border: none !important;
+  outline: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  flex-shrink: 0;
+}
+
+/* FOTO KLA SEJAJAR DENGAN BUKU */
+.hero-refined .kla-image-frame {
+  width: 185px !important;
+  height: 355px !important;
+  flex: 0 0 355px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* FOTO ORIGINAL */
+.hero-refined .kla-image-frame .kla-logo {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transform: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+}
+
+/* TULISAN KLA PROJECT */
+.hero-refined .publisher-kla .kla-info {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 28px;
+  text-align: center;
+}
+
+.hero-refined .publisher-kla .kla-info strong {
+  font-family: "Oswald", sans-serif;
+  font-size: 19px !important;
+  font-weight: 600;
+  color: #23365d;
+  line-height: 1.2;
+}
+
+/* DESKRIPSI DI BAWAH KEDUANYA */
+.hero.hero-refined .hero-right > .hero-right-description {
+  margin: 12px auto 0 !important;
+  padding: 0 8px !important;
+  max-width: 550px;
+  text-align: center !important;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .hero.hero-refined .hero-art-3d {
+    gap: 8px !important;
+  }
+
+  .hero-refined .publisher.publisher-kla {
+    width: 105px !important;
+    height: 245px !important;
+    gap: 4px !important;
+  }
+
+  .hero-refined .kla-image-frame {
+    width: 105px !important;
+    height: 215px !important;
+    flex: 0 0 215px !important;
+  }
+
+  .hero-refined .publisher-kla .kla-info {
+    height: 24px;
+  }
+
+  .hero-refined .publisher-kla .kla-info strong {
+    font-size: 12px !important;
+  }
+
+  .hero.hero-refined .hero-right > .hero-right-description {
+    margin-top: 10px !important;
+    font-size: 10px;
+  }
+}
+
+/* =====================================
+   SINOPSIS - JARAK TEKS LEBIH RAPAT
+===================================== */
+
+/* RAPATKAN BAGIAN SINOPSIS */
+.story-columns-updated .story-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0 !important;
+}
+
+/* SEKELUMIT CERITA */
+.story-copy .story-kicker,
+.story-copy .panel-kicker {
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+}
+
+/* JUDUL */
+.story-columns-updated .story-copy h2 {
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  line-height: 1.08 !important;
+}
+
+/* SEMUA PARAGRAF */
+.story-columns-updated .story-copy > p {
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  line-height: 1.55 !important;
+  text-align: justify;
+  width: 100%;
+}
+
+/* PARAGRAF TERAKHIR */
+.story-columns-updated .story-copy > p:last-of-type {
+  margin-bottom: 12px !important;
+}
+
+/* LABEL NOVEL / KISAH NYATA / KELUARGA */
+.story-columns-updated .topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.story-columns-updated .topic-tags span {
+  margin: 0 !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .story-columns-updated .story-copy h2 {
+    margin-bottom: 10px !important;
+    line-height: 1.12 !important;
+  }
+
+  .story-columns-updated .story-copy > p {
+    margin-bottom: 10px !important;
+    line-height: 1.5 !important;
+  }
+
+  .story-columns-updated .topic-tags {
+    gap: 6px !important;
+  }
+}
+
+/* SEKELUMIT CERITA + JUDUL LEBIH RAPAT */
+
+.story-columns-updated .story-copy {
+  gap: 0 !important;
+}
+
+.story-columns-updated .story-copy > :first-child:not(h2) {
+  margin-bottom: 3px !important;
+  padding-bottom: 0 !important;
+}
+
+.story-columns-updated .story-copy h2 {
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  padding-top: 0 !important;
+  line-height: 1.02 !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .story-columns-updated .story-copy > :first-child:not(h2) {
+    margin-bottom: 2px !important;
+  }
+
+  .story-columns-updated .story-copy h2 {
+    margin-bottom: 8px !important;
+  }
+}
+
+/* ==========================================
+   BIOGRAFI ANDI ARIEF - DESAIN REFERENSI
+========================================== */
+
+/* SECTION BIOGRAFI FULL WIDTH */
+.speakers-section .author-block#penulis {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: grid !important;
+  grid-template-columns: 41% 59% !important;
+  align-items: start !important;
+  gap: 0 !important;
+
+  width: 100vw !important;
+  max-width: none !important;
+
+  margin: 35px 0 0 !important;
+  padding: 0 !important;
+
+  background: #ffffff !important;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   KOLOM KIRI - ILUSTRASI
+========================================== */
+
+.author-block .bio-visual {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.author-block .bio-collage-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: top left;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================
+   KOLOM KANAN - BIOGRAFI
+========================================== */
+
+.author-block .author-bio {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+
+  width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 7% 7% 35px 0 !important;
+
+  background: #ffffff !important;
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   JUDUL TENTANG + PNG ANDI ARIEF
+========================================== */
+
+.author-block .author-bio-heading {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+
+  width: 100%;
+  height: auto;
+  gap: 10px !important;
+
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+}
+
+.author-block .author-bio-heading h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 2.7vw, 46px) !important;
+  font-weight: 400 !important;
+
+  letter-spacing: 0 !important;
+  line-height: 1.15 !important;
+
+  color: #69172f !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap;
+}
+
+/* PNG NAMA ANDI ARIEF */
+.author-block .author-bio-heading .author-name-img {
+  display: block !important;
+
+  width: clamp(180px, 17vw, 270px) !important;
+  height: 72px !important;
+  max-width: none !important;
+
+  object-fit: contain !important;
+  object-position: left center !important;
+
+  margin: 0 0 0 -12px !important;
+  padding: 0 !important;
+}
+
+/* ==========================================
+   PARAGRAF BIOGRAFI
+========================================== */
+
+.author-block .author-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0 !important;
+
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.author-block .author-description p {
+  font-family: "DM Sans", sans-serif !important;
+  font-size: clamp(13px, 1.05vw, 17px) !important;
+  font-weight: 400 !important;
+
+  line-height: 1.48 !important;
+  letter-spacing: -0.15px !important;
+
+  color: #79564e !important;
+
+  text-align: justify !important;
+  text-justify: inter-word;
+
+  margin: 0 0 19px !important;
+  padding: 0 !important;
+}
+
+.author-block .author-description p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+  .speakers-section .author-block#penulis {
+    grid-template-columns: 42% 58% !important;
+  }
+
+  .author-block .author-bio {
+    padding: 6% 5% 25px 0 !important;
+  }
+
+  .author-block .author-bio-heading {
+    margin-bottom: 12px !important;
+  }
+
+  .author-block .author-description p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 13px !important;
+  }
+}
+
+/* ==========================================
+   MOBILE - IPHONE & ANDROID
+========================================== */
+
+@media (max-width: 680px) {
+  .speakers-section .author-block#penulis {
+    display: flex !important;
+    flex-direction: column !important;
+
+    width: 100vw !important;
+    gap: 0 !important;
+    margin-top: 20px !important;
+  }
+
+  .author-block .bio-visual {
+    width: 100%;
+  }
+
+  .author-block .bio-collage-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .author-block .author-bio {
+    width: 100%;
+    padding: 15px 20px 32px !important;
+  }
+
+  .author-block .author-bio-heading {
+    gap: 6px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .author-block .author-bio-heading h2 {
+    font-size: 30px !important;
+  }
+
+  .author-block .author-bio-heading .author-name-img {
+    width: min(190px, 45vw) !important;
+    height: 60px !important;
+    margin-left: -8px !important;
+  }
+
+  .author-block .author-description p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 14px !important;
+    text-align: justify !important;
+  }
+}
+
+/* JARAK TENTANG + PNG ANDI ARIEF */
+
+.author-block .author-bio-heading {
+  display: flex !important;
+  align-items: center !important;
+  gap: 22px !important;
+}
+
+.author-block .author-bio-heading .author-name-img {
+  margin: 0 !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .author-block .author-bio-heading {
+    gap: 12px !important;
+  }
+}
+
+/* =====================================
+   PROFIL PENULIS - SPACING LEBIH RAPAT
+===================================== */
+
+/* Rapatkan jarak foto, teks, dan karya */
+.writer-profile-card {
+  gap: 16px !important;
+  padding: 22px !important;
+}
+
+.writer-profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0 !important;
+}
+
+.writer-profile-content h3 {
+  margin: 2px 0 8px !important;
+}
+
+.writer-profile-bio {
+  margin: 0 0 10px !important;
+  line-height: 1.55 !important;
+}
+
+/* KARYA TERPILIH */
+.writer-profile-works {
+  margin-top: 6px !important;
+  padding-top: 10px !important;
+}
+
+.writer-profile-works h4 {
+  margin: 0 0 5px !important;
+  padding: 0 !important;
+}
+
+/* Judul karya di kiri, tahun di kanan */
+.writer-profile-works .writer-work {
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  margin: 0 !important;
+  padding: 2px 0 !important;
+  line-height: 1.35 !important;
+}
+
+.writer-work em,
+.writer-work span {
+  margin: 0 !important;
+}
+
+.writer-work span {
+  white-space: nowrap;
+}
+
+/* =====================================
+   RAPATKAN PROFIL KE BIOGRAFI ANDI ARIEF
+===================================== */
+
+.speakers-section .writer-profile-grid {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.speakers-section .author-block#penulis {
+  margin-top: 8px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .writer-profile-card {
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+
+  .writer-profile-bio {
+    margin-bottom: 8px !important;
+  }
+
+  .writer-profile-works {
+    margin-top: 4px !important;
+    padding-top: 8px !important;
+  }
+
+  .writer-profile-works .writer-work {
+    padding: 2px 0 !important;
+  }
+
+  .speakers-section .author-block#penulis {
+    margin-top: 5px !important;
+  }
+}
+
+/* ==========================================
+   RANGKAIAN ACARA - COMPACT FINAL
+========================================== */
+
+/* JARAK ATAS DAN BAWAH SECTION */
+.event-section {
+  padding-top: 20px !important;
+  padding-bottom: 25px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* JUDUL RANGKAIAN ACARA */
+.event-section .section-heading {
+  margin: 0 0 15px !important;
+  padding: 0 !important;
+}
+
+/* DUA KOLOM */
+.event-section .event-grid {
+  align-items: start !important;
+  gap: 35px !important;
+}
+
+/* ==========================================
+   BAGIAN KIRI
+========================================== */
+
+.event-section .event-intro {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* JUDUL BESAR */
+.event-section .event-intro h2 {
+  font-size: clamp(38px, 4vw, 56px) !important;
+  line-height: 1.08 !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+}
+
+/* KETERANGAN DI BAWAH JUDUL */
+.event-section .event-instruction {
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* KOTAK BIRU */
+.event-section .event-feature {
+  padding: 22px 26px !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+/* NOMOR SESI DAN DURASI */
+.event-section .event-feature-top {
+  margin-bottom: 8px !important;
+}
+
+/* JAM BESAR */
+.event-section #eventActiveTime {
+  display: block;
+  line-height: 1 !important;
+  margin: 0 0 6px !important;
+}
+
+/* NAMA AGENDA */
+.event-section #eventActiveTitle {
+  margin: 0 0 4px !important;
+  line-height: 1.2 !important;
+}
+
+/* RENTANG WAKTU */
+.event-section #eventActiveRange {
+  margin: 0 0 14px !important;
+}
+
+/* TOMBOL NAVIGASI */
+.event-section .event-controls {
+  margin-top: 8px !important;
+  gap: 8px !important;
+}
+
+/* ==========================================
+   BAGIAN KANAN - RUNDOWN
+========================================== */
+
+.event-section .event-schedule-area {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* HEADER RUNDOWN */
+.event-section .event-schedule-heading {
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+}
+
+/* LIST RUNDOWN */
+.event-section .agenda-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+/* SETIAP BARIS RUNDOWN */
+.event-section .agenda-list > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* TOMBOL BARIS RUNDOWN */
+.event-section .agenda-list > * > button {
+  min-height: 48px !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+  margin: 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* DETAIL SAAT DIKLIK */
+.event-section .agenda-list [class*="detail"],
+.event-section .agenda-list [class*="content"] {
+  padding-top: 8px !important;
+  padding-bottom: 10px !important;
+}
+
+/* RAPATKAN DETAIL WAKTU DAN DURASI */
+.event-section .agenda-list [class*="detail"] p,
+.event-section .agenda-list [class*="content"] p {
+  margin: 0 0 5px !important;
+  line-height: 1.4 !important;
+}
+
+/* ==========================================
+   TABLET DAN MOBILE
+========================================== */
+
+@media (max-width: 1024px) {
+  .event-section .event-grid {
+    gap: 22px !important;
+  }
+
+  .event-section .event-intro h2 {
+    font-size: clamp(34px, 5vw, 46px) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .event-section {
+    padding-top: 15px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .event-section .section-heading {
+    margin-bottom: 12px !important;
+  }
+
+  .event-section .event-grid {
+    gap: 18px !important;
+  }
+
+  .event-section .event-intro h2 {
+    font-size: 36px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .event-section .event-instruction {
+    margin-bottom: 10px !important;
+  }
+
+  .event-section .event-feature {
+    padding: 18px !important;
+  }
+
+  .event-section .event-schedule-heading {
+    margin-bottom: 8px !important;
+  }
+
+  .event-section .agenda-list > * > button {
+    min-height: 44px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+}
+
+/* =========================================
+   FIX JARAK BIOGRAFI KE RANGKAIAN ACARA
+========================================= */
+
+.speakers-section {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.speakers-section > .container {
+  padding-bottom: 0 !important;
+}
+
+.speakers-section .author-block {
+  margin-bottom: 0 !important;
+}
+
+/* HILANGKAN SPACE BESAR ANTAR SECTION */
+section.event-section.container {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 8px !important;
+  padding-bottom: 15px !important;
+}
+
+/* HEADER RANGKAIAN ACARA */
+.event-section .section-heading {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+}
+
+/* KOLOM KIRI DAN KANAN */
+.event-section .event-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start !important;
+  gap: 25px !important;
+}
+
+/* =========================================
+   BAGIAN KIRI - LEBIH COMPACT
+========================================= */
+
+.event-section .event-intro {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.event-section .event-intro h2 {
+  font-size: clamp(36px, 3.5vw, 48px) !important;
+  line-height: 1.03 !important;
+  margin: 0 0 6px !important;
+}
+
+.event-section .event-instruction {
+  margin: 0 0 8px !important;
+  line-height: 1.3 !important;
+}
+
+.event-section .event-feature {
+  padding: 18px 22px !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+}
+
+.event-section .event-feature-top {
+  margin-bottom: 5px !important;
+}
+
+.event-section #eventActiveTime {
+  margin: 0 0 4px !important;
+  line-height: 1 !important;
+}
+
+.event-section #eventActiveTitle {
+  margin: 0 0 3px !important;
+}
+
+.event-section #eventActiveRange {
+  margin: 0 0 8px !important;
+}
+
+.event-section .event-controls {
+  margin-top: 8px !important;
+}
+
+/* =========================================
+   RUNDOWN KANAN - RAPATKAN SEMUA BARIS
+========================================= */
+
+.event-section .event-schedule-area {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.event-section .event-schedule-heading {
+  margin: 0 0 5px !important;
+  padding: 0 !important;
+}
+
+.event-section #agendaList {
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+.event-section #agendaList > * {
+  margin: 0 !important;
+}
+
+/* BARIS AGENDA */
+.event-section #agendaList button {
+  min-height: 38px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  line-height: 1.2 !important;
+}
+
+/* DETAIL YANG TERBUKA */
+.event-section #agendaList [class*="detail"],
+.event-section #agendaList [class*="content"] {
+  padding-top: 6px !important;
+  padding-bottom: 8px !important;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 680px) {
+  section.event-section.container {
+    padding-top: 6px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .event-section .event-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .event-section .event-intro h2 {
+    font-size: 34px !important;
+  }
+
+  .event-section .event-feature {
+    padding: 15px !important;
+  }
+
+  .event-section #agendaList button {
+    min-height: 36px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
+
+/* KOMENTAR - LEBIH KECIL & COMPACT */
+
+.author-block .andi-comment {
+  margin-top: 12px !important;
+  padding: 0 !important;
+}
+
+.andi-comment-heading {
+  margin-bottom: 7px !important;
+}
+
+.andi-comment-heading span {
+  font-size: 10px !important;
+  margin-bottom: 2px !important;
+}
+
+.andi-comment-heading h3 {
+  font-size: 25px !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+}
+
+.andi-comment form {
+  gap: 6px !important;
+}
+
+.andi-comment input {
+  padding: 8px 12px !important;
+  height: 35px !important;
+  font-size: 12px !important;
+}
+
+.andi-comment textarea {
+  min-height: 65px !important;
+  height: 65px !important;
+  padding: 9px 12px !important;
+  font-size: 12px !important;
+  resize: vertical;
+}
+
+.andi-comment button {
+  padding: 9px 17px !important;
+  font-size: 11px !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .andi-comment-heading h3 {
+    font-size: 22px !important;
+  }
+
+  .andi-comment textarea {
+    height: 75px !important;
+    min-height: 75px !important;
+  }
+}
+
+/* =====================================
+   RSVP - COMPACT & RAPI
+===================================== */
+
+/* SECTION UTAMA */
+.rsvp-section {
+  padding: 25px 0 !important;
+  margin: 0 !important;
+}
+
+/* DUA KOLOM */
+.rsvp-section .rsvp-grid {
+  align-items: start !important;
+  gap: 30px !important;
+}
+
+/* BAGIAN KIRI */
+.rsvp-section .rsvp-intro {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.rsvp-section .panel-kicker {
+  margin: 0 0 8px !important;
+}
+
+.rsvp-section .rsvp-intro h2 {
+  margin: 0 0 12px !important;
+  line-height: 1.05 !important;
+}
+
+.rsvp-section .rsvp-intro > p:not(.panel-kicker) {
+  margin: 0 0 12px !important;
+  line-height: 1.5 !important;
+}
+
+/* NARAHUBUNG */
+.rsvp-section .contact-rsvp {
+  margin-top: 14px !important;
+  padding: 0 !important;
+}
+
+.rsvp-section .contact-label {
+  margin-bottom: 5px !important;
+}
+
+.rsvp-section .contact-rsvp h3 {
+  margin: 3px 0 8px !important;
+}
+
+.rsvp-section .contact-whatsapp {
+  margin: 0 !important;
+  padding: 12px 16px !important;
+}
+
+.rsvp-section .contact-hint {
+  margin: 8px 0 0 !important;
+}
+
+/* =====================================
+   FORM KANAN
+===================================== */
+
+.rsvp-section .rsvp-form {
+  padding: 24px 28px !important;
+  gap: 9px !important;
+  margin: 0 !important;
+}
+
+/* JUDUL FORM */
+.rsvp-section .form-kicker {
+  margin-bottom: 6px !important;
+}
+
+/* LABEL INPUT */
+.rsvp-section .rsvp-form label {
+  margin: 0 !important;
+  gap: 4px !important;
+}
+
+/* INPUT */
+.rsvp-section .rsvp-form input {
+  height: 38px !important;
+  padding: 8px 12px !important;
+}
+
+/* EMAIL + WHATSAPP */
+.rsvp-section .form-cols {
+  gap: 10px !important;
+}
+
+/* PILIHAN KEHADIRAN */
+.rsvp-section .choice-row {
+  gap: 8px !important;
+  margin: 0 !important;
+}
+
+.rsvp-section .choice {
+  min-height: 36px !important;
+  padding: 8px !important;
+}
+
+/* PESAN */
+.rsvp-section .rsvp-form textarea {
+  min-height: 60px !important;
+  height: 60px !important;
+  padding: 9px 12px !important;
+}
+
+/* TOMBOL KIRIM */
+.rsvp-section .submit-btn {
+  min-height: 42px !important;
+  padding: 11px 15px !important;
+  margin-top: 3px !important;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 680px) {
+  .rsvp-section {
+    padding: 16px 0 !important;
+  }
+
+  .rsvp-section .rsvp-grid {
+    gap: 16px !important;
+  }
+
+  .rsvp-section .rsvp-intro h2 {
+    margin-bottom: 9px !important;
+  }
+
+  .rsvp-section .contact-rsvp {
+    margin-top: 10px !important;
+  }
+
+  .rsvp-section .rsvp-form {
+    padding: 16px !important;
+    gap: 8px !important;
+  }
+
+  .rsvp-section .form-cols {
+    gap: 8px !important;
+  }
+}
+
+/* KOMENTAR DI BAWAH BIOGRAFI */
+
+.author-block .andi-comment {
+  width: 100%;
+  margin-top: 22px;
+  padding: 0;
+}
+
+/* JUDUL */
+.andi-comment-heading {
+  margin-bottom: 12px;
+}
+
+.andi-comment-heading span {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #b08d57;
+  margin-bottom: 5px;
+}
+
+.andi-comment-heading h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(23px, 2vw, 30px);
+  font-weight: 400;
+  color: #69172f;
+  margin: 0;
+}
+
+/* FORM */
+.andi-comment form {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.andi-comment input,
+.andi-comment textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d3c9c5;
+  border-radius: 0;
+  background: #fff;
+  color: #23365d;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.andi-comment textarea {
+  min-height: 90px;
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.andi-comment input:focus,
+.andi-comment textarea:focus {
+  border-color: #69172f;
+}
+
+/* TOMBOL */
+.andi-comment button {
+  align-self: flex-start;
+  padding: 12px 23px;
+  border: none;
+  background: #69172f;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.andi-comment button:hover {
+  background: #892543;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .author-block .andi-comment {
+    margin-top: 16px;
+  }
+
+  .andi-comment-heading h3 {
+    font-size: 24px;
+  }
+
+  .andi-comment textarea {
+    min-height: 100px;
+  }
+}
+
+/* ==========================================
+   FOOTER HIDUP KEDUA MANAGEMENT
+   COMPACT - FULL WIDTH - NO IMAGE
+========================================== */
+
+.site-footer.hk-footer {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 18px 0 !important;
+
+  background: #f7f2e9 !important;
+  border: none !important;
+  border-top: 1px solid #e0d5c6 !important;
+
+  overflow: visible !important;
+  box-sizing: border-box;
+}
+
+/* SUSUNAN FOOTER */
+.hk-footer .hk-footer__inner {
+  width: calc(100% - 64px);
+  max-width: 1360px;
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  display: grid !important;
+  grid-template-columns:
+    minmax(170px, 245px)
+    2px
+    minmax(0, 1fr);
+
+  align-items: center;
+  gap: 26px;
+
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+/* ==========================================
+   LOGO KIRI
+========================================== */
+
+.hk-footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+.hk-footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(39px, 3.5vw, 56px);
+  font-weight: 600;
+
+  line-height: 0.85;
+  letter-spacing: -2.5px;
+
+  color: #84152d;
+}
+
+.hk-footer__logo span {
+  display: block;
+}
+
+.hk-footer__management {
+  font-family: "Playfair Display", serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  color: #84152d;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   GARIS PEMISAH EMAS
+========================================== */
+
+.hk-footer__divider {
+  width: 2px;
+  height: 105px;
+
+  background: #b99455;
+  border: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================
+   TEKS KANAN
+========================================== */
+
+.hk-footer__content {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.hk-footer__content p {
+  margin: 0 !important;
+  padding: 0 !important;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.45;
+  letter-spacing: -0.2px;
+
+  color: #84152d;
+  text-align: left;
+}
+
+.hk-footer__content strong {
+  font-weight: 700;
+  color: #84152d;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1024px) {
+  .site-footer.hk-footer {
+    padding: 16px 0 !important;
+  }
+
+  .hk-footer .hk-footer__inner {
+    width: calc(100% - 40px);
+    grid-template-columns: 165px 2px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .hk-footer__logo {
+    font-size: 42px;
+  }
+
+  .hk-footer__content p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
+
+/* ==========================================
+   MOBILE - RESPONSIVE
+========================================== */
+
+@media (max-width: 680px) {
+  .site-footer.hk-footer {
+    padding: 16px 0 !important;
+    overflow: hidden !important;
+  }
+
+  .hk-footer .hk-footer__inner {
+    width: calc(100% - 32px);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .hk-footer__brand {
+    gap: 5px;
+  }
+
+  .hk-footer__logo {
+    font-size: 42px;
+  }
+
+  .hk-footer__management {
+    font-size: 10px;
+  }
+
+  /* GARIS EMAS HORIZONTAL DI MOBILE */
+  .hk-footer__divider {
+    width: 80px;
+    height: 2px;
+  }
+
+  .hk-footer__content {
+    width: 100%;
+  }
+
+  .hk-footer__content p {
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0;
+    text-align: center;
+  }
+}
+
+/* TOMBOL KIRIM KONFIRMASI - CENTER */
+
+.rsvp-section .submit-btn {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 100% !important;
+  min-height: 46px !important;
+  padding: 12px 42px !important;
+
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  cursor: pointer;
+}
+
+/* PANAH TETAP DI KANAN */
+.rsvp-section .submit-btn span {
+  position: absolute !important;
+  right: 17px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .rsvp-section .submit-btn {
+    font-size: 14px !important;
+    min-height: 44px !important;
+    padding: 10px 36px !important;
+  }
+
+  .rsvp-section .submit-btn span {
+    right: 12px !important;
+  }
+}
+
+/* COPYRIGHT DI DALAM FOOTER */
+.hk-footer__copyright {
+  margin-top: 6px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  color: #84152d;
+  text-align: left;
+}
+
+@media (max-width: 680px) {
+  .hk-footer__copyright {
+    margin-top: 6px;
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+/* ==========================================
+   HERO MOBILE - SPACING & RESPONSIVE FIX
+========================================== */
+
+@media (max-width: 680px) {
+
+  /* CONTAINER HERO */
+  .hero.hero-refined {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+
+    padding: 12px 20px 24px !important;
+    margin: 0 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  /* TEKS / GAMBAR PELUNCURAN NOVEL */
+  .hero-refined .hero-topline {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 0 22px !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .hero-refined .hero-topline img {
+    display: block;
+    width: min(75%, 280px) !important;
+    height: auto !important;
+    margin: 0 auto !important;
+  }
+
+  /* KOLOM KIRI */
+  .hero-refined .hero-left {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  /* TRUE STORY + PNG ANDI ARIEF */
+  .hero-refined .hero-author {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    margin: 0 0 14px !important;
+    padding: 0 !important;
+  }
+
+  .hero-refined .hero-author img {
+    display: block;
+    width: auto !important;
+    max-width: 55% !important;
+    max-height: 55px !important;
+    height: auto !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+  }
+
+  /* JUDUL NOVEL */
+  .hero-refined .hero-title-two-lines {
+    font-size: clamp(40px, 10vw, 58px) !important;
+    line-height: 0.98 !important;
+    margin: 0 0 16px !important;
+    padding: 0 !important;
+  }
+
+  .hero-refined .hero-title-row {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .hero-refined .hero-title-last {
+    display: flex !important;
+    align-items: baseline !important;
+    flex-wrap: wrap !important;
+    column-gap: 8px !important;
+  }
+
+  .hero-refined .hero-title-label {
+    font-size: 11px !important;
+    white-space: nowrap;
+  }
+
+  /* RILIS, PENULIS, PENERBIT */
+  .hero-refined .hero-meta {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px 18px !important;
+    margin: 14px 0 0 !important;
+  }
+
+  /* TOMBOL RSVP & JELAJAHI */
+  .hero-refined .hero-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin: 20px 0 0 !important;
+  }
+
+  .hero-refined .hero-actions .btn {
+    min-height: 42px !important;
+    padding: 12px 16px !important;
+  }
+
+  /* KOLOM KANAN */
+  .hero-refined .hero-right {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 24px 0 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  /* BUKU DAN KLA TIDAK SALING MEPET */
+  .hero-refined .hero-art {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+  }
+
+  /* PERTAHANKAN INTERAKSI 3D */
+  .hero-refined .book-stage {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  /* KLA PROJECT DI BAWAH BUKU */
+  .hero-refined .publisher-kla {
+    position: relative !important;
+    inset: auto !important;
+    transform: none !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    max-width: 220px !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    border: none !important;
+    background: transparent !important;
+  }
+
+  .hero-refined .publisher-kla img {
+    display: block;
+    width: 100% !important;
+    max-width: 190px !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* DESKRIPSI DI BAWAH BUKU */
+  .hero-refined .hero-right .hero-lead {
+    width: 100% !important;
+    margin: 14px 0 0 !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* BATAS KE COUNTDOWN */
+  .hero-refined + .countdown-band {
+    margin-top: 0 !important;
+  }
+}
+
+/* IPHONE LEBIH KECIL */
+@media (max-width: 390px) {
+  .hero.hero-refined {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero-refined .hero-title-two-lines {
+    font-size: 39px !important;
+  }
+
+  .hero-refined .hero-actions {
+    gap: 8px !important;
+  }
+
+  .hero-refined .publisher-kla img {
+    max-width: 165px !important;
+  }
+}
+/* =========================
+   KLA PROJECT - MOBILE ONLY
+========================= */
+@media (max-width: 680px) {
+  .kla-mobile-slot {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .kla-mobile-slot .publisher-kla {
+    display: flex !important;
+    flex-direction: column !important;   /* jadi berdiri */
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+
+    width: 110px !important;
+    padding: 10px 8px !important;
+    text-align: center !important;
+    border: 1px solid #d7d7d7;
+    background: #f7f7f2;
+  }
+
+  .kla-mobile-slot .publisher-kla img {
+    display: block;
+    width: 56px !important;   /* ukuran poster/foto */
+    height: auto !important;
+    margin: 0 auto !important;
+    object-fit: contain;
+  }
+
+  .kla-mobile-slot .publisher-kla span,
+  .kla-mobile-slot .publisher-kla .label,
+  .kla-mobile-slot .publisher-kla .title {
+    display: block;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+}
+
+/* KLA PROJECT - FOTO PORTRAIT MOBILE */
+
+@media (max-width: 680px) {
+
+  .kla-mobile-slot {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 14px 0 !important;
+  }
+
+  .kla-mobile-slot .publisher-kla {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 200px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    gap: 6px !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  /* FOTO MEMANJANG KE BAWAH */
+  .kla-mobile-slot .publisher-kla .kla-logo {
+    display: block !important;
+    width: 190px !important;
+    max-width: 100% !important;
+    height: 290px !important;
+    max-height: none !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  /* TULISAN DI BAWAH FOTO */
+  .kla-mobile-slot .publisher-kla .kla-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .kla-mobile-slot .kla-info strong {
+    display: block !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+  }
+}
+
+/* ==========================================
+   BIOGRAFI ANDI ARIEF - MOBILE EDITORIAL
+   JUDUL DI ATAS
+   FOTO KIRI + PARAGRAF PERTAMA KANAN
+   PARAGRAF SELANJUTNYA FULL WIDTH
+========================================== */
+
+@media (max-width: 680px) {
+
+  /* LAYOUT UTAMA */
+  .speakers-section .author-block {
+    display: grid !important;
+    grid-template-columns:
+      minmax(0, 38%)
+      minmax(0, 1fr) !important;
+
+    column-gap: 12px !important;
+    row-gap: 12px !important;
+
+    align-items: start !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 18px 16px 22px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* BUKA WRAPPER AGAR ISINYA BISA
+     DISUSUN MENGGUNAKAN CSS GRID */
+  .author-block .author-bio,
+  .author-block .author-description {
+    display: contents !important;
+  }
+
+  /* JUDUL TENTANG ANDI ARIEF DI ATAS */
+  .author-block .author-bio-heading {
+    grid-column: 1 / -1 !important;
+    grid-row: 1 !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    gap: 10px !important;
+    margin: 0 0 4px !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* TEKS TENTANG */
+  .author-block .author-bio-heading span {
+    font-family: "Playfair Display", serif !important;
+    font-size: 28px !important;
+    font-weight: 400 !important;
+    line-height: 1.1 !important;
+
+    color: #69172f !important;
+    margin: 0 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+  }
+
+  /* PNG NAMA ANDI ARIEF */
+  .author-block .author-name-img {
+    display: block !important;
+    width: 150px !important;
+    max-width: 55% !important;
+    height: auto !important;
+    max-height: 55px !important;
+    object-fit: contain !important;
+    margin: 0 !important;
+  }
+
+  /* ==================================
+     FOTO KIRI
+  ================================== */
+  .author-block .author-photo {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+
+    display: block !important;
+    position: relative !important;
+    inset: auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: top center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    align-self: start !important;
+  }
+
+  /* ==================================
+     PARAGRAF PERTAMA DI KANAN FOTO
+  ================================== */
+  .author-block .author-description p:first-child {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 12.5px !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    text-align: left !important;
+
+    color: #795348 !important;
+  }
+
+  /* ==================================
+     PARAGRAF KEDUA DAN SELANJUTNYA
+     FULL WIDTH DI BAWAH FOTO
+  ================================== */
+  .author-block .author-description p:not(:first-child) {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 13px !important;
+    line-height: 1.65 !important;
+    font-weight: 400 !important;
+    text-align: justify !important;
+
+    color: #795348 !important;
+  }
+
+  /* FORM KOMENTAR TETAP DI BAWAH */
+  .author-block .andi-comment {
+    grid-column: 1 / -1 !important;
+    grid-row: auto !important;
+
+    width: 100% !important;
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* HP LEBIH KECIL */
+@media (max-width: 390px) {
+
+  .speakers-section .author-block {
+    grid-template-columns:
+      minmax(0, 35%)
+      minmax(0, 1fr) !important;
+
+    column-gap: 10px !important;
+    padding: 16px 12px 20px !important;
+  }
+
+  .author-block .author-bio-heading span {
+    font-size: 25px !important;
+  }
+
+  .author-block .author-name-img {
+    width: 125px !important;
+  }
+
+  .author-block .author-description p:first-child {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
   }
 }
