@@ -551,10 +551,15 @@
 
                 <form
                   id="andiCommentForm"
-                  action="URL_GOOGLE_APPS_SCRIPT"
+                  action="https://script.google.com/macros/s/AKfycbylbWyjVXncMvu1qP7AykMKTcG8WNn-xC5pmwlw4Nk1vitgMTvUFkx_tlm1GLL8OBKn/exec"
                   method="POST"
-                  target="_blank"
+                  target="komentarResponseFrame"
                 >
+                  <input
+                    type="hidden"
+                    name="request_id"
+                    id="commentRequestId"
+                  />
                   <input
                     type="text"
                     name="nama"
@@ -573,6 +578,11 @@
 
                   <button type="submit">KIRIM KOMENTAR</button>
                 </form>
+                <iframe
+                  name="komentarResponseFrame"
+                  title="Hasil pengiriman komentar"
+                  hidden
+                ></iframe>
               </div>
             </div>
           </div>

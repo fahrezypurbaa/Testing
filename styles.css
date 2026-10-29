@@ -5526,3 +5526,133 @@ section.event-section.container {
     margin: 0 auto !important;
   }
 }
+
+/* ==========================================
+   SINOPSIS - FOTO FULL WIDTH MOBILE
+========================================== */
+
+@media (max-width: 680px) {
+
+  /* WADAH GAMBAR SINOPSIS */
+  .story-section#tentang .story-photo {
+    display: block !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    margin-top: 8px !important;
+    margin-bottom: 12px !important;
+
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  /* GAMBAR FULL KANAN KIRI */
+  .story-section#tentang .story-photo img {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ==========================================
+   KOMENTAR FULL WIDTH - MOBILE ONLY
+========================================== */
+
+@media (max-width: 680px) {
+
+  /* BAGIAN KOMENTAR MEMENUHI LAYAR */
+  .speakers-section #penulis.author-block .andi-comment {
+    display: block !important;
+    position: relative !important;
+
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    margin: 0 !important;
+    padding: 16px 14px 20px !important;
+
+    background: #f1f1ed !important;
+    box-sizing: border-box !important;
+  }
+
+  /* JUDUL KOMENTAR */
+  .speakers-section #penulis .andi-comment-heading {
+    width: 100% !important;
+    margin: 0 0 12px !important;
+  }
+
+  .speakers-section #penulis .andi-comment-heading h3 {
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+    margin: 4px 0 0 !important;
+  }
+
+  /* FORM MEMANJANG */
+  .speakers-section #penulis #andiCommentForm {
+    display: flex !important;
+    flex-direction: column !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    gap: 9px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* INPUT NAMA DAN KOMENTAR */
+  .speakers-section #penulis #andiCommentForm input,
+  .speakers-section #penulis #andiCommentForm textarea {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 16px !important;
+    padding: 12px !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .speakers-section #penulis #andiCommentForm textarea {
+    min-height: 90px !important;
+  }
+
+  /* TOMBOL KIRIM FULL WIDTH */
+  .speakers-section #penulis #andiCommentForm button {
+    display: block !important;
+    width: 100% !important;
+
+    min-height: 46px !important;
+    padding: 12px 16px !important;
+
+    font-size: 14px !important;
+    text-align: center !important;
+    background: #69172f !important;
+    color: white !important;
+
+    box-sizing: border-box !important;
+  }
+}
