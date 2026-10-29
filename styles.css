@@ -5993,3 +5993,93 @@ section.event-section.container {
     font-size: 13px;
   }
 }
+
+/* ==========================================
+   FIX BIOGRAFI ANDI ARIEF MOBILE
+   DESKTOP TETAP SAMA
+========================================== */
+
+@media (min-width: 681px) {
+  .author-mobile-poster {
+    display: none !important;
+  }
+}
+
+@media (max-width: 680px) {
+
+  /* TAMPILKAN POSTER BIOGRAFI */
+  .speakers-section .author-mobile-poster {
+    display: block !important;
+    position: relative !important;
+
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    padding: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .speakers-section .author-mobile-poster img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* WADAH DESKTOP TETAP ADA */
+  .speakers-section #penulis.author-block {
+    display: block !important;
+  }
+
+  /* SEMBUNYIKAN BIOGRAFI DESKTOP YANG DOBEL */
+  .speakers-section #penulis .bio-visual,
+  .speakers-section #penulis .author-bio-heading,
+  .speakers-section #penulis .author-description {
+    display: none !important;
+  }
+
+  /* SEMBUNYIKAN LABEL SEBUAH NOVEL JIKA HTML */
+  .hero.hero-refined .hero-title-label {
+    display: none !important;
+  }
+}
+/* ==========================================
+   FULL WIDTH POSTER "BAB TERAKHIR" KHUSUS MOBILE
+========================================== */
+@media (max-width: 680px) {
+  .speakers-section .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .speakers-section .author-mobile-poster {
+    display: block !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    overflow: hidden !important;
+  }
+
+  .speakers-section .author-mobile-poster img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+  }
+
+  /* biar blok desktop-nya tidak ganggu tampilan mobile */
+  .speakers-section #penulis.author-block {
+    display: none !important;
+  }
+}
