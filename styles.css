@@ -5740,3 +5740,256 @@ section.event-section.container {
     height: auto !important;
   }
 }
+
+/* ========================================================
+   POPUP KONFIRMASI KOMENTAR - DESKTOP, TABLET, MOBILE
+   ======================================================== */
+.hk-comment-popup-backdrop[hidden] {
+  display: none !important;
+}
+
+.hk-comment-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(18, 27, 44, 0.60);
+  backdrop-filter: blur(3px);
+}
+
+.hk-comment-popup {
+  width: min(100%, 420px);
+  padding: 35px 30px 30px;
+  background: #f8f8f5;
+  color: #23365d;
+  text-align: center;
+  border: 1px solid #dddcd7;
+  box-shadow: 0 22px 65px rgba(17, 24, 39, 0.22);
+}
+
+.hk-comment-popup__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #e1eae5;
+  color: #2f7851;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.hk-comment-popup-backdrop[data-status="warning"] .hk-comment-popup__icon {
+  background: #fae8df;
+  color: #9d4f2c;
+}
+
+.hk-comment-popup h2 {
+  margin: 0 0 12px;
+  color: #69172f;
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(24px, 5vw, 30px);
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.hk-comment-popup p {
+  margin: 0 0 24px;
+  color: #4e5b6b;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.hk-comment-popup__close {
+  width: 100%;
+  min-height: 46px;
+  border: 0;
+  background: #69172f;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+}
+
+.hk-comment-popup__close:hover {
+  background: #501225;
+}
+
+@media (max-width: 680px) {
+  .hk-comment-popup {
+    padding: 27px 20px 22px;
+  }
+  .hk-comment-popup p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   INFORMASI ACARA DI ATAS COUNTDOWN
+   Desktop, tablet dan mobile (tanpa mengubah bagian lain)
+   ========================================================= */
+.countdown-band .countdown-event-info {
+  margin: 0 auto 16px;
+  padding: 0 8px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  text-align: center;
+}
+
+.countdown-band .countdown-event-date,
+.countdown-band .countdown-event-place {
+  margin: 0;
+  line-height: 1.45;
+}
+
+.countdown-band .countdown-event-date {
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(15px, 1.8vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.countdown-band .countdown-event-place {
+  margin-top: 4px;
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(12px, 1.3vw, 15px);
+  font-weight: 500;
+  letter-spacing: 0.015em;
+  color: #e3e8f2;
+}
+
+@media (max-width: 680px) {
+  .countdown-band .countdown-event-info {
+    margin-bottom: 12px;
+    padding: 0 5px 11px;
+  }
+
+  .countdown-band .countdown-event-date {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .countdown-band .countdown-event-place {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+/* =====================================
+   RSVP POPUP - HIDUP KEDUA
+===================================== */
+
+/* INPUT ANTI BOT */
+.hk-rsvp-trap {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  left: -9999px !important;
+  pointer-events: none !important;
+}
+
+.rsvp-form input[type="hidden"] {
+  display: none !important;
+}
+
+/* POPUP */
+.hk-rsvp-dialog {
+  border: none;
+  padding: 0;
+  width: min(430px, calc(100vw - 32px));
+  max-height: calc(100dvh - 40px);
+  background: #f8f8f5;
+  color: #23365d;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+}
+
+.hk-rsvp-dialog::backdrop {
+  background: rgba(16, 26, 43, 0.65);
+  backdrop-filter: blur(4px);
+}
+
+.hk-rsvp-dialog__content {
+  padding: 34px 30px;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+}
+
+.hk-rsvp-dialog__icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #e0f1e7;
+  color: #23744b;
+  font-size: 29px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 16px;
+}
+
+.hk-rsvp-dialog h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.hk-rsvp-dialog p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4c5968;
+  margin: 0 0 25px;
+}
+
+#hkRsvpClose {
+  display: block;
+  width: 100%;
+  min-height: 45px;
+  background: #69172f;
+  color: white;
+  border: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.hk-rsvp-dialog[data-status="warning"]
+.hk-rsvp-dialog__icon {
+  background: #fff1d9;
+  color: #9a6524;
+}
+
+#rsvpForm .submit-btn:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+/* KHUSUS MOBILE */
+@media (max-width: 680px) {
+  .hk-rsvp-dialog {
+    width: calc(100% - 36px);
+  }
+
+  .hk-rsvp-dialog__content {
+    padding: 28px 22px;
+  }
+
+  .hk-rsvp-dialog h2 {
+    font-size: 25px;
+  }
+
+  .hk-rsvp-dialog p {
+    font-size: 13px;
+  }
+}

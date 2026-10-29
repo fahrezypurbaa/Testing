@@ -56,7 +56,7 @@
       <section class="undangan-section">
         <div class="undangan-heading">
           <span class="undangan-line kiri"></span>
-          <h2>UNDANGAN</h2>
+          <h2>Andi Arief dan Keluarga</h2>
           <span class="undangan-line kanan"></span>
         </div>
 
@@ -100,7 +100,6 @@
             <span class="hero-title-row">PELAJARAN</span>
             <span class="hero-title-row hero-title-last">
               CINTA
-              <small class="hero-title-label">SEBUAH NOVEL</small>
             </span>
           </h1>
           <div class="hero-meta">
@@ -201,6 +200,15 @@
 
       <section class="countdown-band" aria-label="Hitung mundur peluncuran">
         <div class="container">
+          <!-- HARI, TANGGAL, WAKTU, DAN TEMPAT: DI ATAS COUNTDOWN -->
+          <div class="countdown-event-info" aria-label="Jadwal dan tempat peluncuran">
+            <p class="countdown-event-date">
+              <time datetime="2026-11-20T19:00:00+07:00">Jumat, 20 November 2026 · 19.00 WIB</time>
+            </p>
+            <p class="countdown-event-place">
+              Auditorium PLN Pusat <span>· Kebayoran Baru, Jakarta Selatan</span>
+            </p>
+          </div>
           <div class="countdown-caption">MENUJU MALAM PELUNCURAN</div>
           <div class="countdown-grid">
             <div class="count-cell">
@@ -216,9 +224,6 @@
               <strong id="seconds">10</strong><small>DETIK</small>
             </div>
           </div>
-          <p class="countdown-footer">
-            JUMAT · 19.00 WIB · AUDITORIUM PLN PUSAT
-          </p>
         </div>
       </section>
 
@@ -279,13 +284,6 @@
               dari perjalanan hidup Andi Arief: tentang tubuh yang perlahan
               menyerah, hati yang harus diganti, dan keluarga yang memilih untuk
               tidak menyerah.
-            </p>
-
-            <p>
-              Di antara lorong rumah sakit, ingatan tentang masa aktivisme, dan
-              percakapan ayah dan anak yang lama tertunda, novel ini menelusuri
-              apa artinya diberi kesempatan hidup untuk kedua kalinya, dan apa
-              yang harus dipelajari ulang sesudahnya.
             </p>
             <p>
               Ketika sang anak bersedia mendonorkan sebagian hatinya, hubungan
@@ -404,7 +402,8 @@
 
                 <p class="writer-profile-bio">
                   FX Rudy Gunawan adalah penulis, jurnalis, pekerja budaya,
-                  serta pendiri majalah khusus disabilitas Diffa. Ia menulis
+                  serta pendiri majalah khusus disabilitas Diffa. Ia merupakan
+                  alumnus Filsafat Universitas Gadjah Mada (UGM). Ia menulis
                   novel, cerpen, esai, dan puisi sejak 1990-an. Pernah bekerja
                   di Kantor Staf Presiden (2015–2019), kemudian mengikuti
                   residensi penulis Komite Buku Nasional di New York (2019),
@@ -444,7 +443,9 @@
 
                 <p class="writer-profile-bio">
                   Hasya Nindita adalah penulis dan pewarta yang aktif melakukan
-                  peliputan untuk media internasional. Karya jurnalistiknya
+                  peliputan untuk media internasional. Ia merupakan alumnus
+                  Ilmu Komunikasi, Fakultas Ilmu Sosial dan Ilmu Politik
+                  (Fisipol), Universitas Gadjah Mada (UGM). Karya jurnalistiknya
                   terbit di The New York Times, The Gecko Project, Global
                   Voices, dan berbagai media lainnya. Ia menerima penghargaan
                   SOPA Awards (2026) untuk salah satu liputan lingkungan. Semasa
@@ -542,48 +543,6 @@
                 </p>
               </div>
 
-              <!-- KOMENTAR PENGUNJUNG -->
-              <div class="andi-comment">
-                <div class="andi-comment-heading">
-                  <span>KOMENTAR</span>
-                  <h3>Andi Arief yang Anda Kenal</h3>
-                </div>
-
-                <form
-                  id="andiCommentForm"
-                  action="https://script.google.com/macros/s/AKfycbylbWyjVXncMvu1qP7AykMKTcG8WNn-xC5pmwlw4Nk1vitgMTvUFkx_tlm1GLL8OBKn/exec"
-                  method="POST"
-                  target="komentarResponseFrame"
-                >
-                  <input
-                    type="hidden"
-                    name="request_id"
-                    id="commentRequestId"
-                  />
-                  <input
-                    type="text"
-                    name="nama"
-                    placeholder="Nama Anda"
-                    maxlength="100"
-                    required
-                  />
-
-                  <textarea
-                    name="komentar"
-                    placeholder="Ceritakan sosok Bang Andi Arief yang Anda kenal..."
-                    rows="3"
-                    maxlength="2000"
-                    required
-                  ></textarea>
-
-                  <button type="submit">KIRIM KOMENTAR</button>
-                </form>
-                <iframe
-                  name="komentarResponseFrame"
-                  title="Hasil pengiriman komentar"
-                  hidden
-                ></iframe>
-              </div>
             </div>
           </div>
         </div>
@@ -599,11 +558,6 @@
         <div class="event-grid event-interactive">
           <!-- PANEL KIRI -->
           <div class="event-intro">
-            <h2>Seratus Delapan Puluh Menit Bersama Kawan.</h2>
-
-            <p class="event-instruction">
-              Panggung ini menjadi bagian dari rangkaian acara syukuran atas kesembuhan seorang sahabat yang berhasil melewati perjuangan melawan sirosis hati, menjalani operasi transplantasi, hingga akhirnya pulih dan kembali sehat.
-            </p>
 
             <div class="event-feature" aria-live="polite">
               <div class="event-feature-top">
@@ -679,7 +633,32 @@
               </p>
             </div>
           </div>
-          <form class="rsvp-form" id="rsvpForm">
+          <form class="rsvp-form" id="rsvpForm" method="POST"
+  target="hkRsvpResponseFrame">
+              <!-- STATUS HADIR / TIDAK HADIR -->
+  <input
+    type="hidden"
+    name="attendance"
+    value="Hadir"
+  />
+
+  <!-- ID UNIK RSVP -->
+  <input
+    type="hidden"
+    name="requestId"
+    id="rsvpRequestId"
+    value=""
+  />
+
+  <!-- ANTI BOT -->
+  <input
+    type="text"
+    name="website"
+    class="hk-rsvp-trap"
+    tabindex="-1"
+    autocomplete="off"
+    aria-hidden="true"
+  />
             <div class="form-kicker">KONFIRMASI KEHADIRAN</div>
             <label
               >Nama lengkap
@@ -876,5 +855,37 @@
         </div>
       </div>
     </footer>
+
+<!-- POPUP KONFIRMASI RSVP -->
+<dialog
+  id="rsvpSuccessDialog"
+  class="hk-rsvp-dialog"
+  aria-labelledby="hkRsvpTitle"
+>
+  <div class="hk-rsvp-dialog__content">
+
+    <span
+      class="hk-rsvp-dialog__icon"
+      aria-hidden="true"
+    >
+      ✓
+    </span>
+
+    <h2 id="hkRsvpTitle">
+      Konfirmasi Berhasil Dikirim!
+    </h2>
+
+    <p id="hkRsvpMessage">
+      Terima kasih.
+      Konfirmasi kehadiran Anda telah kami terima.
+    </p>
+
+    <button type="button" id="hkRsvpClose">
+      TUTUP
+    </button>
+
+  </div>
+</dialog>
+
   </body>
 </html>
