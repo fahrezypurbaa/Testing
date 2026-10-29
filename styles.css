@@ -5656,3 +5656,25 @@ section.event-section.container {
     box-sizing: border-box !important;
   }
 }
+
+/* PARAGRAF RANGKAIAN ACARA - MOBILE */
+
+@media (max-width: 680px) {
+
+  .event-section .event-intro .event-instruction {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    text-align: justify !important;
+    text-align-last: left !important;
+
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+
+    margin: 6px 0 12px !important;
+    padding: 0 !important;
+  }
+
+}
