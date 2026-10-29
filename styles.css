@@ -2783,7 +2783,7 @@ body {
 .hero-title-four-lines .hero-title-row {
   display: block !important;
   white-space: nowrap;
-  line-height: .98 !important;
+  line-height: 0.98 !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -2793,8 +2793,7 @@ body {
   gap: 10px;
 }
 /* SEBUAH NOVEL */
-.hero.hero-refined
-.hero-title-four-lines .hero-title-label {
+.hero.hero-refined .hero-title-four-lines .hero-title-label {
   display: inline-block;
   font-family: "Oswald", sans-serif;
   font-size: 13px !important;
@@ -2837,15 +2836,15 @@ body {
   .hero-refined .hero-author span {
     font-size: 14px !important;
   }
-.hero-refined .hero-andi-logo {
-  display: block;
-  width: 270px !important;
-  height: 90px !important;
-  max-width: none !important;
-  object-fit: contain;
-  object-position: left center;
-  margin: 0 0 0 -6px !important;
-}
+  .hero-refined .hero-andi-logo {
+    display: block;
+    width: 270px !important;
+    height: 90px !important;
+    max-width: none !important;
+    object-fit: contain;
+    object-position: left center;
+    margin: 0 0 0 -6px !important;
+  }
   .hero.hero-refined h1#heroTitle.hero-title-four-lines {
     font-size: clamp(33px, 9vw, 52px) !important;
     letter-spacing: -1.5px;
@@ -2854,10 +2853,9 @@ body {
   .hero-title-four-lines .hero-title-last {
     gap: 6px;
   }
-  .hero.hero-refined
-  .hero-title-four-lines .hero-title-label {
+  .hero.hero-refined .hero-title-four-lines .hero-title-label {
     font-size: 10px !important;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
 }
 /* =====================================
@@ -2887,15 +2885,13 @@ body {
   margin-top: 0 !important;
   margin-bottom: 12px !important;
 }
-.hero.hero-refined
-.hero-title-four-lines .hero-title-row {
+.hero.hero-refined .hero-title-four-lines .hero-title-row {
   display: block !important;
-  line-height: 0.90 !important;
+  line-height: 0.9 !important;
   margin: 0 !important;
   padding: 0 !important;
 }
-.hero.hero-refined
-.hero-title-four-lines .hero-title-last {
+.hero.hero-refined .hero-title-four-lines .hero-title-last {
   display: flex !important;
   align-items: baseline;
   gap: 9px;
@@ -2915,8 +2911,7 @@ body {
   .hero.hero-refined h1#heroTitle.hero-title-four-lines {
     line-height: 0.92 !important;
   }
-  .hero.hero-refined
-  .hero-title-four-lines .hero-title-row {
+  .hero.hero-refined .hero-title-four-lines .hero-title-row {
     line-height: 0.93 !important;
   }
 }
@@ -3079,7 +3074,7 @@ body {
     max-width: 100%;
     font-size: 10px;
     line-height: 1.5;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     margin-top: 3px !important;
     padding: 0 12px;
   }
@@ -4075,7 +4070,7 @@ section.event-section.container {
   font-size: 12px;
   letter-spacing: 1.5px;
   cursor: pointer;
-  transition: background .2s;
+  transition: background 0.2s;
 }
 .andi-comment button:hover {
   background: #892543;
@@ -4459,12 +4454,12 @@ section.event-section.container {
     margin-top: 10px;
   }
   .kla-mobile-slot .publisher-kla {
-       /* jadi berdiri */
+    /* jadi berdiri */
     text-align: center !important;
   }
   .kla-mobile-slot .publisher-kla img {
     display: block;
-    width: 56px !important;   /* ukuran poster/foto */
+    width: 56px !important; /* ukuran poster/foto */
     height: auto !important;
     margin: 0 auto !important;
     object-fit: contain;
@@ -4630,7 +4625,10 @@ section.event-section.container {
   }
 
   /* Paragraf 2, 3, 4 turun dan melebar penuh. */
-  .speakers-section .author-block#penulis .author-description > p:not(:first-child) {
+  .speakers-section
+    .author-block#penulis
+    .author-description
+    > p:not(:first-child) {
     grid-column: 1 / -1 !important;
     grid-row: auto !important;
     min-width: 0 !important;
@@ -4660,5 +4658,871 @@ section.event-section.container {
   .speakers-section .author-block#penulis .author-description > p:first-child {
     font-size: 11.5px !important;
     line-height: 1.5 !important;
+  }
+}
+
+/* ==========================================
+   MOBILE HERO POSTER - LEBIH BESAR & RAPI
+========================================== */
+
+.hero-mobile-poster {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  /* Hilangkan banner peluncuran yang dobel */
+  .undangan-section .undangan-quote-image {
+    display: none !important;
+  }
+
+  /* Rapatkan area undangan */
+  .undangan-section {
+    padding-bottom: 4px !important;
+  }
+
+  .undangan-section .undangan-subtitle {
+    margin-bottom: 0 !important;
+  }
+
+  /* HERO MOBILE */
+  .hero.hero-refined {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    padding: 8px 14px 16px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Poster diperbesar */
+  .hero.hero-refined > .hero-mobile-poster {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    max-width: 440px !important;
+    height: auto !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* Gambar original tanpa distorsi */
+  .hero.hero-refined > .hero-mobile-poster img {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    transform: none !important;
+  }
+
+  /* Sembunyikan elemen hero desktop */
+  .hero.hero-refined > .hero-left,
+  .hero.hero-refined > .hero-right {
+    display: none !important;
+  }
+}
+
+/* HP KECIL */
+@media (max-width: 390px) {
+  .hero.hero-refined {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* ==========================================
+   MOBILE - RAPATKAN POSTER & COUNTDOWN
+========================================== */
+
+@media (max-width: 680px) {
+  /* RAPATKAN BAGIAN UNDANGAN */
+  .undangan-section {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .undangan-section .undangan-subtitle {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* NAIKKAN POSTER KE ATAS */
+  .hero.hero-refined {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 14px !important;
+  }
+
+  /* HILANGKAN SPACE TAMBAHAN POSTER */
+  .hero.hero-refined > .hero-mobile-poster {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* GAMBAR TETAP UTUH */
+  .hero-mobile-poster img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: contain !important;
+  }
+
+  /* RAPATKAN SECTION WAKTU KE POSTER */
+  .hero.hero-refined + .countdown-band {
+    margin-top: 0 !important;
+  }
+}
+
+/* =========================================
+   MOBILE - HERO RAPI TANPA TABRAKAN
+========================================= */
+
+@media (max-width: 680px) {
+  /* BAGIAN UNDANGAN */
+  .undangan-section {
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding-bottom: 8px !important;
+    overflow: visible !important;
+  }
+
+  .undangan-section .undangan-subtitle {
+    margin-bottom: 8px !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* POSTER MOBILE */
+  .hero.hero-refined {
+    display: block !important;
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 auto !important;
+    padding: 8px 14px 18px !important;
+
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  /* WADAH GAMBAR */
+  .hero.hero-refined > .hero-mobile-poster {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    max-width: 440px !important;
+    height: auto !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+    gap: 0 !important;
+
+    position: relative !important;
+    transform: none !important;
+  }
+
+  /* GAMBAR TIDAK TERPOTONG */
+  .hero.hero-refined > .hero-mobile-poster img {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+    transform: none !important;
+  }
+
+  /* HANYA POSTER DI MOBILE */
+  .hero.hero-refined > .hero-left,
+  .hero.hero-refined > .hero-right {
+    display: none !important;
+  }
+
+  /* COUNTDOWN TIDAK BOLEH NIMPA POSTER */
+  .hero.hero-refined + .countdown-band {
+    position: relative !important;
+    top: auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    transform: none !important;
+    clear: both !important;
+  }
+
+  /* JARAK KLA SETELAH COUNTDOWN */
+  .kla-mobile-slot {
+    margin-top: 0 !important;
+    padding-top: 12px !important;
+  }
+}
+
+/* ==========================================
+   KLA PROJECT - POSTER MOBILE ONLY
+========================================== */
+
+/* Desktop: poster mobile disembunyikan */
+.kla-mobile-slot {
+  display: none !important;
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  .kla-mobile-slot {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 auto !important;
+    padding: 14px 12px 18px !important;
+
+    background: #f1f1ed !important;
+    overflow: hidden !important;
+  }
+
+  /* GAMBAR KLA PROJECT */
+  .kla-mobile-slot .kla-mobile-poster {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 420px !important;
+
+    height: auto !important;
+    max-height: none !important;
+
+    object-fit: contain !important;
+    object-position: center !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    border: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}
+
+/* HP KECIL */
+@media (max-width: 390px) {
+  .kla-mobile-slot {
+    padding: 10px 10px 14px !important;
+  }
+
+  .kla-mobile-slot .kla-mobile-poster {
+    max-width: 100% !important;
+  }
+}
+/* =========================================
+   KLA PROJECT MOBILE ONLY
+========================================= */
+
+.kla-mobile-slot {
+  display: none;
+}
+
+/* khusus mobile */
+@media (max-width: 680px) {
+  /* poster mobile tampil */
+  .kla-mobile-slot {
+    display: block !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: transparent !important;
+  }
+
+  .kla-mobile-slot .kla-mobile-poster {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+  }
+
+  /* gambar KLA lama disembunyikan di mobile */
+  .publisher-kla {
+    display: none !important;
+  }
+
+  /* rapatkan jarak countdown ke poster */
+  .countdown-band {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .countdown-band + .kla-mobile-slot {
+    margin-top: 0 !important;
+  }
+
+  /* rapatkan poster ke section sinopsis */
+  .kla-mobile-slot + .story-section,
+  .kla-mobile-slot + section.story-section {
+    margin-top: 0 !important;
+    padding-top: 12px !important;
+  }
+}
+/* =========================================
+   MOBILE ONLY - TENTANG ANDI ARIEF FULL IMAGE
+========================================= */
+
+.author-mobile-poster {
+  display: none;
+}
+
+/* khusus mobile */
+@media (max-width: 680px) {
+  .author-mobile-poster {
+    display: block !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: transparent !important;
+  }
+
+  .author-mobile-poster img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    margin: 0 !important;
+    border: 0 !important;
+  }
+
+  /* sembunyikan layout desktop pada mobile */
+  .author-block {
+    display: none !important;
+  }
+}
+
+/* =========================================
+   BIOGRAFI ANDI ARIEF - MOBILE FINAL
+   Poster tampil, biografi lama disembunyikan,
+   komentar tetap muncul full width.
+========================================= */
+
+@media (max-width: 680px) {
+  /* 1. POSTER BIOGRAFI MOBILE */
+  .speakers-section .author-mobile-poster {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .speakers-section .author-mobile-poster img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* 2. WADAH BIOGRAFI TETAP ADA
+     SUPAYA FORM KOMENTAR TIDAK HILANG */
+  .speakers-section .container #penulis.author-block {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 14px 22px !important;
+    background: #f1f1ed !important;
+    box-sizing: border-box !important;
+  }
+
+  .speakers-section #penulis .author-bio {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 3. HILANGKAN BIOGRAFI HTML LAMA */
+  .speakers-section #penulis .bio-visual,
+  .speakers-section #penulis .author-bio-heading,
+  .speakers-section #penulis .author-description {
+    display: none !important;
+  }
+
+  /* 4. KOMENTAR TETAP DITAMPILKAN */
+  .speakers-section #penulis .andi-comment {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 16px 0 0 !important;
+
+    background: transparent !important;
+    box-sizing: border-box !important;
+  }
+
+  /* JUDUL KOMENTAR */
+  .speakers-section #penulis .andi-comment-heading {
+    display: block !important;
+    margin: 0 0 12px !important;
+    padding: 0 !important;
+  }
+
+  .speakers-section #penulis .andi-comment-heading span {
+    display: block !important;
+    color: #b08d57 !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .speakers-section #penulis .andi-comment-heading h3 {
+    font-family: "Playfair Display", serif !important;
+    font-size: clamp(23px, 6vw, 30px) !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    color: #69172f !important;
+    margin: 0 !important;
+  }
+
+  /* 5. FORM KOMENTAR MEMANJANG */
+  .speakers-section #penulis #andiCommentForm {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* INPUT NAMA DAN KOMENTAR */
+  .speakers-section #penulis #andiCommentForm input,
+  .speakers-section #penulis #andiCommentForm textarea {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+
+    color: #24375f !important;
+    background: #fff !important;
+    border: 1px solid #d6d6d3 !important;
+    border-radius: 2px !important;
+
+    margin: 0 !important;
+    padding: 12px !important;
+  }
+
+  .speakers-section #penulis #andiCommentForm textarea {
+    min-height: 110px !important;
+    resize: vertical !important;
+  }
+
+  /* TOMBOL KIRIM */
+  .speakers-section #penulis #andiCommentForm button {
+    display: block !important;
+    width: 100% !important;
+    min-height: 46px !important;
+
+    margin: 0 !important;
+    padding: 12px 16px !important;
+
+    background: #69172f !important;
+    color: #fff !important;
+
+    border: none !important;
+    border-radius: 2px !important;
+
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    text-align: center !important;
+
+    cursor: pointer !important;
+  }
+}
+
+/* ==========================================
+   MOBILE - BIOGRAFI GAMBAR + KOMENTAR SAJA
+========================================== */
+
+@media (max-width: 680px) {
+  /* GAMBAR BIOGRAFI MOBILE */
+  .speakers-section .author-mobile-poster {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .speakers-section .author-mobile-poster img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* HILANGKAN BIOGRAFI LAMA YANG DOUBLE */
+  .speakers-section #penulis.author-block .bio-visual,
+  .speakers-section #penulis.author-block .author-bio-heading,
+  .speakers-section #penulis.author-block .author-description,
+  .speakers-section #penulis.author-block .author-photo,
+  .speakers-section
+    #penulis.author-block
+    .author-mobile-reflow
+    > :not(.andi-comment) {
+    display: none !important;
+  }
+
+  /* WADAH TETAP ADA UNTUK KOMENTAR */
+  .speakers-section #penulis.author-block,
+  .speakers-section #penulis.author-block .author-bio,
+  .speakers-section #penulis.author-block .author-mobile-reflow {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .speakers-section #penulis.author-block {
+    padding: 0 16px 20px !important;
+  }
+
+  .speakers-section #penulis.author-block .author-bio {
+    padding: 0 !important;
+  }
+
+  /* KOMENTAR TETAP MUNCUL */
+  .speakers-section #penulis.author-block .andi-comment {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 16px 0 0 !important;
+  }
+
+  /* FORM KOMENTAR FULL WIDTH */
+  .speakers-section #penulis #andiCommentForm,
+  .speakers-section #penulis #andiCommentForm input,
+  .speakers-section #penulis #andiCommentForm textarea,
+  .speakers-section #penulis #andiCommentForm button {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ==========================================
+   RSVP MOBILE - COMPACT & RAPI
+   Khusus layar HP
+========================================== */
+
+@media (max-width: 680px) {
+  /* SECTION RSVP */
+  .rsvp-section {
+    padding: 14px 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  /* SUSUNAN KONTEN */
+  .rsvp-section .rsvp-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: start !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 14px !important;
+  }
+
+  /* BAGIAN KIRI */
+  .rsvp-section .rsvp-intro {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* LABEL RSVP */
+  .rsvp-intro > .panel-kicker {
+    margin: 0 0 4px !important;
+  }
+
+  /* JUDUL */
+  .rsvp-intro > h2 {
+    font-size: clamp(27px, 7vw, 34px) !important;
+    line-height: 1.06 !important;
+    margin: 0 0 7px !important;
+  }
+
+  /* DESKRIPSI */
+  .rsvp-intro > p:not(.panel-kicker) {
+    margin: 0 0 9px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* NARAHUBUNG */
+  .rsvp-section .contact-rsvp {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 3px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .contact-rsvp .contact-label,
+  .contact-rsvp h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  /* NOMOR WHATSAPP */
+  .contact-rsvp .contact-whatsapp {
+    margin: 3px 0 0 !important;
+    padding: 8px 12px !important;
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+
+  .contact-rsvp .contact-hint {
+    margin: 2px 0 0 !important;
+    line-height: 1.35 !important;
+  }
+
+  /* FORM RSVP */
+  .rsvp-section .rsvp-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 14px !important;
+  }
+
+  .rsvp-form .form-kicker {
+    margin: 0 0 2px !important;
+  }
+
+  .rsvp-form label {
+    margin: 0 !important;
+  }
+
+  /* EMAIL & WHATSAPP */
+  .rsvp-form .form-cols {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px !important;
+    margin: 0 !important;
+  }
+
+  /* INPUT TETAP MUDAH DIBACA */
+  .rsvp-form input,
+  .rsvp-form textarea {
+    width: 100% !important;
+    min-width: 0 !important;
+    font-size: 16px !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  .rsvp-form input {
+    min-height: 44px !important;
+  }
+
+  .rsvp-form textarea {
+    min-height: 64px !important;
+  }
+
+  /* TOMBOL PILIHAN */
+  .rsvp-form .choice-row {
+    gap: 8px !important;
+    margin: 0 !important;
+  }
+
+  .rsvp-form .choice {
+    min-height: 44px !important;
+  }
+
+  /* TOMBOL KIRIM */
+  .rsvp-form .submit-btn {
+    min-height: 46px !important;
+    margin: 0 !important;
+    padding: 11px 14px !important;
+    font-size: 14px !important;
+    text-align: center !important;
+  }
+
+  /* HILANGKAN SPACE FEEDBACK KOSONG */
+  .rsvp-form .form-feedback:empty {
+    display: none !important;
+  }
+}
+
+/* MOBILE KECIL */
+@media (max-width: 390px) {
+  .rsvp-form .form-cols {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* FOOTER GAMBAR - MOBILE ONLY */
+
+.hk-footer__mobile-image {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .site-footer.hk-footer {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #f1f1ed !important;
+    overflow: hidden !important;
+  }
+
+  /* Sembunyikan footer desktop */
+  .site-footer.hk-footer > .hk-footer__inner {
+    display: none !important;
+  }
+
+  /* Tampilkan gambar mobile */
+  .site-footer.hk-footer > .hk-footer__mobile-image {
+    display: block !important;
+    width: 100% !important;
+    padding: 8px 8px 12px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .site-footer.hk-footer > .hk-footer__mobile-image img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 480px !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+/* FOOTER MOBILE - FULL WIDTH & COMPACT */
+
+.hk-footer__mobile-image {
+  display: none;
+}
+
+@media (max-width: 680px) {
+
+  .site-footer.hk-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: #f1f1ed !important;
+  }
+
+  /* Sembunyikan footer desktop */
+  .site-footer.hk-footer > .hk-footer__inner {
+    display: none !important;
+  }
+
+  /* Gambar penuh kiri-kanan */
+  .site-footer.hk-footer > .hk-footer__mobile-image {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 4px 6px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .hk-footer__mobile-image img {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto !important;
   }
 }

@@ -193,13 +193,13 @@ document.getElementById("year").textContent = new Date().getFullYear();
       time: "19.50",
       range: "19.50 – 20.00 WIB",
       duration: "10 menit",
-      title: "Sambutan Tuan Rumah",
+      title: "Sambutan Andri Arief & Keluarga",
     },
     {
       time: "20.00",
       range: "20.00 – 20.15 WIB",
       duration: "15 menit",
-      title: "Sambutan SBY",
+      title: "Sambutan Bapak Susilo Bambang Yudhoyono",
     },
     {
       time: "20.15",
@@ -211,7 +211,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
       time: "20.30",
       range: "Setelah penyerahan buku – 22.00 WIB",
       duration: "60–90 menit",
-      title: "Penampilan Konser KLa Project",
+      title: "Penampilan KLa Project",
     },
   ];
 
