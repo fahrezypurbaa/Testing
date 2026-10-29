@@ -5678,3 +5678,65 @@ section.event-section.container {
   }
 
 }
+
+/* ==========================================
+   SUBTITLE PENYERAHAN BUKU SIMBOLIK
+   DESKTOP + TABLET + MOBILE
+========================================== */
+
+/* Keterangan umum */
+.symbolic-subtitle {
+  display: block;
+  margin-top: 5px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: normal;
+}
+
+/* Keterangan di kotak biru */
+#eventActiveTitle .symbolic-subtitle {
+  color: #e4e9f3;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Keterangan dalam rundown */
+#agendaList .symbolic-subtitle {
+  color: #53617a;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  #eventActiveTitle .symbolic-subtitle {
+    font-size: 13px;
+  }
+
+  #agendaList .symbolic-subtitle {
+    font-size: 11px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 680px) {
+  #eventActiveTitle .symbolic-subtitle {
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+
+  #agendaList .symbolic-subtitle {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-top: 3px;
+  }
+
+  #eventActiveTitle {
+    height: auto !important;
+  }
+}

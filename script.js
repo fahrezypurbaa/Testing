@@ -485,3 +485,71 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
   render();
 })();
+
+/* KETERANGAN PENYERAHAN BUKU SIMBOLIK */
+
+(function () {
+  const judul = "Penyerahan Buku Simbolik";
+  const keterangan = "kepada tokoh dan perwakilan undangan";
+
+  const activeTitle = document.getElementById("eventActiveTitle");
+  const agendaList = document.getElementById("agendaList");
+
+  function normalize(text) {
+    return (text || "").replace(/\s+/g, " ").trim();
+  }
+
+  function tambahKeterangan(element) {
+    if (!element) return;
+
+    if (element.querySelector(".symbolic-subtitle")) return;
+    if (normalize(element.textContent) !== judul) return;
+
+    const subtitle = document.createElement("small");
+    subtitle.className = "symbolic-subtitle";
+    subtitle.textContent = keterangan;
+
+    element.appendChild(subtitle);
+  }
+
+  function perbarui() {
+    tambahKeterangan(activeTitle);
+
+    if (!agendaList) return;
+
+    const elements = [...agendaList.querySelectorAll("*")];
+
+    elements.forEach((el) => {
+      const childHasTitle = [...el.children].some(
+        child => normalize(child.textContent) === judul
+      );
+
+      if (
+        normalize(el.textContent) === judul &&
+        !childHasTitle
+      ) {
+        tambahKeterangan(el);
+      }
+    });
+  }
+
+  const observer = new MutationObserver(perbarui);
+
+  if (activeTitle) {
+    observer.observe(activeTitle, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+  }
+
+  if (agendaList) {
+    observer.observe(agendaList, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+  }
+
+  perbarui();
+})();
