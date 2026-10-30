@@ -202,10 +202,10 @@ if (year) {
 
   const rundown = [
     {
-      time: '17.00',
-      range: '17.00 – 18.00 WIB',
-      duration: '60 menit',
-      title: 'Open Gate & Registrasi'
+      time: '17.30',
+      range: '17.30 – 18.45 WIB',
+      duration: '75 menit',
+      title: 'Registrasi, Sholat & Makan Malam'
     },
     {
       time: '18.45',
