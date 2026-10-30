@@ -6083,3 +6083,146 @@ section.event-section.container {
     display: none !important;
   }
 }
+
+/* ==========================================
+   BUKU 3D SETELAH POSTER HERO - MOBILE ONLY
+   DESKTOP TIDAK BERUBAH
+========================================== */
+
+@media (max-width: 680px) {
+
+  /* TAMPILKAN AREA BUKU 3D */
+  .hero.hero-refined > .hero-right {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    padding: 20px 0 24px !important;
+    transform: none !important;
+  }
+
+  /* PUSATKAN BUKU */
+  .hero.hero-refined > .hero-right .hero-art.hero-art-3d {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* UKURAN BUKU 3D MOBILE */
+  .hero.hero-refined > .hero-right .book-stage {
+    --book-width: clamp(180px, 50vw, 220px);
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    flex: 0 0 auto !important;
+    width: max-content !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* PERTAHANKAN ANIMASI 3D ASLI */
+  .hero.hero-refined > .hero-right .book-3d {
+    animation: bookAutoRotate 30s linear infinite !important;
+    transform-style: preserve-3d !important;
+  }
+
+  /* KLA PROJECT TETAP DI BAWAH COUNTDOWN */
+  .hero.hero-refined > .hero-right .publisher.publisher-kla {
+    display: none !important;
+  }
+
+  /* HINDARI TEKS DESKTOP YANG DOBEL */
+  .hero.hero-refined > .hero-right .hero-right-description {
+    display: none !important;
+  }
+
+  /* BAGIAN TEKS DESKTOP TETAP TERSEMBUNYI */
+  .hero.hero-refined > .hero-left {
+    display: none !important;
+  }
+
+}
+
+@media (max-width: 680px) and (prefers-reduced-motion: reduce) {
+  .hero.hero-refined > .hero-right .book-3d {
+    animation: none !important;
+    transform: rotateY(-12deg);
+  }
+}
+
+/* ==========================================
+   DESKRIPSI DI BAWAH BUKU 3D - MOBILE ONLY
+========================================== */
+
+@media (max-width: 680px) {
+
+  .hero.hero-refined > .hero-right .hero-right-description {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 360px !important;
+
+    margin: 25px auto 0 !important;
+    padding: 0 14px !important;
+
+    font-family: "DM Sans", sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    line-height: 1.8 !important;
+    letter-spacing: 1.1px !important;
+
+    color: #23365d !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+}
+
+/* ==========================================
+   RAPATKAN BUKU, DESKRIPSI & COUNTDOWN
+   KHUSUS MOBILE
+========================================== */
+
+@media (max-width: 680px) {
+
+  /* Rapatkan teks ke bawah buku 3D */
+  .hero.hero-refined > .hero-right .hero-right-description {
+    margin-top: 5px !important;
+    margin-bottom: 0 !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Kurangi ruang kosong di bawah buku */
+  .hero.hero-refined > .hero-right {
+    padding-top: 8px !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Rapatkan akhir hero ke countdown */
+  .hero.hero-refined {
+    padding-bottom: 8px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Hilangkan jarak tambahan sebelum jadwal */
+  .countdown-band {
+    margin-top: 0 !important;
+  }
+
+}

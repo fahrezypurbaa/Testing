@@ -205,7 +205,7 @@ if (year) {
       time: '17.30',
       range: '17.30 – 18.45 WIB',
       duration: '75 menit',
-      title: 'Registrasi, Sholat & Makan Malam'
+      title: 'Open Gate & Registrasi'
     },
     {
       time: '18.45',
@@ -376,6 +376,18 @@ if (year) {
     `)
     .join('');
 
+  // KETERANGAN OPEN GATE
+  const openGateTitle = agendaList.querySelector(
+    '.agenda-item[data-index="0"] .agenda-title'
+  );
+
+  if (openGateTitle) {
+    const small = document.createElement('small');
+    small.className = 'symbolic-subtitle';
+    small.textContent = 'Registrasi, Sholat & Makan Malam';
+    openGateTitle.appendChild(small);
+  }
+
   const rows = [
     ...agendaList.querySelectorAll('.agenda-item')
   ];
@@ -398,6 +410,14 @@ if (year) {
       small.className = 'symbolic-subtitle';
       small.textContent = specialDescription;
 
+      activeTitle.appendChild(small);
+    }
+
+    // KETERANGAN OPEN GATE DI PANEL BIRU
+    if (item.title === 'Open Gate & Registrasi') {
+      const small = document.createElement('small');
+      small.className = 'symbolic-subtitle';
+      small.textContent = 'Registrasi, Sholat & Makan Malam';
       activeTitle.appendChild(small);
     }
 
