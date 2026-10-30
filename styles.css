@@ -6226,3 +6226,39 @@ section.event-section.container {
   }
 
 }
+
+/* ==========================================
+   PERKECIL BUKU 3D - KHUSUS MOBILE
+========================================== */
+
+@media (max-width: 680px) {
+
+  .hero.hero-refined > .hero-right .book-stage {
+    --book-width: clamp(115px, 33vw, 150px) !important;
+
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .hero.hero-refined > .hero-right {
+    padding-top: 8px !important;
+    padding-bottom: 0 !important;
+  }
+
+  .hero.hero-refined > .hero-right .hero-art.hero-art-3d {
+    min-height: 0 !important;
+  }
+
+  .hero.hero-refined > .hero-right .hero-right-description {
+    margin-top: 8px !important;
+  }
+
+}
+
+/* BUKU 3D LEBIH KECIL - MOBILE ONLY */
+@media (max-width: 680px) {
+  .hero.hero-refined > .hero-right .book-stage {
+    --book-width: clamp(100px, 28vw, 130px) !important;
+  }
+}
+
